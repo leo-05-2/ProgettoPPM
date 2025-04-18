@@ -9,14 +9,15 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="listDisplay.scss">
     <title>Title</title>
 </head>
 <body>
+<header class="site-header bg-light">heder
+    <!-- deve prevedere 2 sezioni, una per logo, ricerca e menù a tendina ed una per i sotto link, deve prevedere un place holder
+     per fare in modo che quando si scorre la pagina, la navbar rimance in cima alla visualizzazione ma che quando si torna in cima riprenda il suo posto senza alterare la pagina-->
+</header>
 <div id="page" class="container-xxl">
-    <header class="site-header bg-light">heder
-        <!-- deve prevedere 2 sezioni, una per logo, ricerca e menù a tendina ed una per i sotto link, deve prevedere un place holder
-         per fare in modo che quando si scorre la pagina, la navbar rimance in cima alla visualizzazione ma che quando si torna in cima riprenda il suo posto senza alterare la pagina-->
-    </header>
 
     <section id="content">
         <header class="section bg-light flex-row">must kept void </header>
@@ -25,25 +26,55 @@
             <p>This is a simple template using Bootstrap.</p>
         </div>
         <div id="breaking news bar"><!-- opzionale --></div>
-        <main id="main content" class="container-xxl">
-            <section id="primary" class="d-flex flex-row">
-                <div id="articles-main" class=" col-md-6 flex-row bg-light">
-                    test </div>
-                <div id="titles-list" class="col-md-4 flex-row bg-dark">
-                    <ul>
+        <main id="main content" class=" row flex-row">
+            <section id="primary" class="row flex-row">
+                <div id="articles-main" class="row  bg-light">
+                    <div id="news-article-list" class=" row col-12 col-md-9">
+                        <div id="main-news"  class="col-12 col-md-8">
+                            <div id="main-news-header" >
+                                <h2>Notizie principali</h2>
+                            <article> titolo notizia principale
+                            <!--TODO: aggiungere foto e controllare la scala a seconda della dimensione dello schermo-->
+                            </article>
+                            </div>
+                            <div id="news" >
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                        <div id="titles-list" class="col-12 col-md-4  bg-dark">
+                            <ul>
+                                <li><a hrerticles-mainf="#">Article 1</a></li>
+                                <li><a href="#">Article 2</a></li>
+                                <li><a href="#">Article 3</a></li>
+                                <li><a href="#">Article 4</a></li>
+                                <li><a href="#">Article 5</a></li>
+                            </ul>
+                        </div>
+                        <div id="bottom">bottom fisso</div>
+                    </div>
+                    <aside class="col-12 bg-light col-md-3">test</aside>
+                </div>
+
+            </section>
+            <div id="sponsors-void">kept void</div>
+            <section class="landing-3-1 row flex-row  ">
+                <div class="landing-3-1-left col-md-6 bg-light col-lg-6 col-sm-12 ">
+                    <!-- left side content, list of most popular raccomandation-->
+                    <h2>Most popular news</h2>
+                    <div id="test-per-lista" >
+                    <ul class="  list-unstyled ">
                         <li><a href="#">Article 1</a></li>
                         <li><a href="#">Article 2</a></li>
                         <li><a href="#">Article 3</a></li>
                         <li><a href="#">Article 4</a></li>
                         <li><a href="#">Article 5</a></li>
+                        <li><a href="#">Article 6</a></li>
+                        <li><a href="#">Article 7</a></li>
+                        <li><a href="#">Article 8</a></li>
+                        <li><a href="#">Article 9</a></li>
+                        <li><a href="#">Article 10</a></li>
                     </ul>
-                </div>
-                <aside class="sidebar bg-light flex-row col-md-2">test</aside>
-            </section>
-            <div id="sponsors-void">kept void</div>
-            <section class="landing-3-1 d-flex flex-row  ">
-                <div class="landing-3-1-left col-md-6 bg-light col-lg-6 col-sm-12 ">
-                    <!-- left side content, list of most popular raccomandation-->
+                    </div>
                     test
                 </div>
                 <div class="landing-3-1-right col-md-4 col-lg-6 d-none d-sm-block">test2</div>
