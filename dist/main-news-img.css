@@ -1,12 +1,33 @@
+@charset "UTF-8";
 .custom-horizontal-list {
   display: flex;
   flex-direction: column; /* Disposizione orizzontale */
   list-style: none; /* Rimuove i punti elenco */
   flex-wrap: wrap;
+  align-items: stretch; /* Allinea gli elementi all'inizio */
+  max-width: 100%; /* provare a ricopiare il fill dento la disposizione a colonna */
 }
 .custom-horizontal-list li {
-  max-width: 50%;
-  flex-basis: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.custom-horizontal-list li article {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: stretch;
+}
+.custom-horizontal-list li article img {
+  flex: 1 1 50%;
+  height: auto;
+  width: 100%;
+  margin-right: 10px;
+}
+.custom-horizontal-list li article span, .custom-horizontal-list li article header {
+  flex: 1 1 50%;
 }
 @media (max-width: 652px) {
   .custom-horizontal-list {
@@ -15,6 +36,16 @@
   .custom-horizontal-list li {
     flex: 0 0 100%;
     max-width: 100%;
+    flex-direction: row;
+  }
+  .custom-horizontal-list li article {
+    flex: 0 0 100%;
+    max-width: 100%;
+    flex-direction: row;
+  }
+  .custom-horizontal-list li article img {
+    max-height: 80px; /* Altezza massima per schermi piccoli */
+    margin-bottom: 10px;
   }
 }
 @media (min-width: 652px) and (max-width: 1040px) {
@@ -24,7 +55,16 @@
   .custom-horizontal-list li {
     flex: 0 0 50%;
     max-width: 50%;
-    flex-direction: row;
+    flex-direction: column;
+  }
+  .custom-horizontal-list li article {
+    flex: 0 0 100%;
+    max-width: 100%;
+    flex-direction: column;
+  }
+  .custom-horizontal-list li article img {
+    max-height: 120px; /* Altezza massima per schermi medi */
+    margin-bottom: 10px;
   }
 }
 @media (min-width: 1040px) and (max-width: 1280px) {
@@ -32,9 +72,26 @@
     flex-direction: column;
   }
   .custom-horizontal-list li {
+    flex: 0 0 100%;
+    max-width: 100%;
+    flex-direction: row;
+  }
+  .custom-horizontal-list li article {
+    flex: 0 0 100%;
+    max-width: 100%;
+    flex-direction: row;
+    display: flex;
+  }
+  .custom-horizontal-list li article img {
     flex: 0 0 50%;
     max-width: 50%;
-    flex-direction: row;
+    max-height: 150px; /* Altezza massima per schermi grandi */
+    margin: 10px;
+  }
+  .custom-horizontal-list li article span, .custom-horizontal-list li article header {
+    flex: 0 0 50%;
+    max-width: 50%;
+    align-self: start;
   }
 }
 @media (min-width: 1280px) {
@@ -44,6 +101,17 @@
   .custom-horizontal-list li {
     flex: 0 0 50%;
     max-width: 50%;
-    flex-direction: row;
+    flex-direction: column;
+  }
+  .custom-horizontal-list li article {
+    flex: 0 0 50%;
+    max-width: 50%;
+    flex-direction: column;
+  }
+  .custom-horizontal-list li article img {
+    max-height: 200px; /* Altezza massima per schermi extra grandi */
+    margin-bottom: 10px;
   }
 }
+
+/* @extend .d-flex si può fare */
