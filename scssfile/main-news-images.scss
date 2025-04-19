@@ -10,47 +10,121 @@ lg:1280px,
        flex-direction: column; /* Disposizione orizzontale */
        list-style: none; /* Rimuove i punti elenco */
        flex-wrap: wrap;
+       align-items: stretch; /* Allinea gli elementi all'inizio */
+       max-width: 100%; /* provare a ricopiare il fill dento la disposizione a colonna */
+
+
+
 
 
 
        li {
+         display: flex;
+         flex-direction: row;
+         width: 100%;
+         justify-content: space-between;
+         align-items: stretch;
+         article{
+           display: flex;
+           flex-direction: row;
+           width: 100%;
+           align-items: stretch;
 
-              max-width: 50%;
-              flex-basis: 100%; // Ogni elemento <li> occupa il 50% della larghezza
+           img {
+             flex: 1 1 50% ;
+             height: auto;
+             width: 100%;
+             margin-right: 10px;
+
+           }
+           span, header {
+             flex: 1 1 50%;
+           }
+         }
+       }
+       @media (max-width: map-get($custom-breakpoint-img-list, sm)) {
+         flex-direction: column;
+         li {
+           flex: 0 0 100%; // Mantiene un elemento per riga fino a sm
+           max-width: 100%;
+           flex-direction: row;
+           article{
+             flex: 0 0 100%; // Mantiene un elemento per riga fino a sm
+             max-width: 100%;
+             flex-direction: row;
+             img {
+               max-height: 80px; /* Altezza massima per schermi piccoli */
+               margin-bottom: 10px;
+             }
+            }
+          }
 
        }
-         @media (max-width: map-get($custom-breakpoint-img-list, sm)) {
-                flex-direction: column;
-                  li {
-                        flex: 0 0 100%; // Mantiene un elemento per riga fino a sm
-                        max-width: 100%;
-                  }
-         }
 
        @media (min-width: map-get($custom-breakpoint-img-list, sm)) and (max-width: map-get($custom-breakpoint-img-list, md)) {
-              flex-direction: row;
-              li {
-                     flex: 0 0 50%; // Mantiene due elementi per riga tra sm e md
-                     max-width: 50%;
-                     flex-direction: row;
-              }
-       }
-         @media (min-width: map-get($custom-breakpoint-img-list, md)) and (max-width: map-get($custom-breakpoint-img-list, lg)) {
-                  flex-direction: column;
-                  li {
-                        flex: 0 0 50%; // Mantiene due elementi per riga tra md e lg
-                        max-width: 50%;
-                        flex-direction: row;
-                  }
+         flex-direction: row;
+         li {
+           flex: 0 0 50%; // Mantiene due elementi per riga tra sm e md
+           max-width: 50%;
+           flex-direction: column;
+           article{
+             flex: 0 0 100%; // Mantiene un elemento per riga fino a sm
+             max-width: 100%;
+             flex-direction: column;
+             img {
+
+               max-height: 120px; /* Altezza massima per schermi medi */
+               margin-bottom: 10px;
+             }
+           }
          }
+       }
+
+       @media (min-width: map-get($custom-breakpoint-img-list, md)) and (max-width: map-get($custom-breakpoint-img-list, lg)) {
+                flex-direction: column;
+                li {
+                  flex: 0 0 100%; // Mantiene due elementi per riga tra md e lg
+                  max-width: 100%;
+                  flex-direction: row;
+                  article{
+                    flex: 0 0 100%; // Mantiene due elementi per riga tra md e lg
+                    max-width: 100%;
+                    flex-direction: row;
+                    display: flex;
+                    img {
+                      flex: 0 0 50%;
+                      max-width: 50%;
+                      max-height: 150px; /* Altezza massima per schermi grandi */
+                      margin: 10px;
+
+                    }
+                    span, header {
+                      flex: 0 0 50%;
+                      max-width: 50%;
+                      align-self: start;
+                    }
+                  }
+                }
+       }
 
        @media (min-width: map-get($custom-breakpoint-img-list, lg)) {
                 flex-direction: row;
               li {
                      flex: 0 0 50%; // Mantiene due elementi per riga dopo lg
                      max-width: 50%;
-                     flex-direction: row;
+                     flex-direction: column;
+                      article{
+                        flex: 0 0 50%; // Mantiene due elementi per riga dopo lg
+                        max-width: 50%;
+                        flex-direction: column;
+                          img {
+                            max-height: 200px; /* Altezza massima per schermi extra grandi */
+                            margin-bottom: 10px;
+                          }
+                        }
               }
        }
 }
+/* @extend .d-flex si può fare */
+
 
