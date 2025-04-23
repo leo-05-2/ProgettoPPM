@@ -7,8 +7,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass scssfile/listDisplay.scss dist/listDisplay.css --no-source-map --style=compressed && sass scssfile/main-news-images.scss dist/main-news-img.css --no-source-map --style=expanded && sass scssfile/main-news-images.scss dist/main-news-img.css --no-source-map --style=compressed",
-    "watch": "sass scssfile/listDisplay.scss dist/listDisplay.css --watch && sass scssfile/main-news-images.scss dist/main-news-img.css --watch && sass scssfile/custom-bootstrap.scss dist/custom-bootstrap --watch"
+    "build": "sass scssfile/listDisplay.scss dist/listDisplay.css --no-source-map --style=compressed && sass scssfile/main-news-images.scss dist/main-news-img.css --no-source-map --style=compressed ",
+    "watch": "sass scssfile/listDisplay.scss dist/listDisplay.css --watch && sass scssfile/main-news-images.scss dist/main-news-img.css --watch && sass scssfile/custom-bootstrap.scss dist/custom-bootstrap.css --watch"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/leo-05-2/ProgettoPPM#readme",
   "description": "",
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.5",
     "bootstrap-icons": "^1.11.3"
   }
