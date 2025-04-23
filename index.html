@@ -15,7 +15,80 @@
     <title>Title</title>
 </head>
 <body>
-<header class="site-header bg-light">heder
+<header class="">
+   <!--  <div id="testo">testo</div> -->
+
+    <div class=" container-fluid ">
+
+        <nav class="navbar bg-body-tertiary fixed-top  ">
+        <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-brand">Boston Herald</div>
+            <div id="wrapper" class="row">
+                <button class="navbar-toggler d-lg-none col-12" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaRight" aria-controls="offcanva-login icon" aria-label="Toggle login">
+                   <i class=" bi bi-person-lines-fill "></i>
+                </button>
+                <button class="btn btn-primary d-none d-lg-block col-6" type="button" aria-label="subscribe"> <span>sing up</span></button>
+                <button class="btn btn-primary d-none d-lg-block col-6" type="button" aria-label="widget-wether"> <span>sing up</span></button>
+            </div>
+            <button aria-controls="search" aria-label="search bar">
+                <i class="bi bi-search"></i>
+            </button>
+        </nav>
+        <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navbar</h5>
+                <button type="button" class="btn-primary "  aria-label="subscribe"> <span>bottone sing in</span></button>
+                <button type="button" class="d-lg-none"  aria-label="widget-wether"> <span>widget</span></button>
+                <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+            </div>
+            <div class="offcanvas-body">
+                <ul class=" navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="dropdown ">
+                        <a class="nav-link dropdown-toggle"  id="dropdownMenu" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                            news
+                        </a>
+                        <ul class="dropdown-menu " aria-labelledby="dropdownMenu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li> </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvaRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">Login</h5>
+                <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+
+            </div>
+
+        </div>
+    </div>
+    <div id="median-bottom-navbar">
+        <div id="placeholder"></div>
+        <div id="median-navbar"></div>
+        <div id="bottom-navbar"></div>
+
+    </div>
+
+
+
     <!-- deve prevedere 2 sezioni, una per logo, ricerca e menù a tendina ed una per i sotto link, deve prevedere un place holder
      per fare in modo che quando si scorre la pagina, la navbar rimance in cima alla visualizzazione ma che quando si torna in cima riprenda il suo posto senza alterare la pagina-->
 </header>

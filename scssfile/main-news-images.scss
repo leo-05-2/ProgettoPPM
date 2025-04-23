@@ -470,8 +470,8 @@ $custom-breakpoint-main-img:(
   max-width: 100%;
   width: 2rem;
   height: 2rem;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+
+  font: normal 600 1.3125em / 1 "Noto Sans", Helvetica, sans-serif;
   align-items: center;
 
   display: flex;
@@ -620,6 +620,41 @@ $custom-breakpoint-main-img:(
   }
 
 }
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  z-index: 1055; /* Sopra l'offcanvas */
+  height: 64px; /* Altezza della navbar */
+}
+
+.offcanvas {
+  position: fixed;
+  top: 64px; /* Altezza della navbar */
+  z-index: 1055; /* Sotto la navbar */
+  height: calc(100vh - 64px); /* Altezza totale meno la navbar */
+    overflow-y: auto; /* Scorrimento verticale */
+}
+
+.offcanvas.showing, .offcanvas.hiding, .offcanvas.show {
+  top: 64px;
+
+}
+
+.offcanvas-backdrop {
+  z-index: 1049; /* Sotto l'offcanvas */
+}
+#placeholder{
+  height: 64px;
+
+}
+.container-xxl{
+  max-width: 1300px;
+}
+
+
 
 
 
