@@ -30,20 +30,10 @@ xl:1280px,
            flex-direction: row;
            width: 100%;
 
-           img {
-             flex: 1 1 50% ;
-             display: flex;
-             height: auto;
-             width: auto;
 
-
-           }
-           span, header {
-             flex: 1 1 50%;
-           }
          }
        }
-       @media (max-width: map-get($custom-breakpoint-img-list, sm)) {
+       @media (max-width: 640px) {
          flex-direction: column;
          li {
            flex: 0 0 100%; // Mantiene un elemento per riga fino a sm
@@ -55,15 +45,12 @@ xl:1280px,
              max-width: 100%;
              flex-direction: row;
 
-             img {
-               max-height: 80px; /* Altezza massima per schermi piccoli */
-             }
             }
           }
 
        }
 
-       @media (min-width: map-get($custom-breakpoint-img-list, sm)) and (max-width: map-get($custom-breakpoint-img-list, md)) {
+       @media (min-width: 640px) and (max-width: 800px) {
          flex-direction: row;
          li {
            flex: 0 0 50%; // Mantiene due elementi per riga tra sm e md
@@ -73,15 +60,11 @@ xl:1280px,
              flex: 0 0 50%; // Mantiene un elemento per riga fino a sm
              max-width: 50%;
              flex-direction: row;
-             img {
-               max-height: 100%; /* Altezza massima per schermi medi */
 
-
-             }
            }
          }
        }
-         @media (min-width: map-get($custom-breakpoint-img-list, md)) and (max-width: map-get($custom-breakpoint-img-list, lg)) {
+         @media (min-width: 800px) and (max-width: 1040px) {
             flex-direction: row;
             li {
               flex: 0 0 50%; // Mantiene due elementi per riga tra md e lg
@@ -91,14 +74,12 @@ xl:1280px,
                  flex: 0 0 100%; // Mantiene due elementi per riga tra md e lg
                  max-width: 100%;
                  flex-direction: column;
-                 img {
-                max-height: 100%; /* Altezza massima per schermi grandi */
-                 }
+
               }
             }
          }
 
-       @media (min-width: map-get($custom-breakpoint-img-list, lg)) and (max-width: map-get($custom-breakpoint-img-list, xl)) {
+       @media (min-width: 1040px) and (max-width: 1280px) {
                 flex-direction: column;
                 li {
                   flex: 0 0 100%; // Mantiene due elementi per riga tra md e lg
@@ -109,21 +90,12 @@ xl:1280px,
                     max-width: 100%;
                     flex-direction: row;
                     display: flex;
-                    img {
 
-                      max-width: 100%;
-                      max-height: 150px; /* Altezza massima per schermi grandi */
-
-                    }
-                    span, header {
-                      flex: 0 0 50%;
-                      max-width: 50%;
-                    }
                   }
                 }
        }
 
-       @media (min-width: map-get($custom-breakpoint-img-list, xl)) {
+       @media (min-width: 1280px) {
                 flex-direction: row;
               li {
                      flex: 0 0 50%; // Mantiene due elementi per riga dopo lg
@@ -133,10 +105,6 @@ xl:1280px,
                         flex: 0 0 50%; // Mantiene due elementi per riga dopo lg
                         max-width: 50%;
                         flex-direction: column;
-                          img {
-                            max-height: 100%; /* Altezza massima = alla metà di section, 100% si riferisce al suo spazio a disposizione */
-                            max-width: fit-content;
-                          }
                         }
               }
        }
@@ -653,6 +621,82 @@ $custom-breakpoint-main-img:(
 .container-xxl{
   max-width: 1300px;
 }
+.d-custom-lg-block{
+    display: none;
+    @media (min-width: 1040px) {
+        display: block;
+    }
+}
+.custom-d-none{
+    display: none;
+}
+#navbar-wrapper{
+  max-width: 95%;
+}
+.navbar{
+  max-width: 100vw;
+  padding: 0 1.28vw;
+
+}
+.d-custom-lg-none{
+    @media (min-width: 1040px) {
+        display: none;
+    }
+}
+#median-bottom-navbar{
+  height: 80px;
+
+}
+#bottom-navbar {
+  height: 0;
+  display: none;
+
+  @media (min-width: 1040px) {
+    display: flex;
+    height: 3em;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+  overflow: hidden;
+  ul{
+    li{
+      a{
+        padding: 0 1.28vw;
+        font-size: .9375em;
+      }
+    }
+  }
+  @extend .d-custom-lg-block;
+}
+#median-bottom-navbar{
+  display: none;
+  @media(min-width: 1040px) {
+    display: flex;
+    height: auto;
+
+  }
+  height: 0;
+
+}
+#median-navbar{
+  >*{
+    display: none;
+    @media(min-width: 1040px) {
+      display: flex;
+
+    }
+  }
+}
+.main-news-article-list-wrapper{}
+.main-list-images-wrapper{
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
 
 
 

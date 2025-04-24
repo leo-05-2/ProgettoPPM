@@ -18,23 +18,25 @@
 <header class="">
    <!--  <div id="testo">testo</div> -->
 
-    <div class=" container-fluid ">
+    <div id="navbar-wrapper" class="container border-bottom border-2 border-black">
+            <div id="placeholder"></div>
 
-        <nav class="navbar bg-body-tertiary fixed-top  ">
+        <nav class="navbar bg-body-tertiary fixed-top  d-flex ">
         <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-brand">Boston Herald</div>
             <div id="wrapper" class="row">
-                <button class="navbar-toggler d-lg-none col-12" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaRight" aria-controls="offcanva-login icon" aria-label="Toggle login">
+                <button class="navbar-toggler d-custom-lg-none col-6 custom-col-md-6" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaRight" aria-controls="offcanva-login icon" aria-label="Toggle login">
                    <i class=" bi bi-person-lines-fill "></i>
                 </button>
-                <button class="btn btn-primary d-none d-lg-block col-6" type="button" aria-label="subscribe"> <span>sing up</span></button>
-                <button class="btn btn-primary d-none d-lg-block col-6" type="button" aria-label="widget-wether"> <span>sing up</span></button>
+                <button class="btn btn-primary  d-custom-lg-block col-4" type="button" aria-label="subscribe"> <span>sing up</span></button>
+                <button class="btn btn-primary  d-custom-lg-block col-4" type="button" aria-label="widget-wether"> <span>sing up</span></button>
+                <button class="col-6 custom-col-md-4" aria-controls="search" aria-label="search bar">
+                    <i class="bi bi-search"></i>
+                </button>
             </div>
-            <button aria-controls="search" aria-label="search bar">
-                <i class="bi bi-search"></i>
-            </button>
+
         </nav>
         <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
@@ -79,12 +81,37 @@
             </div>
 
         </div>
+            <div id="median-bottom-navbar" class=" row d-flex">
+                <div id="median-navbar" class=" col-12 row">
+                    <div id="median-navbar-widget" class="col-4">widget meteo</div>
+                    <div id="logo" class="col-4">boston herald</div>
+                    <div id="place-holder-median" class="col-4"> void</div>
+                </div>
+                <div id="bottom-navbar" class="col-12 row d-flex ">
+                    <ul id="some-section" class="list-group list-group-horizontal list-unstyled align-items-center justify-content-center">
+                        <li class=""><a href="#">news</a></li>
+                        <li class=""><a href="#">opinion</a></li>
+                        <li class=""><a href="#">sports</a></li>
+                        <li class=""><a href="#">entertainment</a></li>
+                        <li class=""><a href="#">lifestyle</a></li>
+                        <li class=""><a href="#">multimedia/video</a></li>
+                        <li class=""><a href="#">photo</a></li>
+                        <li class=""><a href="#">obituaries</a></li>
+                    </ul>
+                </div>
     </div>
-    <div id="median-bottom-navbar">
-        <div id="placeholder"></div>
-        <div id="median-navbar"></div>
-        <div id="bottom-navbar"></div>
 
+    </div>
+    <div id="trending-news" class="row d-custom-lg-block d-flex align-items-center m-2">
+        <p class="col-2 mb-0">trending news:</p>
+        <ul class=" col-10 list-group list-group-horizontal list-unstyled mb-0 ">
+            <li >prova1</li>
+            <li class="me-2">prova2</li>
+            <li>prova3</li>
+            <li>prova4</li>
+            <li>prova5</li>
+
+        </ul>
     </div>
 
 
@@ -103,7 +130,7 @@
         <div id="breaking news bar"><!-- opzionale --></div>
         <main id="main content" class=" row justify-content-center">
             <section id="primary" class="row justify-content-center">
-                    <div id="news-article-list" class=" row col-12 custom-col-md-8 ">
+                    <div id="news-article-list" class=" row col-12 custom-col-md-9 ">
                         <div id="main-news"  class="row col-12 custom-col-md-9 ">
 
                                 <h2 id="main-news-header">Notizie principali</h2>
@@ -124,23 +151,31 @@
                                 </article>
 
                             <section id="other-news" class="">
-                                <ul id="other-news-list" class=" list-unstyled custom-horizontal-list">
-                                    <li><article >
-                                        <img src="https://placehold.co/345x230" class="img-fluid " alt="Article Image">
+                                <ul id="other-news-list" class=" list-unstyled custom-horizontal-list list-group  list-group-flush">
+                                    <li class="list-group-item"><article >
+                                        <div class="main-list-images-wrapper">
+                                        <img src="https://placehold.co/345x230" class="img-fluid" alt="Article Image">
+                                    </div>
                                         <header>Article 1</header>
                                     </article></li>
-                                    <li><article>
+                                    <li class="list-group-item"><article>
+                                        <div class="main-list-images-wrapper">
                                         <img src="https://placehold.co/345x230" class="img-fluid" alt="Article Image">
+                                        </div>
                                         <header>Article 2</header>
 
                                     </article></li>
-                                    <li><article>
-                                        <img src="https://placehold.co/345x230" class="img-fluid" alt="Article Image">
+                                    <li class="list-group-item"><article>
+                                        <div class="main-list-images-wrapper">
+                                            <img src="https://placehold.co/345x230" class="img-fluid" alt="Article Image">
+                                        </div>
                                         <header>Article 3</header>
 
                                     </article></li>
-                                    <li><article>
+                                    <li class="list-group-item"><article>
+                                        <div class="main-list-images-wrapper ">
                                         <img src="https://placehold.co/345x230" class="img-fluid" alt="Article Image">
+                                    </div>
                                         <header>Article 4</header>
 
 
@@ -182,7 +217,7 @@
                         </div>
                         <div id="bottom">bottom fisso</div>
                     </div>
-                    <aside class="col-12 bg-light col-md-4 ">
+                    <aside class="col-12 bg-light custom-col-md-3 ">
                         <img src="https://placehold.co/1333x1425" class="img-fluid" alt="aside image">
                     </aside>
 
