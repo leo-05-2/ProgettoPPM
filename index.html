@@ -19,14 +19,15 @@
    <!--  <div id="testo">testo</div> -->
 
     <div id="navbar-wrapper" class="container border-bottom border-2 border-black">
-            <div id="placeholder"></div>
+        <div id="placeholder"></div>
 
-        <nav class="navbar bg-body-tertiary fixed-top  d-flex ">
-        <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <nav class="navbar bg-body-tertiary fixed-top  d-flex">
+            <div class="col-4"><button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-brand">Boston Herald</div>
-            <div id="wrapper" class="row">
+            </div>
+            <div id="navbar-logo" class="col-4 d-flex justify-content-center">Boston Herald</div>
+            <div id="wrapper" class="d-inline-flex justify-content-end col-4">
                 <button class="navbar-toggler d-custom-lg-none col-6 custom-col-md-6" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaRight" aria-controls="offcanva-login icon" aria-label="Toggle login">
                    <i class=" bi bi-person-lines-fill "></i>
                 </button>
@@ -36,14 +37,12 @@
                     <i class="bi bi-search"></i>
                 </button>
             </div>
-
         </nav>
         <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Navbar</h5>
-                <button type="button" class="btn-primary "  aria-label="subscribe"> <span>bottone sing in</span></button>
-                <button type="button" class="d-lg-none"  aria-label="widget-wether"> <span>widget</span></button>
+            <div class="offcanvas-header row" aria-label="all sections">
                 <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <button type="button" class="btn-primary offcanvas-title"  aria-label="subscribe"> <span>bottone sing in</span></button>
+                <button type="button" class="d-lg-none"  aria-label="widget-wether"> <span>widget</span></button>
 
             </div>
             <div class="offcanvas-body">
@@ -51,32 +50,137 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
-                    <li class="dropdown ">
-                        <a class="nav-link dropdown-toggle"  id="dropdownMenu" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item">
+                        <a class="nav-link "  id="dropdownMenu" role="button"
+                        data-bs-toggle="collapse" data-bs-target="#news-subsection"  aria-expanded="false">
                             news
                         </a>
-                        <ul class="dropdown-menu " aria-labelledby="dropdownMenu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li> </ul>
+                        <ul class="collapse" aria-labelledby=" news subsection" id="news-subsection" >
+                            <li><a class="dropdown-item" href="#">News</a></li>
+                            <li><a class="dropdown-item" href="#">Local News</a></li>
+                            <li><hr class="dropdown-divider"> Crime & Public Safety</li>
+                            <li><a class="dropdown-item" href="#">Your Tax Dollars AT Work</a></li>
+                            <li><a class="dropdown-item" href="#">Massachusetts</a></li>
+                            <li><a class="dropdown-item" href="#">Nation</a></li>
+                            <li><a class="dropdown-item" href="#">World News</a></li>
+                            <li><a class="dropdown-item" href="#">Business</a></li>
+                            <li><hr class="dropdown-divider"> Best Reviews</li>
+                            <li><a class="dropdown-item" href="#">Health</a></li>
+                            <li><a class="dropdown-item" href="#">Traffic</a></li>
+                            <li><a class="dropdown-item" href="#">Automotive</a></li>
+                            <li><a class="dropdown-item" href="#">Real Estate</a></li>
+
+                        </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#">Pricing</a>
+                    <li class="nav-item ">
+                        <a class="nav-link active" role="button" data-bs-toggle="collapse"
+                           data-bs-target="#opinion-subsection" aria-expanded="false">Opinion</a>
+                        <ul class="collapse" aria-labelledby="opinion subsection" id="opinion-subsection">
+                            <li><a class="dropdown-item" href="#">Opinion</a></li>
+                            <li><a class="dropdown-item" href="#">Editorials</a></li>
+                            <li><a class="dropdown-item" href="#">Letters to the Editor</a></li>
+                            <li><a class="dropdown-item" href="#">Submit a Letter</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link disabled">Disabled</a>
+                    <li class="nav-item ">
+                        <a class="nav-link active" role="button"  data-bs-toggle="collapse"
+                           data-bs-target="#entertainment-subsection" aria-label=" entertainment" aria-expanded="false">
+                            Entertainment</a>  <!-- TODO: ricontrollare -->
+                        <ul class="collapse" aria-labelledby="entertainment subsection" id="entertainment-subsection">
+                            <li><a class="dropdown-item" href="#">Arts</a></li>
+                            <li><a class="dropdown-item" href="#">Movies</a></li>
+                            <li><a class="dropdown-item" href="#">TV and Streaming</a></li>
+                            <li><a class="dropdown-item" href="#">Music and Concerts</a></li>
+                            <li><a class="dropdown-item" href="#">Events</a></li>
+                            <li><a class="dropdown-item" href="#">Fun & Games</a></li>
+                            <li><a class="dropdown-item" href="#">Contests</a></li>
+                            <li><a class="dropdown-item" href="#">Comics</a></li>
+                            <li><a class="dropdown-item" href="#">Puzzles</a></li>
+                            <li><a class="dropdown-item" href="#">Special Sections</a></li>
+                        </ul>
                     </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active" role="button" data-bs-toggle="collapse"
+                           data-bs-target="#life-style-subsection" aria-expanded="false">
+                            life-style-subsection
+                        </a>
+
+                        <ul class="collapse" aria-labelledby="life-style-subsection" id="life-style-subsection">
+                            <li><a class="dropdown-item" href="#">Lifestyles</a></li>
+                            <li><a class="dropdown-item" href="#">Restaurants Food & Drink</a></li>
+                            <li><a class="dropdown-item" href="#">Travel</a></li>
+                            <li><a class="dropdown-item" href="#">Boston Herald Store</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" role="button" >
+                            Photo
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active" role="button" data-bs-toggle="collapse"
+                           data-bs-target="#obituaries-subsection" aria-expanded="false">Opinion</a>
+                        <ul class="collapse" aria-labelledby="opinion subsection" id="obituaries-subsection">
+                            <li><a class="dropdown-item" href="#">Obituaries</a></li>
+                            <li><a class="dropdown-item" href="#">News Obituaries</a></li>
+                            <li><a class="dropdown-item" href="#">Place an Obituaries</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active" role="button">
+                          Branded Content
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active" role="button">
+                            Subscribe
+
+                        </a>
+                    </li>
+                    <li>
+                        void
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active" role="button">
+                            Log in
+
+                        </a>
+
+                    </li>
+
                 </ul>
+                <div> void</div>
+                <div class="nav-item border-top border-2 border-black row ">
+                    <p class="nav-link active justify-content-center d-flex" >sing up for newsletters</p>
+                    <a class="nav-link active justify-content-center d-flex" aria-current="page" >
+                        <button class="btn btn-primary" type="button" aria-label="subscribe"> <span>sing up</span></button>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvaRight" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasRightLabel">Login</h5>
-                <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
+            <div> void</div>
             <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 list-unstyled">
+                    <li class="nav-item ">
+                        <a class="nav-link active" role="button" aria-label="Subscribe button" >
+                            Subscribe
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active" role="button" aria-label="Login" >
+                            Login
+                        </a>
+                    </li>
+                </ul>
+                <div> void</div>
+                <div class="nav-item border-top border-2 border-black row ">
+                    <p class="nav-link active justify-content-center d-flex" >sing up for newsletters</p>
+                    <a class="nav-link active justify-content-center d-flex" aria-current="page" >
+                        <button class="btn btn-primary" type="button" aria-label="subscribe"> <span>sing up</span></button>
+                    </a>
+                </div>
+
 
             </div>
 
@@ -86,9 +190,10 @@
                     <div id="median-navbar-widget" class="col-4">widget meteo</div>
                     <div id="logo" class="col-4">boston herald</div>
                     <div id="place-holder-median" class="col-4"> void</div>
+                    <div id="logo" class="col-4 justify-content-center">boston herald</div>
                 </div>
                 <div id="bottom-navbar" class="col-12 row d-flex ">
-                    <ul id="some-section" class="list-group list-group-horizontal list-unstyled align-items-center justify-content-center">
+                    <ul id="some-section" class="list-group list-group-horizontal list-unstyled align-items-center justify-content-center gap-3">
                         <li class=""><a href="#">news</a></li>
                         <li class=""><a href="#">opinion</a></li>
                         <li class=""><a href="#">sports</a></li>
@@ -102,16 +207,17 @@
     </div>
 
     </div>
-    <div id="trending-news" class="row d-custom-lg-block d-flex align-items-center m-2">
-        <p class="col-2 mb-0">trending news:</p>
-        <ul class=" col-10 list-group list-group-horizontal list-unstyled mb-0 ">
-            <li >prova1</li>
-            <li class="me-2">prova2</li>
-            <li>prova3</li>
-            <li>prova4</li>
-            <li>prova5</li>
-
-        </ul>
+    <div id="trending-news-bar" class="row justify-content-center">
+        <nav id="trending-news" class=" d-custom-lg-block align-items-center  ">
+            <p id="trending-title" class="  align-items-center ">trending news:</p>
+            <ul class=" list-group list-group-horizontal list-unstyled  ">
+            <li  class="trending-news-item">prova1</li>
+            <li class="trending-news-item">prova2</li>
+            <li class="trending-news-item">prova3</li>
+            <li class="trending-news-item">prova4</li>
+            <li class="trending-news-item">prova5</li>
+            </ul>
+    </nav>
     </div>
 
 
@@ -121,11 +227,6 @@
 </header>
 <main id="page" class="container-xxl">
     <section id="content">
-        <header class="section  flex-row">must kept void </header>
-        <div class="col-md-12">
-            <h1>Welcome to the Bootstrap Template</h1>
-            <p>This is a simple template using Bootstrap.</p>
-        </div>
         <div id="breaking news bar"><!-- opzionale --></div>
         <main id="main content" class=" row justify-content-center">
             <section id="primary" class="row justify-content-center">
