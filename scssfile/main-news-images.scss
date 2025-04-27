@@ -14,17 +14,33 @@ xl:1280px,
        align-items: stretch; /* Allinea gli elementi all'inizio */
        max-width: 100%; /* provare a ricopiare il fill dento la disposizione a colonna */
        padding: 0;
+  margin: 0;
 
        li {
          display: flex;
          flex-direction: row;
          width: 100%;
          justify-content: space-between;
+         flex: 1 1 auto;
+         margin: 0 0 16px 0;
+         padding: 0 0 16px 0;
          article{
            display: flex;
            flex-direction: row;
            width: 100%;
-           gap: 5px;
+           overflow: hidden;
+           flex: 0 0 auto;
+           div{
+             min-width: 17%;
+             max-width: 30%;
+           }
+           header{
+             max-width: 83%;
+             min-width: 70%;
+
+           }
+
+
 
 
          }
@@ -47,31 +63,44 @@ xl:1280px,
 
        }
 
-       @media (min-width: 640px) and (max-width: 800px) {
+       @media (min-width: 640px) and (max-width: 799px) {
          flex-direction: row;
+         justify-content: space-between;
          li {
-           flex: 0 0 50%; // Mantiene due elementi per riga tra sm e md
-           max-width: 50%;
+           break-inside: avoid;
+           max-width: calc(50% - 10px);
            flex-direction: column;
            article{
-             flex: 0 0 50%; // Mantiene un elemento per riga fino a sm
-             max-width: 50%;
+
              flex-direction: row;
              display: flex;
 
            }
          }
        }
-         @media (min-width: 800px) and (max-width: 1040px) {
+         @media (min-width: 800px) and (max-width: 1039px) {
             flex-direction: row;
+           justify-content: space-between;
             li {
-              flex: 0 0 50%; // Mantiene due elementi per riga tra md e lg
-              max-width: 50%;
+              break-inside: avoid;
+              max-width: calc(50% - 10px);
               flex-direction: column;
+              flex: 1 1 auto;
+
               article{
-                 flex: 0 0 100%; // Mantiene due elementi per riga tra md e lg
-                 max-width: 100%;
-                 flex-direction: column;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 16px;
+                div{
+                  max-width: 100%;
+
+                }
+                header{
+                  max-width: 100%;
+
+                }
+                /* todo: considerare un wrapper per spazio solo tra titolo e bordo di article */
 
               }
             }
@@ -84,15 +113,19 @@ xl:1280px,
                   max-width: 100%;
                   flex-direction: row;
                   article{
-                    flex: 0 0 100%; // Mantiene due elementi per riga tra md e lg
-                    max-width: 100%;
+
                     flex-direction: row;
                     display: flex;
                     div{
-                      width: 45%;
+                      max-width: 60%;
+                      min-width: 60%;
+
+
                     }
                     header{
-                      width: 55%;
+                      max-width: 40%;
+                      min-width: 40%;
+
                     }
 
                   }
@@ -111,6 +144,31 @@ xl:1280px,
                         flex-direction: column;
                         }
               }
+         flex-direction: row;
+         justify-content: space-between;
+         li {
+           break-inside: avoid;
+           max-width: calc(50% - 10px);
+           flex-direction: column;
+           flex: 1 1 auto;
+
+           article{
+             display: flex;
+             flex-direction: column;
+             width: 100%;
+             gap: 16px;
+             div{
+               max-width: 100%;
+
+             }
+             header{
+               max-width: 100%;
+
+             }
+             /* todo: considerare un wrapper per spazio solo tra titolo e bordo di article */
+
+           }
+         }
        }
 }
 $custom-breakpoint-main-img:(
@@ -372,6 +430,15 @@ $custom-breakpoint-main-img:(
         width: 100%;
     }
 }
+#primary.row{
+  padding-left: 0;
+  padding-right: 0;
+}
+#photo-video-title{
+  margin-left: 10px;
+  padding-left: 26px;
+
+}
 
 .custom-numbered-list{
   list-style: none;
@@ -460,7 +527,10 @@ $custom-breakpoint-main-img:(
     min-width: 300px;
     height: auto;
     max-width: 304.5px;
+    margin-left: 10px;
   }
+
+
 }
 .landing-3-1-left{
   display: flex;
@@ -486,7 +556,6 @@ $custom-breakpoint-main-img:(
   flex-direction: column;
 
 
-  margin: 10px 10px;
   @media (min-width: 800px) {
     flex-direction: row;
     .on-the-left{
@@ -518,6 +587,7 @@ $custom-breakpoint-main-img:(
   width: 100%;
   flex-direction: row;
 }
+
 
 #article-list{
   display: flex;
@@ -570,6 +640,7 @@ $custom-breakpoint-main-img:(
     flex-direction: row;
     #list-news2{
       flex: 1 1 auto;
+      padding-left: 12px;
     }
     .on-the-right{
       min-width: 300px;
@@ -724,10 +795,10 @@ $custom-breakpoint-main-img:(
 }
 .main-news-article-list-wrapper{}
 .main-list-images-wrapper{
-  height: 0;
-  padding-bottom: 56.25%;
+  display: flex;
+  padding-bottom: 8%;
   overflow: hidden;
-  position: relative;
+
   width: 100%;
 }
 

@@ -157,6 +157,8 @@
                     </a>
                 </div>
             </div>
+
+
         </div>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvaRight" aria-labelledby="offcanvasRightLabel">
             <div> void</div>
@@ -231,48 +233,53 @@
             <div class="void-1">must kept void </div>
             <section id="primary" class="row justify-content-center">
                     <div id="news-article-list" class=" row col-12 custom-col-md-9 ">
-                        <div id="main-news"  class="container col-12 custom-col-md-9 ">
-                            <h2 id="main-news-header">Notizie principali</h2>
-                            <article class="row">
+                        <div id="main-news-section"  class="container col-12 custom-col-md-9 ">
+                            <article  id="main-news" class="row">
                                 <div class="custom-col ">
                                     <header> <h2> titolo notizia principale</h2></header>
-                                    <img id="main-img-complementary" src="https://placehold.co/525x350" class="img-fluid custom-main-image-wrapper" sizes="(max-width: 40em) 620px,(min-width: 40em) and (max-width: 50em) 780px,(min-width: 50em) and (max-width: 65em) 675px,(min-width: 65em) and (max-width: 80em) 865px,(min-width: 80em) 622px,865px"
+                                    <img id="main-img-complementary" src="https://placehold.co/525x350" class="img-fluid custom-main-image-wrapper"
                                          alt="Main Image"  >
                                     <div id="news-description" >
                                         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                                     </div>
+                                    <h3 id="related">related</h3>
+                                    <ul id="related-list">
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                    </ul>
+
                                 </div>
                                 <div id="main-img-wrapper" class="custom-col">
-                                    <img id="main-img" src="https://placehold.co/525x350" class="img-fluid custom-main-image-wrapper" sizes="(max-width: 40em) 620px,(min-width: 40em) and (max-width: 50em) 780px,(min-width: 50em) and (max-width: 65em) 675px,(min-width: 65em) and (max-width: 80em) 865px,(min-width: 80em) 622px,865px"
+                                    <img id="main-img" src="https://placehold.co/525x350" class="img-fluid custom-main-image-wrapper"
                                          alt="Main Image"  >
                                 </div>
-                                </article>
+                            </article>
 
                             <section id="other-news" class="">
                                 <ul id="other-news-list" class=" list-unstyled custom-horizontal-list list-group  list-group-flush">
                                     <li class="list-group-item"><article >
                                         <div class="main-list-images-wrapper">
-                                        <img src="https://placehold.co/345x230" class="img-fluid" alt="Article Image">
+                                        <img src="https://placehold.co/345x230/png" class="img-fluid" alt="Article Image">
                                     </div>
                                         <header>Article 1</header>
                                     </article></li>
                                     <li class="list-group-item"><article>
                                         <div class="main-list-images-wrapper">
-                                        <img src="https://placehold.co/345x230" class="img-fluid" alt="Article Image">
+                                        <img src="https://placehold.co/345x230/png" class="img-fluid" alt="Article Image">
                                         </div>
                                         <header>Article 2</header>
 
                                     </article></li>
                                     <li class="list-group-item"><article>
                                         <div class="main-list-images-wrapper">
-                                            <img src="https://placehold.co/345x230" class="img-fluid" alt="Article Image">
+                                            <img src="https://placehold.co/345x230/png" class="img-fluid" alt="Article Image">
                                         </div>
                                         <header>Article 3</header>
 
                                     </article></li>
                                     <li class="list-group-item"><article>
                                         <div class="main-list-images-wrapper ">
-                                        <img src="https://placehold.co/345x230" class="img-fluid" alt="Article Image">
+                                        <img src="https://placehold.co/345x230/png" class="img-fluid" alt="Article Image">
                                     </div>
                                         <header>Article 4</header>
 
@@ -392,7 +399,7 @@
             </section>
             <div class="void-4">void</div>
             <section  class="row ">
-                <h3>photos and video <i class="bi bi-chevron-right"></i></h3>
+                <h3 id="photo-video-title">photos and video <i class="bi bi-chevron-right"></i></h3>
                 <section id="landing-2-3" class="photo-video-container ">
                 <div id="article+list-news" class=" row on-the-left">
                     <article id="article" class="col-12 custom-col-lg-8 ">
@@ -449,7 +456,7 @@
                 </div>
             </section>
             </section>
-            <section id="list-news+void" class="list-news-void"> <!--da aggiungere un contenitore flex senza bordi ai lati ma in verticale per display small-->
+            <section id="list-news-void" class="list-news-void"> <!--da aggiungere un contenitore flex senza bordi ai lati ma in verticale per display small-->
                 <div id="list-news2" class=" col-12 custom-col-md-8 ">
                     <ul class="list-unstyled">
                         <li><section >
