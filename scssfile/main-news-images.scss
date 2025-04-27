@@ -15,11 +15,6 @@ xl:1280px,
        max-width: 100%; /* provare a ricopiare il fill dento la disposizione a colonna */
        padding: 0;
 
-
-
-
-
-
        li {
          display: flex;
          flex-direction: row;
@@ -29,6 +24,7 @@ xl:1280px,
            display: flex;
            flex-direction: row;
            width: 100%;
+           gap: 5px;
 
 
          }
@@ -44,6 +40,7 @@ xl:1280px,
              flex: 0 0 100%; // Mantiene un elemento per riga fino a sm
              max-width: 100%;
              flex-direction: row;
+
 
             }
           }
@@ -90,6 +87,12 @@ xl:1280px,
                     max-width: 100%;
                     flex-direction: row;
                     display: flex;
+                    div{
+                      width: 45%;
+                    }
+                    header{
+                      width: 55%;
+                    }
 
                   }
                 }
@@ -103,7 +106,7 @@ xl:1280px,
                      flex-direction: column;
                       article{
                         flex: 0 0 50%; // Mantiene due elementi per riga dopo lg
-                        max-width: 50%;
+                        max-width: 100%;
                         flex-direction: column;
                         }
               }
@@ -139,10 +142,6 @@ $custom-breakpoint-main-img:(
   @media (max-width: map-get($custom-breakpoint-main-img, sm)) {
     flex: 0 0 auto;
     width: 100%;
-
-
-
-
 
   }
   @media (min-width: map-get($custom-breakpoint-main-img, sm)) and (max-width: map-get($custom-breakpoint-main-img, md)) {
