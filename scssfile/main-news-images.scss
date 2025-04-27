@@ -863,6 +863,7 @@ $custom-breakpoint-main-img:(
   }
 
 }
+
 /* stili */
 .void-1{
   height: 0;
@@ -899,6 +900,40 @@ $custom-breakpoint-main-img:(
     height: 250px ;
   }
 }
+#widget-void{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0 ;
+  @media (min-width: 640px) {
+    flex-direction: row;
+
+      img{
+      flex: 1 1 auto;
+        width: auto;
+      }
+    #void-ads{
+      display: flex;
+      flex: 0 0 300px;
+      width: 300px;
+
+
+
+    }
+
+  }
+}
+#void-ads{
+  height: 250px;
+  max-width: 300px;
+}
+#widget{
+  margin: 0 10px 0 10px;
+  display: flex;
+  height: 250px;
+}
+
 
 
 
