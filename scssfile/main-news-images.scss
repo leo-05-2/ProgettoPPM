@@ -48,10 +48,7 @@ xl:1280px,
        @media (max-width: 640px) {
          flex-direction: column;
          li {
-           flex: 0 0 100%; // Mantiene un elemento per riga fino a sm
-           max-width: 100%;
            flex-direction: row;
-           margin: 10px ;
            article{
              flex: 0 0 100%; // Mantiene un elemento per riga fino a sm
              max-width: 100%;
@@ -507,6 +504,7 @@ $custom-breakpoint-main-img:(
   display: flex;
   flex-direction: row;
   max-width: 100%;
+
 }
 .landing-3-1-right{
   display: none;
@@ -656,6 +654,7 @@ $custom-breakpoint-main-img:(
   max-width: 100%;
   z-index: 1055; /* Sopra l'offcanvas */
   height: 64px; /* Altezza della navbar */
+  flex-wrap: nowrap;
 }
 
 .offcanvas {
@@ -720,10 +719,7 @@ $custom-breakpoint-main-img:(
   }
 }
 
-#median-bottom-navbar{
-  height: 80px;
 
-}
 #bottom-navbar {
   height: 0;
   display: none;
@@ -731,7 +727,7 @@ $custom-breakpoint-main-img:(
   @media (min-width: 1040px) {
     display: flex;
     height: 3em;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
   }
@@ -770,14 +766,9 @@ $custom-breakpoint-main-img:(
 
 }
 #median-navbar{
-  height: 80px;
-  >*{
-    align-items: center;
-    display: none;
-    @media(min-width: 1040px) {
-      display: flex;
-
-    }
+  display: none;
+  @media(min-width: 1040px) {
+    display: flex;
 
   }
 }
