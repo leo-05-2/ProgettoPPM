@@ -1,10 +1,29 @@
 @import "custom-bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+
 $custom-breakpoint-img-list:(
 sm:652px,
 md:800px,
 lg:1040px,
 xl:1280px,
 );
+body{
+  background-color: #fbfbfb;
+  font-family: "Open Sans", Roboto, sans-serif;
+  >*{
+    background-color: #fbfbfb;
+
+  }
+}
+.list-group-item{
+  background-color: #fbfbfb;
+
+}
+$list-group-bg: #fbfbfb;
+
 
 .custom-horizontal-list {
        display: flex;
@@ -492,7 +511,7 @@ $custom-breakpoint-main-img:(
   width: 2rem;
   height: 2rem;
 
-  font: normal 600 1.3125em / 1 "Noto Sans", Helvetica, sans-serif;
+  font: normal 600 1.3125em / 1 "Open Sans", Roboto, sans-serif;
   align-items: center;
 
   display: flex;
@@ -541,6 +560,8 @@ $custom-breakpoint-main-img:(
   display: flex;
   width: 100%;
   flex-direction: column;
+  align-items: center;
+  margin-bottom: 8px;
 
 
   @media (min-width: 800px) {
@@ -581,6 +602,13 @@ $custom-breakpoint-main-img:(
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
+  li{
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+  }
+  li:last-child{
+    margin-bottom: 0;
+  }
   @media (min-width: 640px) {
     flex-direction: row;
     li {
@@ -601,6 +629,31 @@ $custom-breakpoint-main-img:(
   }
 
 }
+.related-article-list{
+  justify-content: center;
+
+  li{
+    padding-bottom: 16px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid $list-group-border-color;
+  }
+}
+.list-list{
+  li{
+    section{
+      margin: 0 0 32px 0;
+      justify-content: center;
+    }
+  }
+}
+.custom-article{
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ddd8d5;
+  max-width: calc(100% - 12px);
+}
+
+
 .listed-article{
   display: flex;
   width: 100%;
@@ -777,7 +830,7 @@ $custom-breakpoint-main-img:(
 }
 .trending-news-item{
   padding-right: 25px;
-  font-family: normal 600 .9375em / 1.7333333333 "Noto Sans";
+  font-family: normal 600 15px / 1.7333333333 "Open Sans";
 }
 #trending-title{
   color: rgb(0 83 138);
@@ -806,29 +859,47 @@ $custom-breakpoint-main-img:(
 }
 
 .main-footer-item {
-  border: 1px solid lightcoral;
-  padding: 1.5rem 1rem;
   text-align: start;
-  background-color: #f8f9fa;
   display: flex;
+
+  margin: 16px 2.5% 0 2.5%;
+  border-top: 2px solid #000;
+}
+.footer-item-title{
+  margin: 16px 15px 0 0;
+  font-family: "Open Sans", Roboto, sans-serif;
+  a{
+    font-weight: 700;
+
+    text-transform: uppercase;
+  }
+}
+.footer-item-body{
+  margin: 15px 15px 19px 0;
+  li{
+    a{
+      text-decoration: none;
+      color: inherit;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 
 
-@media (min-width: 800px) and (max-width: (1279px)) {
+@media (min-width: 800px) and (max-width: (1039px)) {
   .footer-list {
     display: flex;
-    height: 500px;
+    height: 450px;
     width: 100%;
-    grid-template-columns: none;
-    column-count: 2;
-    column-gap: 1rem;
-    padding: 0;
+    flex-wrap: wrap;
     li{
       break-inside: avoid;
-      width: 50%;
     }
     .main-footer-item {
+      width: 28%;
 
     }
 
@@ -838,20 +909,17 @@ $custom-breakpoint-main-img:(
 
 }
 
-// Schermi >= 1280px e < 1332px: Layout 4 colonne (1, 2, [3+4], 5)
-@media (min-width: 1280px) and (max-width: 1331px) {
+@media (min-width: 1040px) and (max-width: 1331px) {
   .footer-list {
 
-    height: 400px;
-    column-count: 4;
-    grid-template-columns: none;
+    height: 380px;
     display: flex;
 
 
   }
   .main-footer-item {
-    flex: 0 0 calc(25% - 1rem);
-    box-sizing: border-box;
+
+    width: 20%;
   }
 
 
@@ -860,21 +928,18 @@ $custom-breakpoint-main-img:(
   @media (min-width: 1332px) {
     .footer-list {
       display: flex;
-      height: 500px;
-      grid-template-columns: none;
-      column-count: 2;
-      column-gap: 1rem;
-      gap: 12px;
-
-
-      li {
+      height: 450px;
+      width: 100%;
+      flex-wrap: wrap;
+      li{
         break-inside: avoid;
-        width: 50%;
       }
-
       .main-footer-item {
+        width: 28%;
 
       }
+
+
     }
   }
   .footer-item {
@@ -891,10 +956,7 @@ $custom-breakpoint-main-img:(
     }
   }
   .footer-item-title {
-    font-size: 1.5em;
-    font-weight: 600;
-    margin-bottom: 10px;
-    justify-content: space-between;
+
   }
 
   @media (min-width: 640px) {
@@ -994,52 +1056,138 @@ $custom-breakpoint-main-img:(
     align-items: center;
     background-color: rgb(238, 255, 65);
     border: 0;
-    display: flex;
-    margin-bottom: 1em;
-    min-height: 2.1875em;
-    padding: 0 .625em;
+    margin-bottom: 16px;
+    min-height: 35px;
+    padding: 0 10px;
     width: 100%;
-    justify-content: space-between;
     gap: 12px;
-    .breaking-news-bar-wrapper{
+    display: flex;
+    flex-direction: row;
+
+
+
+  }
+.breaking-news-bar-wrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  h2{
+    flex: 0 0 auto;
+    min-width: 8%;
+    margin-right: 10px;
+    align-items: center;
+  }
+  article{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    a{
       display: flex;
-      flex-direction: row;
       flex-wrap: wrap;
-
-      h2{
-        flex: 0 0 auto;
-        min-width: 8%;
-        margin-right: 10px;
-        align-items: center;
-      }
-      article{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        a{
-          display: flex;
-          flex-wrap: wrap;
-          @media (max-width: 200px) {
-            flex-wrap: nowrap;
-
-          }
-        }
-        time{
-          display: flex;
-          flex-wrap: wrap;
-        }
+      @media (max-width: 200px) {
+        flex-wrap: nowrap;
 
       }
+    }
+    time{
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+  }
+
+}
+button{
+  width: 28px;
+  height: 28px;
+}
+
+
+  .title-list{
+    li{
+      border-top: 1px solid rgb(221, 216, 213);
+      margin: 12px 0 0 0;
+      padding-top: 16px;
 
     }
-    button{
-      width: 28px;
-      height: 28px;
+  }
+  #news-letter-subscribe{
+    text-align: center;
+    border-top: 0;
+    padding: 16px;
+    background-color: #ecede7;
+    box-sizing: border-box;
+
+
+
+    p{
+      font: normal 700 14px / 1.0666666667 "Open Sans", Roboto, sans-serif;
+      color: #141414;
+      margin-bottom: .75rem;
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    a{
+      font: normal 600 .9375em / 1 "Open Sans", Roboto, sans-serif;
+      background-color: rgba(0, 0, 0, 0);
+      border: 2px solid #005d9c;
+      border-radius: 4px;
+      color: #005d9c;
+      padding: 12px 16px;
+      text-shadow: none;
+      text-transform: uppercase;
+      transition: background-color 100ms linear, color 100ms linear;
+      box-sizing: border-box;
+      display: inline-block;
+
+
+
+
+    }
+    a:hover{
+      color: #ffffff;
+      background-color: #005d9c;
+
     }
 
 
   }
+
+  #show-more-photo{
+    font: normal 700 16px "Open Sans", Roboto, sans-serif;
+    border-top: 1px solid #ddd8d5;
+    color: #005d9c;
+    cursor: pointer;
+    display: inline-block;
+    padding: 40px 0;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    background: transparent;
+
+
+
+
+
+  }
+#show-more-photo::before {
+  content: "";
+  background-color: #fbfbfb;
+  border-bottom: 1px solid #ddd8d5;
+  border-left: 1px solid #ddd8d5;
+  height: 2.1875em;
+  top: -0.3125em;
+  -ms-transform: rotate(-45deg) translateY(-50%);
+  transform: rotate(-45deg) translateY(-50%);
+  width: 2.1875em;
+  left: 50%;
+  position: absolute;
+}
 
 
 
@@ -1050,4 +1198,6 @@ $custom-breakpoint-main-img:(
 
 /* @extend .d-flex si può fare */
 /* TODO: capire come importare bootstrap */
+/* decidere se modificare direttamente la gria di bootstrap o fare classi personalizzate */
+
 
