@@ -9,9 +9,12 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" href="dist/listDisplay.css">
-    <link rel="stylesheet" href="dist/main-news-img.css">
+
+    <link rel="stylesheet" href="dist/custom-bootstrap.css">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="dist/main-news-img.css">
+    <link rel="stylesheet" href="dist/listDisplay.css">
+    <script src="https://kit.fontawesome.com/a89d6e17c6.js" crossorigin="anonymous"></script>
     <title>Title</title>
 </head>
 <body>
@@ -20,33 +23,33 @@
 
     <div id="navbar-wrapper" class="container border-bottom border-2 border-black">
         <div id="placeholder"></div>
-
-        <nav class="navbar bg-body-tertiary fixed-top  d-flex">
-            <div class="col-4"><button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <div class="navbar bg-body-tertiary fixed-top  d-flex" aria-label="fixed top menu">
+            <div id="navbar-left" class="col-4"><button id="offcanvasNavbarLabel" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i><span>All Sections</span>
         </button>
             </div>
-            <div id="navbar-logo" class="col-4 d-flex justify-content-center">Boston Herald</div>
-            <div id="wrapper" class="d-inline-flex justify-content-end col-4">
-                <button class="navbar-toggler d-custom-lg-none col-6 custom-col-md-6" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaRight" aria-controls="offcanva-login icon" aria-label="Toggle login">
-                   <i class=" bi bi-person-lines-fill "></i>
+            <div id="navbar-logo" class="col-4 d-flex justify-content-center" aria-label="site logo">
+                <a href="#" class="text-decoration-none text-reset"> Boston Herald</a></div>
+            <div id="wrapper" class="d-inline-flex  col-4 justify-content-end">
+                <button  id="account-section-icon" class="btn d-custom-lg-none " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaRight" aria-controls="offcanvas-user-menu" aria-label="click to open user section off canvas">
+                    <i class="fa-solid fa-user"></i>
                 </button>
-                <button class="btn btn-primary  d-custom-lg-block col-4" type="button" aria-label="subscribe"> <span>sing up</span></button>
-                <button class="btn btn-primary  d-custom-lg-block col-4" type="button" aria-label="widget-wether"> <span>sing up</span></button>
-                <button class="col-6 custom-col-md-4" aria-controls="search" aria-label="search bar">
+                <a href="#" class="btn btn-primary  d-custom-lg-block navbar-button text-decoration-none  " role="button" aria-label="click to subscribe"> <span>sing up</span></a>
+                <a href="#" class="btn btn-primary  d-custom-lg-block navbar-button text-decoration-none " role="button" aria-label="click to sing up"> <span>sing up</span></a>
+                <button class=" btn " aria-label="search bar">
                     <i class="bi bi-search"></i>
                 </button>
             </div>
-        </nav>
+        </div>
         <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header row" aria-label="all sections">
+            <div class="offcanvas-header row" aria-label="all sections list">
                 <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 <button type="button" class="btn-primary offcanvas-title"  aria-label="subscribe"> <span>bottone sing in</span></button>
                 <button type="button" class="d-lg-none"  aria-label="widget-wether"> <span>widget</span></button>
 
         </div>
-        <div class="offcanvas-body " aria-label=" all sections links">
-            <ul class=" navbar-nav justify-content-end flex-grow-1 pe-3">
+            <nav class="offcanvas-body " aria-label=" all sections links">
+                <ul class=" navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
                     <a class="nav-link active" aria-label="home page" href="#">Home</a>
                 </li>
@@ -55,7 +58,7 @@
                        data-bs-toggle="collapse" data-bs-target="#news-subsection"  aria-expanded="false">
                         news
                     </a>
-                    <ul class="collapse list-unstyled " aria-label=" news subsection" id="news-subsection" >
+                    <ul class="collapse list-unstyled " aria-labelledby="news-nav-section" id="news-subsection" >
                         <li><a class="nav-link active" href="#">News</a></li>
                         <li><a class="nav-link active" href="#">Local News</a></li>
                         <li><a class="nav-link active" href="#"> Crime & Public Safety</a></li>
@@ -73,9 +76,9 @@
                     </ul>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active" role="button" data-bs-toggle="collapse"
-                       data-bs-target="#opinion-subsection" aria-expanded="false">Opinion</a>
-                    <ul class="collapselist-unstyled" aria-labelledby="opinion subsection" id="opinion-subsection">
+                    <a class="nav-link active" id="opinion" role="button" data-bs-toggle="collapse"
+                       data-bs-target="#opinion-subsection" aria-expanded="false" aria-label="opinion section">Opinion</a>
+                    <ul class="collapselist-unstyled" aria-labelledby="opinion" id="opinion-subsection">
                         <li><a class="dropdown-item" href="#">Opinion</a></li>
                         <li><a class="dropdown-item" href="#">Editorials</a></li>
                         <li><a class="dropdown-item" href="#">Letters to the Editor</a></li>
@@ -83,10 +86,10 @@
                     </ul>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active" role="button"  data-bs-toggle="collapse"
+                    <a class="nav-link active" id="entertainment" role="button"  data-bs-toggle="collapse"
                        data-bs-target="#entertainment-subsection" aria-label=" entertainment" aria-expanded="false">
                         Entertainment</a>
-                    <ul class="collapse list-unstyled" aria-labelledby="entertainment subsection" id="entertainment-subsection">
+                    <ul class="collapse list-unstyled" aria-labelledby="entertainment" id="entertainment-subsection">
                         <li><a class="dropdown-item" href="#">Arts</a></li>
                         <li><a class="dropdown-item" href="#">Movies</a></li>
                         <li><a class="dropdown-item" href="#">TV and Streaming</a></li>
@@ -100,12 +103,12 @@
                     </ul>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active" role="button" data-bs-toggle="collapse"
+                    <a class="nav-link active" id="life-style" role="button" data-bs-toggle="collapse"
                        data-bs-target="#life-style-subsection" aria-expanded="false">
                         Lifestyle
                     </a>
 
-                    <ul class="collapse list-unstyled" aria-labelledby="life-style-subsection" id="life-style-subsection">
+                    <ul class="collapse list-unstyled" aria-labelledby="life-style" id="life-style-subsection">
                         <li><a class="dropdown-item" href="#">Lifestyles</a></li>
                         <li><a class="dropdown-item" href="#">Restaurants Food & Drink</a></li>
                         <li><a class="dropdown-item" href="#">Travel</a></li>
@@ -118,9 +121,9 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active" role="button" data-bs-toggle="collapse"
+                    <a class="nav-link active" id="Obituaries" role="button" data-bs-toggle="collapse"
                        data-bs-target="#obituaries-subsection" aria-expanded="false">Obituaries</a>
-                    <ul class="collapse list-unstyled" aria-labelledby="opinion subsection" id="obituaries-subsection">
+                    <ul class="collapse list-unstyled" aria-labelledby="Obituaries" id="obituaries-subsection">
                         <li><a class="dropdown-item" href="#">Obituaries</a></li>
                         <li><a class="dropdown-item" href="#">News Obituaries</a></li>
                         <li><a class="dropdown-item" href="#">Place an Obituaries</a></li>
@@ -149,20 +152,18 @@
                 </li>
 
             </ul>
-            <div> void</div>
-            <div class="nav-item border-top border-2 border-black row ">
+                <div class="nav-item border-top border-2 border-black row ">
                 <p class="nav-link active justify-content-center d-flex" >sing up for newsletters</p>
                 <a class="nav-link active justify-content-center d-flex" aria-current="page" >
                     <button class="btn btn-primary" type="button" aria-label="subscribe"> <span>sing up</span></button>
                 </a>
             </div>
-        </div>
+        </nav>
 
 
     </div>
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvaRight" aria-labelledby="account-section-icon">
-        <div> void</div>
-        <div class="offcanvas-body">
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvaRight" aria-labelledby="account-section-icon">
+            <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 list-unstyled">
                 <li class="nav-item ">
                     <a class="nav-link active" role="button" aria-label="Subscribe button" >
@@ -185,15 +186,14 @@
 
 
         </div>
-
-    </div>
-    <section id="median-bottom-navbar" class=" row ">
-        <nav id="median-navbar" class=" col-12 row">
-            <div id="median-navbar-widget" class="col-4 justify-content-center">widget meteo</div>
-            <div id="logo" class="col-4 justify-content-center">boston herald</div>
-            <div id="place-holder-median" class="col-4 justify-content-center"> void</div>
-        </nav>
-        <nav id="bottom-navbar" class="col-12 row  " role="navigation" aria-label="trending news">
+        </div>
+        <section id="median-bottom-navbar" class=" row ">
+            <section id="median-navbar" class=" col-12 row">
+                <div id="median-navbar-widget" class="col-4 justify-content-center" aria-label="widget whether">widget meteo</div>
+                <div id="logo" class="col-4 justify-content-center" aria-label="site title">boston herald</div>
+                <div id="place-holder-median" class="col-4 justify-content-center"> </div>
+            </section>
+            <nav id="bottom-navbar" class="col-12 row  " role="navigation" aria-label="main section navigation">
             <ul id="some-section" class="list-group list-group-horizontal
                     list-unstyled align-items-center justify-content-center ">
                 <li class="nav-item"><a  class="nav-link" href="#">news</a></li>
@@ -206,269 +206,33 @@
                 <li class="nav-item"><a  class="nav-link" href="#">obituaries</a></li>
             </ul>
         </nav>
-    </section>
-
+        </section>
     </div>
-    <div id="trending-news-bar" class="row justify-content-center">
-        <nav id="trending-news" class=" d-custom-lg-block align-items-center  ">
+    <section id="trending-news-bar" class="row justify-content-center">
+        <div id="trending-news" class=" d-custom-lg-block align-items-center  ">
             <p id="trending-title" class=" align-items-center ">trending news:</p>
-            <ul class=" list-group list-group-horizontal list-unstyled  ">
+            <nav><ul class=" list-group list-group-horizontal list-unstyled  ">
                 <li  class="trending-news-item">prova1</li>
                 <li class="trending-news-item">prova2</li>
                 <li class="trending-news-item">prova3</li>
                 <li class="trending-news-item">prova4</li>
                 <li class="trending-news-item">prova5</li>
-            </ul>
-        </nav>
-    </div>
-
-   
-   <!--  <div id="testo">testo</div> -->
-<!--
-    <div id="navbar-wrapper" class=" border-bottom border-2 border-black ">
-        <div id="placeholder"></div>
-        <nav class="">
-            <div class="row bg-body-tertiary custom-navbar">
-           <div id="all-sections" class="col-4 "><button class="" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <i class="bi bi-list"></i>
-
-        </button>
-            </div>
-            <div class="col-4 "> <img class="img-fluid" id="navbar-logo" src="https://placehold.co/200x48" alt="logo"></div>
-            <div id="wrapper" class=" col-4">
-                <button class=" d-custom-lg-none col-6 custom-col-md-6" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaRight" aria-controls="offcanva-login icon" aria-label="Toggle login">
-                   <i class=" bi bi-person-lines-fill "></i>
-                </button>
-                <button class="btn btn-primary  d-custom-lg-block col-4" type="button" aria-label="subscribe"> <span>sing up</span></button>
-                <button class="btn btn-primary  d-custom-lg-block col-4" type="button" aria-label="widget-wether"> <span>sing up</span></button>
-                <button class="col-6 custom-col-md-4" aria-controls="search" aria-label="search bar">
-                    <i class="bi bi-search"></i>
-                </button>
-            </div>
-            </div>
-        </nav>
-        <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header row" aria-label="all sections">
-                <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                <button type="button" class="btn-primary offcanvas-title"  aria-label="subscribe"> <span>bottone sing in</span></button>
-                <button type="button" class="d-lg-none"  aria-label="widget-wether"> <span>widget</span></button>
-
-            </div>
-            <div class="offcanvas-body " aria-label=" all sections links">
-                <ul class=" navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-label="home page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link "  id="news-nav-section" role="button" aria-label="news subsection"
-                        data-bs-toggle="collapse" data-bs-target="#news-subsection"  aria-expanded="false">
-                            news
-                        </a>
-                        <ul class="collapse list-unstyled " aria-label=" news subsection" id="news-subsection" >
-                            <li><a class="nav-link active" href="#">News</a></li>
-                            <li><a class="nav-link active" href="#">Local News</a></li>
-                            <li><a class="nav-link active" href="#"> Crime & Public Safety</a></li>
-                            <li><a class="nav-link active" href="#">Your Tax Dollars AT Work</a></li>
-                            <li><a class="nav-link active" href="#">Massachusetts</a></li>
-                            <li><a class="nav-link active" href="#">Nation</a></li>
-                            <li><a class="nav-link active" href="#">World News</a></li>
-                            <li><a class="nav-link active" href="#">Business</a></li>
-                            <li><a class="nav-link active" href="#"> Best Reviews</a>></li>
-                            <li><a class="nav-link active" href="#">Health</a></li>
-                            <li><a class="nav-link active" href="#">Traffic</a></li>
-                            <li><a class="nav-link active" href="#">Automotive</a></li>
-                            <li><a class="nav-link active" href="#">Real Estate</a></li>
-
-                        </ul>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link active" role="button" data-bs-toggle="collapse"
-                           data-bs-target="#opinion-subsection" aria-expanded="false">Opinion</a>
-                        <ul class="collapselist-unstyled" aria-labelledby="opinion subsection" id="opinion-subsection">
-                            <li><a class="dropdown-item" href="#">Opinion</a></li>
-                            <li><a class="dropdown-item" href="#">Editorials</a></li>
-                            <li><a class="dropdown-item" href="#">Letters to the Editor</a></li>
-                            <li><a class="dropdown-item" href="#">Submit a Letter</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link active" role="button"  data-bs-toggle="collapse"
-                           data-bs-target="#entertainment-subsection" aria-label=" entertainment" aria-expanded="false">
-                            Entertainment</a>
-                        <ul class="collapse list-unstyled" aria-labelledby="entertainment subsection" id="entertainment-subsection">
-                            <li><a class="dropdown-item" href="#">Arts</a></li>
-                            <li><a class="dropdown-item" href="#">Movies</a></li>
-                            <li><a class="dropdown-item" href="#">TV and Streaming</a></li>
-                            <li><a class="dropdown-item" href="#">Music and Concerts</a></li>
-                            <li><a class="dropdown-item" href="#">Events</a></li>
-                            <li><a class="dropdown-item" href="#">Fun & Games</a></li>
-                            <li><a class="dropdown-item" href="#">Contests</a></li>
-                            <li><a class="dropdown-item" href="#">Comics</a></li>
-                            <li><a class="dropdown-item" href="#">Puzzles</a></li>
-                            <li><a class="dropdown-item" href="#">Special Sections</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link active" role="button" data-bs-toggle="collapse"
-                           data-bs-target="#life-style-subsection" aria-expanded="false">
-                            Lifestyle
-                        </a>
-
-                        <ul class="collapse list-unstyled" aria-labelledby="life-style-subsection" id="life-style-subsection">
-                            <li><a class="dropdown-item" href="#">Lifestyles</a></li>
-                            <li><a class="dropdown-item" href="#">Restaurants Food & Drink</a></li>
-                            <li><a class="dropdown-item" href="#">Travel</a></li>
-                            <li><a class="dropdown-item" href="#">Boston Herald Store</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" role="button" >
-                            Photo
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link active" role="button" data-bs-toggle="collapse"
-                           data-bs-target="#obituaries-subsection" aria-expanded="false">Obituaries</a>
-                        <ul class="collapse list-unstyled" aria-labelledby="opinion subsection" id="obituaries-subsection">
-                            <li><a class="dropdown-item" href="#">Obituaries</a></li>
-                            <li><a class="dropdown-item" href="#">News Obituaries</a></li>
-                            <li><a class="dropdown-item" href="#">Place an Obituaries</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link active" role="button">
-                          Branded Content
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link active" role="button">
-                            Subscribe
-
-                        </a>
-                    </li>
-                    <li>
-                        void
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link active" role="button">
-                            Log in
-
-                        </a>
-
-                    </li>
-
-                </ul>
-                <div> void</div>
-                <div class="nav-item border-top border-2 border-black row ">
-                    <p class="nav-link active justify-content-center d-flex" >sing up for newsletters</p>
-                    <a class="nav-link active justify-content-center d-flex" aria-current="page" >
-                        <button class="btn btn-primary" type="button" aria-label="subscribe"> <span>sing up</span></button>
-                    </a>
-                </div>
-            </div>
-
-
+            </ul></nav>
         </div>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvaRight" aria-labelledby="account-section-icon">
-            <div> void</div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 list-unstyled">
-                    <li class="nav-item ">
-                        <a class="nav-link active" role="button" aria-label="Subscribe button" >
-                            Subscribe
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link active" role="button" aria-label="Login" >
-                            Login
-                        </a>
-                    </li>
-                </ul>
-                <div> void</div>
-                <div class="nav-item border-top border-2 border-black row ">
-                    <p class="nav-link active justify-content-center d-flex" >sing up for newsletters</p>
-                    <a class="nav-link active justify-content-center d-flex" aria-current="page" >
-                        <button class="btn btn-primary" type="button" aria-label="subscribe"> <span>sing up</span></button>
-                    </a>
-                </div>
+    </section>
+    <!-- todo: controllare semantica navbar e all sections link-->
+    <!-- todo:decidere se aria label va a nav in trending news e se le notizie sono riferimenti di navigazione o di contenuto-->
 
 
-            </div>
-
-        </div>
-        <section id="median-bottom-navbar" class=" row d-flex">
-                <nav id="median-navbar" class=" col-12 row">
-                    <div id="median-navbar-widget" class="col-4 justify-content-center">widget meteo</div>
-                    <div id="logo" class="col-4 justify-content-center">boston herald</div>
-                    <div id="place-holder-median" class="col-4 justify-content-center"> void</div>
-                </nav>
-                <nav id="bottom-navbar" class="col-12 row d-flex " role="navigation" aria-label="trending news">
-                    <ul id="some-section" class="list-group list-group-horizontal
-                    list-unstyled align-items-center justify-content-center ">
-                        <li class="nav-item"><a  class="nav-link" href="#">news</a></li>
-                        <li class="nav-item"><a  class="nav-link" href="#">opinion</a></li>
-                        <li class="nav-item"><a  class="nav-link" href="#">sports</a></li>
-                        <li class="nav-item"><a  class="nav-link" href="#">entertainment</a></li>
-                        <li class="nav-item"><a  class="nav-link" href="#">lifestyle</a></li>
-                        <li class="nav-item"><a  class="nav-link" href="#">multimedia/video</a></li>
-                        <li class="nav-item"><a  class="nav-link" href="#">photo</a></li>
-                        <li class="nav-item"><a  class="nav-link" href="#">obituaries</a></li>
-                    </ul>
-                </nav>
-            </section>
-
-    </div>
-    <div id="trending-news-bar" class="row justify-content-center">
-        <nav id="trending-news" class=" d-custom-lg-block align-items-center  ">
-            <p id="trending-title" class="  align-items-center ">trending news:</p>
-            <ul class=" list-group list-group-horizontal list-unstyled  ">
-            <li  class="trending-news-item">prova1</li>
-            <li class="trending-news-item">prova2</li>
-            <li class="trending-news-item">prova3</li>
-            <li class="trending-news-item">prova4</li>
-            <li class="trending-news-item">prova5</li>
-            </ul>
-    </nav>
-    </div>
-    -->
-
-    <!--
-    nav class="row">
-        <div class="col-4 ">
-            <button class=" flex-row d-flex" type="button" data-bs-toggle="offcanvas" data-bs-target="#all-section-list" aria-controls="offcanvasNavbar"
-                    aria-label="all section icon" id="all-sections-list" aria-expanded="false">
-                <span class="navbar-toggler-icon"></span>
-                <span class="d-custom-lg-block ms-2 align-content-center mb-0">all navigation section</span>
-            </button>
-        </div>
-        <div  class="col-4 "><img id="navbar-logo" src="https://placehold.co/100x40"></div>
-        <div id="wrapper" class=" col-4">
-            <button class=" d-custom-lg-none col-6 custom-col-md-6 p-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaRight" aria-controls="offcanvaRight" aria-label="account-section" id="account-section-icon">
-                <i class="bi bi-person-lines-fill "></i>
-            </button>
-            <button class="btn btn-primary  d-custom-lg-block col-4 p-1" type="button" aria-label="subscribe"> sing up</button>
-            <button class="btn btn-primary  d-custom-lg-block col-4 p-1" type="button" aria-label="widget-wether"> sing up</button>
-            <button class="col-6 custom-col-md-4" aria-controls="search p-1" aria-label="search bar">
-                <i class="bi bi-search"></i>
-            </button>
-        </div>
-
-    </nav>
-    -->
-
-
-
-    <!-- deve prevedere 2 sezioni, una per logo, ricerca e menù a tendina ed una per i sotto link, deve prevedere un place holder
-     per fare in modo che quando si scorre la pagina, la navbar rimance in cima alla visualizzazione ma che quando si torna in cima riprenda il suo posto senza alterare la pagina-->
 </header>
 <main id="page" class="container-xxl">
     <section id="main content" class=" row justify-content-center">
             <div class="void-1"> </div>
             <section id="breaking-news-bar" class="" aria-label="breaking news bar">
                <div class="breaking-news-bar-wrapper">
-                   <h2>Breaking News</h2>
-                   <article id="breaking-news-link" class="text-decoration-none" href="#">
-                       <a class="text-decoration-none" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                   <div id="breaking-news-title"><h2>Breaking News :</h2></div>
+                   <article id="breaking-news-link" class="" href="#">
+                       <a class="" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a>
                        <time datetime="2025-04-20 00:00:00">2025-04-20 00:00:00 </time>
                    </article>
                </div>
@@ -476,23 +240,25 @@
             </section>
             <section id="primary" class="row justify-content-center" aria-label="main news section" >
                     <div id="news-article-list" class=" row col-12 custom-col-md-9 ">
-                        <div id="main-news-section"  class="container col-12 custom-col-md-9 ">
+                        <div id="main-news-section"  class="col-12 custom-col-md-8 ">
                             <article  id="main-news" class="row" aria-label="main news article">
-                                <section class="custom-col ">
-                                    <header> <h2> titolo notizia principale</h2></header>
+                                <section id="main-article" class="custom-col ">
+                                    <h2> titolo notizia principale</h2>
                                     <img id="main-img-complementary" src="https://placehold.co/525x350" class="img-fluid custom-main-image-wrapper"
                                          alt="some img description"  >
                                     <div id="news-description" >
-                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum,
+                                            diam sit amet fringilla lobortis, metus erat dignissim diam, vitae semper nisi sapien vitae eros </p>
                                     </div>
-                                    <section aria-label="related articles">
-                                    <h3 id="related" >related</h3>
-                                    <ul id="related-list">
-                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                                    <section id="related-articles" aria-label="related articles">
+                                        <h3 id="related" >related</h3>
+                                        <ul id="related-list">
+                                        <li><article><header><h4 class="d-inline"><a href="#" class="d-inline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a libero diam.
+                                        </a></h4><time class="d-inline" datetime="2025-04-20 00:00:00"> 23 hours ago </time></header></article></li>
+                                        <li><article><header><h4 class="d-inline"><a href="#" class="d-inline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a libero diam.
+                                        </a></h4><time class="d-inline" datetime="2025-04-20 00:00:00"> 23 hours ago </time></header></article></li>
                                     </ul>
                                     </section>
-
                                 </section>
                                 <div id="main-img-wrapper" class="custom-col">
                                     <img id="main-img" src="https://placehold.co/525x350" class="img-fluid custom-main-image-wrapper"
@@ -503,76 +269,124 @@
                             <section id="other-news" aria-label="other important news">
                                 <ul id="other-news-list" class=" list-unstyled custom-horizontal-list list-group  list-group-flush">
                                     <li class="list-group-item"><article >
-                                        <div class="main-list-images-wrapper">
-                                        <img src="https://placehold.co/345x230/png" class="img-fluid" alt="some img description">
+                                        <div>
+                                            <a href="#"><img src="https://placehold.co/345x230/png" class="img-fluid" alt="some img description">
+                                            </a>
                                     </div>
-                                        <header>Article 1</header>
+                                        <header> <h2 class="main-list-title"><a href="#" >
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a libero diam.
+                                        </a></h2></header>
                                     </article></li>
                                     <li class="list-group-item"><article>
                                         <div class="main-list-images-wrapper">
-                                        <img src="https://placehold.co/345x230/png" class="img-fluid" alt="some img description">
+                                        <a href="#"><img src="https://placehold.co/345x230/png" class="img-fluid" alt="some img description">
+                                        </a>
                                         </div>
-                                        <header>Article 2</header>
+                                        <header><h2><a href="#" class="text-decoration-none text-reset">Article 2</a></h2></header>
 
                                     </article></li>
                                     <li class="list-group-item"><article>
                                         <div class="main-list-images-wrapper">
-                                            <img src="https://placehold.co/345x230/png" class="img-fluid" alt="some img description">
+                                            <a href="#"><img src="https://placehold.co/345x230/png" class="img-fluid" alt="some img description">
+                                            </a>
                                         </div>
-                                        <header>Article 3</header>
-
+                                        <header> <h2><a href="#" class="text-decoration-none text-reset">Article 3</a></h2></header>
                                     </article></li>
                                     <li class="list-group-item"><article>
                                         <div class="main-list-images-wrapper ">
                                         <img src="https://placehold.co/345x230/png" class="img-fluid" alt="some img description">
                                     </div>
-                                        <header>Article 4</header>
-
-
+                                        <header><h2><a href="#" class="text-decoration-none text-reset">Article 4 </a></h2></header>
                                     </article></li>
 
                                 </ul>
                             </section>
                         </div>
-                        <section id="titles-list" class="col-12 custom-col-md-3" aria-label="latest headlines">
-                            <h2>Latest Headlines </h2>
+                        <section id="titles-list" class="col-12 custom-col-md-4" aria-label="latest headlines">
+                            <h2 id="title-list">Latest Headlines </h2>
                             <ul class="title-list list-unstyled">
                                 <li  class="">
-                                    <header>
-                                        <h6>notizia 1</h6>
-                                        <time ></time>
-                                    </header></li>
+                                    <article>
+                                        <header >
+                                            <h3 class="d-inline">
+                                                <a href="#">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit condimentum
+                                                    massa quis cursus. Nullam pellentesque auctor purus
+                                                </a>
+                                            </h3>
+                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 hours ago</time>
+                                        </header>
+                                    </article>
+                                </li>
                                 <li  class="">
-                                    <header>
-                                        <h6>notizia 2</h6>
-                                        <time datetime="2025-04-20 00:00:00">23 ore fa</time>
-                                    </header></li>
+                                    <article>
+                                        <header >
+                                            <h3 class="d-inline">
+                                                <a href="#" class="text-decoration-none text-reset article-list-link d-inline">
+                                                    test notizia 1
+                                                </a>
+                                            </h3>
+                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 ore fa</time>
+                                        </header>
+                                    </article>
+                                </li>
                                 <li  class="">
-                                    <header>
-                                        <h6>notizia 3</h6>
-                                        <time datetime="2025-04-20 00:00:00">23 ore fa</time>
-                                    </header></li>
+                                    <article>
+                                        <header >
+                                            <h3 class="d-inline">
+                                                <a href="#" class="text-decoration-none  text-reset article-list-link d-inline">
+                                                    test notizia 1
+                                                </a>
+                                            </h3>
+                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 ore fa</time>
+                                        </header>
+                                    </article>
+                                </li>
                                 <li  class="">
-                                    <header>
-                                        <h6>notizia 4</h6>
-                                        <time datetime="2025-04-20 00:00:00">23 ore fa</time>
-                                    </header></li>
+                                    <article>
+                                        <header >
+                                            <h3 class="d-inline">
+                                                <a href="#" class="text-decoration-none  text-reset article-list-link d-inline">
+                                                    test notizia 1
+                                                </a>
+                                            </h3>
+                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 ore fa</time>
+                                        </header>
+                                    </article></li>
                                 <li  class="">
-                                    <header>
-                                        <h6>notizia 5</h6>
-                                        <time datetime="2025-04-20 00:00:00">23 ore fa</time>
-                                    </header></li>
+                                    <article>
+                                        <header >
+                                            <h3 class="d-inline">
+                                                <a href="#" class="text-decoration-none  text-reset article-list-link d-inline">
+                                                    test notizia 1
+                                                </a>
+                                            </h3>
+                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 ore fa</time>
+                                        </header>
+                                    </article></li>
                                 <li  class="">
-                                    <header>
-                                        <h6>notizia 2</h6>
-                                        <time datetime="2025-04-20 00:00:00">23 ore fa</time>
-                                    </header></li>
+                                    <article>
+                                        <header >
+                                            <h3 class="d-inline">
+                                                <a href="#" class="text-decoration-none  text-reset article-list-link d-inline">
+                                                    test notizia 1
+                                                </a>
+                                            </h3>
+                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 ore fa</time>
+                                        </header>
+                                    </article></li>
                                 <li  class="">
-                                    <header>
-                                        <h6>notizia 3</h6>
-                                        <time datetime="2025-04-20 00:00:00">23 ore fa</time>
-                                    </header></li>
-                                <li  class="">
+                                    <article>
+                                        <header >
+                                            <h3 class="d-inline">
+                                                <a href="#" class="text-decoration-none  text-reset article-list-link d-inline">
+                                                    test notizia 1
+                                                </a>
+                                            </h3>
+                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 ore fa</time>
+                                        </header>
+                                    </article></li>
+                                <li  class="latest-headlines-link">
                                     <div id="news-letter-subscribe">
                                         <p>sign up for email newsletter</p>
                                         <a>test</a>
@@ -580,11 +394,10 @@
                                 </li>
 
                             </ul>
-                            <div>sing up bottom</div>
                         </section>
                         <div id="bottom">bottom fisso</div>
                     </div>
-                    <aside class="col-12 bg-light custom-col-md-3 " aria-label="news paper cover image" >
+                    <aside id="newspaper-img" class="col-12 bg-light custom-col-md-3 " aria-label="newspaper cover image" >
                         <img src="https://placehold.co/1333x1425" class="img-fluid" alt="aside image description">
                     </aside>
 
@@ -596,87 +409,115 @@
                     <h2 id="most-popular" class="d-flex">Most popular news</h2>
                     <ol class="  list-unstyled custom-numbered-list ">
 
-                        <li class=""> <div class="custom-number"></div><header>articolo 1</header></li>
-                        <li class=""> <div class="custom-number"></div><header>articolo 2 </header></li>
-                        <li class=""> <div class="custom-number"></div><header>articolo 3</header></li>
-                        <li class=""> <div class="custom-number"></div><header>articolo 4</header></li>
-                        <li class=""> <div class="custom-number"></div><header>articolo 5</header></li>
-                        <li class=""> <div class="custom-number"></div><header>articolo 6</header></li>
-                        <li class=""> <div class="custom-number"></div><header>articolo 7</header></li>
-                        <li class=""> <div class="custom-number"></div><header>articolo 8</header></li>
-                        <li class=""> <div class="custom-number"></div><header>articolo 9</header></li>
-                        <li class=""> <div class="custom-number"></div><header>articolo 10</header></li>
+                        <li class=""><a href="#" class="custom-number"><h3>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                        </h3></a></li>
+                        <li class=""><a href="#" class="custom-number"><h3>
+                            Lorem ipsum dolor sit amet
+                        </h3></a></li>
+                        <li class=""><a href="#" class="custom-number"><h3>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                        </h3></a></li>
+                        <li class=""><a href="#" class="custom-number"><h3>
+                            Lorem ipsum dolor sit amet
+                        </h3></a></li>
+                        <li class=""><a href="#" class="custom-number"><h3>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                        </h3></a></li>
+                        <li class=""><a href="#" class="custom-number"><h3>
+                            Lorem ipsum dolor sit amet
+                        </h3></a></li>
+                        <li class=""><a href="#" class="custom-number"><h3>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                        </h3></a></li>
+                        <li class=""><a href="#" class="custom-number"><h3>
+                            Lorem ipsum dolor sit amet
+                        </h3></a></li>
+                        <li class=""><a href="#" class="custom-number"><h3>
+                            Lorem ipsum dolor sit amet
+                        </h3></a></li>
+                        <li class=""><a href="#" class="custom-number"><h3>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                        </h3></a></li>
                     </ol>
                 </div>
-                <div class="landing-3-1-right">kepk void</div>
+                <div class="landing-3-1-right"></div>
             </section>
             <div class="void-3"></div>
             <section id="landing-4-3" class="row " aria-label="main thematic section">
-                <section class="col-12 custom-col-sm-6 custom-col-lg-3">
-                    <h3>titolo sezione notize <i class="bi bi-chevron-right"></i></h3>
+                <section class="col-12 custom-col-sm-6 custom-col-lg-3" id="sport" >
+                    <h2><a href="#">sport<i class="bi bi-chevron-right"></i></a></h2>
                     <article>
-                        <div class="img-wrapper">
-                            <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image">
-                        </div>
-                        <h4>qualche titolo</h4>
-                        <p>testo notizia</p>
+                        <a href="#" ><div class="img-wrapper">
+                            <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image description">
+                        </div></a>
+                        <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Mauris eros. </a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta. Cras blandit,
+                            purus eu egestas mollis, nulla </p>
                     </article>
-                    <ul class="list-unstyled list-group list-group-flush">
-                        <li class="list-group-item"><p>altre notizie</p></li>
-                        <li class="list-group-item"><p>altre notizie</p></li>
-                        <li class="list-group-item"><p>altre notizie</p></li>
+                    <ul class="list-unstyled list-group list-group-flush ul-4-3">
+                        <li class="list-group-item"><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
+                        <li class="list-group-item"><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
+                        <li class="list-group-item"><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
 
                     </ul></section>
-                <section class="col-12 custom-col-sm-6 custom-col-lg-3">
-                    <h3>titolo sezione notize <i class="bi bi-chevron-right"></i></h3>
+                <section class="col-12 custom-col-sm-6 custom-col-lg-3" id="opinion-columnist" >
+                    <h2><a href="#">opinion columnist <i class="bi bi-chevron-right"></i></a></h2>
                     <article>
-                        <div class="img-wrapper">
-                            <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image">
-                        </div>
-                        <h4>qualche titolo</h4>
-                        <p>testo notizia</p>
+                        <a href="#" ><div class="img-wrapper">
+                            <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image description">
+                        </div></a>
+                        <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Mauris eros. </a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta. Cras blandit,
+                            purus eu egestas mollis, nulla </p>
                     </article>
-                    <ul class="list-unstyled list-group list-group-flush">
-                        <li class="list-group-item"><p>altre notizie</p></li>
-                        <li class="list-group-item"><p>altre notizie</p></li>
-                        <li class="list-group-item"><p>altre notizie</p></li>
+                    <ul class="list-unstyled list-group list-group-flush ul-4-3">
+                        <li class="list-group-item"><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
+                        <li class="list-group-item"><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
+                        <li class="list-group-item"><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
 
                     </ul></section>
-                <section class="col-12 custom-col-sm-6 custom-col-lg-3">
-                    <h3>titolo sezione notize <i class="bi bi-chevron-right"></i></h3>
+                <section class="col-12 custom-col-sm-6 custom-col-lg-3" id="local-news" >
+                    <h2><a href="#">local news <i class="bi bi-chevron-right"></i></a></h2>
                     <article>
-                        <div class="img-wrapper">
-                            <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image">
-                        </div>
-                        <h4>qualche titolo</h4>
-                        <p>testo notizia</p>
+                        <a href="#" ><div class="img-wrapper">
+                            <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image description">
+                        </div></a>
+                        <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Mauris eros. </a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta. Cras blandit,
+                            purus eu egestas mollis, nulla </p>
                     </article>
-                    <ul class="list-unstyled list-group list-group-flush">
-                        <li class="list-group-item"><p>altre notizie</p></li>
-                        <li class="list-group-item"><p>altre notizie</p></li>
-                        <li class="list-group-item"><p>altre notizie</p></li>
+                    <ul class="list-unstyled list-group list-group-flush ul-4-3">
+                        <li class="list-group-item"><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
+                        <li class="list-group-item"><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
+                        <li class="list-group-item"><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
 
                     </ul></section>
-                <div id="articolo 4" class="custom-col-sm-3 col-12 d-none d-sm-block"></div>
+                <div id="articolo-4" class="custom-col-sm-3 col-12 d-none d-sm-block"></div>
             </section>
             <div class="void-4"></div>
             <section  class="row " aria-label="photo & videos">
-                <h3 id="photo-video-title">photos and video <i class="bi bi-chevron-right"></i></h3>
                 <section id="landing-2-3" class="photo-video-container ">
-                <div id="article+list-news" class=" row on-the-left">
-                    <article id="article" class="col-12 custom-col-lg-8 ">
-                        <div class="img-wrapper">
-                            <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image">
-
+                    <div id="article-list-news" class=" row on-the-left">
+                        <div id="photo-wrapper"><h2 id="photo-video-title"><a href="#"> photos and video <i class="bi bi-chevron-right"></i></a> </h2></div>
+                        <article id="article" class="col-12 custom-col-lg-8 ">
+                        <div class="img-wrapper-photo">
+                            <a href="#">
+                            <img src="https://placehold.co/642x428" class="img-fluid" alt="some img description">
+                            </a>
                         </div>
-                        <h4>qualche titolo</h4>
-                        <p>testo notizia</p>
+                        <h3><a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta </a></h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta. Cras blandit,
+                            purus eu egestas mollis, nulla</p>
                     </article>
-                    <ul id="article-list" class="list-unstyled col-12 custom-col-lg-4 list-group list-group-flush">
+                        <ul id="article-list" class="list-unstyled col-12 custom-col-lg-4 list-group list-group-flush">
                         <li class="list-group-item">
                             <article  class="listed-article">
-                                <img src="https://placehold.co/90x70" class="" alt="Article Image">
-                                <p>testo articolo</p>
+                                <a href="#"><img src="https://placehold.co/90x70" class="" alt="img descriprion"></a>
+                                <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit   </a></h3>
                             </article>
                         </li>
                         <li class="list-group-item">
@@ -710,25 +551,28 @@
                             </article>
                         </li>
                     </ul>
-                    <button id="show-more-photo" class="btn rounded-0">
+                        <button id="show-more-photo" class="btn rounded-0">
                         show more photos
                     </button>
 
+                    </div>
+
+                    <div id="void-img" class="on-the-right">
+                    <div id="void" class=""></div>
+                        <a href="#">
+                            <img id="img-aside" src="https://placehold.co/552x287" class="img-fluid" alt="img publicity description">
+                        </a>
+
                 </div>
-
-
-                <div id="void+img" class="on-the-right">
-                    <div id="void" class="">void</div>
-                    <img id="img-aside" src="https://placehold.co/552x287" class="img-fluid" alt="img aside">
-
-                </div>
+                </section>
             </section>
-            </section>
-            <section id="list-news-void" class="list-news-void" aria-label="thematic section"> <!--da aggiungere un contenitore flex senza bordi ai lati ma in verticale per display small-->
+            <section id="list-news-void" class="list-news-void" aria-label="thematic section">
                 <div id="list-news2" class=" col-12 custom-col-md-8 ">
                     <ul class="list-unstyled list-list">
                         <li><section >
-                            <h3>titolo elemento lista generale <i class="bi bi-chevron-right"></i></h3>
+                            <h2 class="category-title">
+                                <a href="#">titolo elemento lista generale </a>
+                                <i class="bi bi-chevron-right"></i></h2>
                             <section id="news1" class="row">
                                 <article  class=" row col-12  custom-col-lg-7 custom-article">
                                     <div class="col-12 custom-col-md-6">
@@ -809,75 +653,84 @@
             <div class="void-footer"></div>
     </section>
 </main>
-<footer class="container-xxl">ciao
-    <div id="footer-image" class="row">boston herald</div>
-    <div id="section-list" class="row">
+<footer class="footer-display">
+    <section id="footer-image" class="row">boston herald</section>
+    <div id="footer-main">
+    <section id="section-list" class="row">
         <ul class="list-unstyled list-group footer-list ">
             <li class="main-footer-item footer-item ">
                 <div class="footer-item-title d-flex"><a>sing up for newsletter</a>
-                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#menu-1" aria-label="click here to expand the menù">
-                    <i class="bi bi-chevron-down"></i>
+                    <button class="btn " data-bs-toggle="collapse" data-bs-target="#menu-1" aria-label="click here to expand the menu">
+                    <i class="bi bi-chevron-down d-flex align-items-center justify-content-center"></i>
                 </button>
                 </div>
                 <ul class="collapse list-unstyled footer-item-body" id="menu-1" >
-                    <li>e-Edition </li>
+                    <li><a href="#">e-Edition</a> </li>
                     <li><a class="" href="#">Send a News Tip</a></li>
 
                 </ul>
 
             </li>
             <li class="main-footer-item footer-item ">
-                <div class="footer-item-title d-flex"><a>CONTACT US</a><button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#menu-2" aria-label="click here to expand the menù">
-                    <i class="bi bi-chevron-down"></i>
+                <div class="footer-item-title d-flex"><a>Contact Us</a><button class="btn " data-bs-toggle="collapse" data-bs-target="#menu-2" aria-label="click here to expand the menu">
+                    <i class="bi bi-chevron-down d-flex align-items-center justify-content-center"></i>
                 </button>
                 </div>
-                <ul class="collapse list-unstyled " id="menu-2"  >
-                    <li>Boston Herald Store/Back Copies</li>
-                    <li>Work WIth Us</li>
-                    <li>Legal notices </li>
-                    <li>Privacy Policy </li>
-                    <li>Accessibility</li>
-                    <li>Site Map</li>
+                <ul class="collapse list-unstyled footer-item-body" id="menu-2"  >
+                    <li><a href="#">Boston Herald Store/Back Copies</a></li>
+                    <li><a href="#">Work WIth Us</a></li>
+                    <li><a href="#">Legal notices</a></li>
+                    <li><a href="#">Privacy Policy</a> </li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Site Map</a></li>
                 </ul>
 
             </li>
             <li class="main-footer-item footer-item ">
-                <div class="footer-item-title d-flex"><a>CLASSIFIEDS</a><button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="menu-3" aria-label="click here to expand the menù">
-                    <i class="bi bi-chevron-down"></i>
+                <div class="footer-item-title d-flex"><a>classifieds</a><button class="btn " data-bs-toggle="collapse" data-bs-target="#menu-3" aria-label="click here to expand the menu">
+                    <i class="bi bi-chevron-down d-flex align-items-center justify-content-center"></i>
                 </button>
                 </div>
                 <ul class="collapse list-unstyled footer-item-body" id="menu-3"  >
-                    <li>Contest </li>
-                    <li>Special Section</li>
-                    <li>FUn & Games</li>
-                    <li>Jobs </li>
+                    <li><a href="#">Contest</a> </li>
+                    <li><a href="#">Special Section</a></li>
+                    <li><a href="#">FUn & Games</a></li>
+                    <li><a href="#">Jobs</a> </li>
 
                 </ul>
 
             </li>
             <li class="main-footer-item footer-item ">
-                <div class="footer-item-title d-flex"><a>BUSINESS DIRECTORY</a><button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#menu-4" aria-label="click here to expand the menù">
-                    <i class="bi bi-chevron-down"></i>
+                <div class="footer-item-title d-flex"><a>business directory</a><button class="btn" data-bs-toggle="collapse" data-bs-target="#menu-4" aria-label="click here to expand the menu">
+                    <i class="bi bi-chevron-down d-flex align-items-center justify-content-center"></i>
                 </button>
                 </div>
                 <ul class="collapse list-unstyled footer-item-body" id="menu-4"  >
-                    <li>Network Advertising</li>
-                    <li>Ad solution</li>
+                    <li><a href="#">Network Advertising</a></li>
+                    <li><a href="#">Ad solution</a></li>
 
                 </ul>
 
             </li>
-            <li class="main-footer-item"> <button class="btn btn-primary" aria-label="subscribe now">
-                <span>Subscribe Now</span>
-            </button></li>
+            <li class="main-footer-item" id="footer-button-container"> <a href="#" id="footer-button" class="btn  footer-item-title" role="button" aria-label="click to subscribe to the newsletter">
+                Subscribe Now
+            </a></li>
         </ul>
+    </section>
     </div>
-    <div id="footer-terms-of-use" class="col-12 d-flex justify-content-center">
-        <p>Boston Herald</p>
-        <p>Copyright © 2023</p>
-        <p>Privacy Policy</p>
-        <p>Terms of Use</p>
-    </div>
+    <section id="footer-terms-of-use" class="" aria-label="terms of use">
+        <ul class="list-unstyled">
+            <li><a href="#">prova</a></li>
+            <li><a href="#">prova</a></li>
+            <li><a href="#">prova</a></li>
+            <li><a href="#">prova</a></li>
+            <li><a href="#">prova</a></li>
+            <li><a href="#">prova</a></li>
+            <li><a href="#">prova</a></li>
+            <li><a href="#">prova</a></li>
+            <li><a href="#">prova</a></li>
+        </ul>
+    </section>
 </footer>
 
 
