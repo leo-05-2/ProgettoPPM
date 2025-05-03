@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 
+
 $custom-breakpoint-img-list:(
 sm:652px,
 md:800px,
@@ -1628,10 +1629,10 @@ footer{
   h2{
     padding-bottom: 5.3px;
     margin: 0 0 3px 0;
-    border-bottom: 2px solid rgb(216, 67, 21);
-    color: rgb(216, 67, 21);
+    border-bottom: 2px solid rgb(155 48 15);
+    color: rgb(155 48 15);
     a{
-      font: normal 500 14px "Noto Serif", Roboto, serif;
+      font: normal 500 20.6px "Open Sans", Roboto, serif;
       text-transform: uppercase;
       height: 23px;
       display: flex;
@@ -1639,7 +1640,7 @@ footer{
     }
     a:hover{
       text-decoration: none;
-      color: rgb(216, 67, 21);
+      color: rgb(155 48 15);
     }
   }
   div{
@@ -1651,7 +1652,7 @@ footer{
     }
     p{
       font: normal 400 12px "Noto Serif", Roboto, serif;
-      color: rgb(128, 128, 128);
+      color: rgb(85 85 85);
       text-transform: uppercase;
 
     }
@@ -1755,6 +1756,98 @@ footer{
 
 }
 
+.img-wrapper-photo{
+  position: relative;
+
+
+  #icon{
+    left: auto;
+    right: 5px;
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    height: 40px;
+    position: absolute;
+    width: 40px;
+    bottom: 5px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+  #icon:hover{
+    background-color: #005d9c;
+
+  }
+
+  a{
+    img{
+      position: relative;
+    }
+  }
+  #icon:before{
+    content: url("/icons/icons/image-regular.svg");
+    width: 48%;
+    height: 48%;
+
+  }
+
+}
+.img-wrapper-photo-list{
+  position: relative;
+  display: inline-block;
+  margin: auto;
+
+  .icon-item{
+    left: auto;
+    right: 5px;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+
+
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    font-size: 9px;
+    height: 20px;
+    position: absolute;
+    width: 20px;
+    bottom: 5px;
+  }
+
+  .icon-item:hover{
+    background-color: #005d9c;
+
+  }
+
+  a{
+    img{
+      position: relative;
+    }
+  }
+  .icon-item:before{
+    content: url("/icons/icons/image-regular.svg");
+
+
+    width: 48%;
+    height: 48%;
+
+
+
+  }
+
+}
 
 
 
@@ -1764,8 +1857,7 @@ footer{
 
 
 
-/* @extend .d-flex si può fare */
-/* TODO: capire come importare bootstrap */
-/* decidere se modificare direttamente la gria di bootstrap o fare classi personalizzate */
+
+
 
 

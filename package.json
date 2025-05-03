@@ -7,7 +7,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "  sass scssfile/main-news-images.scss main-news-img.css --no-source-map --style=compressed ",
+    "build": "  sass scssfile/main-news-images.scss main-news-img.css --no-source-map --style=expanded ",
     "watch": "sass scssfile/listDisplay.scss dist/listDisplay.css --watch && sass scssfile/main-news-images.scss dist/main-news-img.css --watch && sass scssfile/custom-bootstrap.scss dist/custom-bootstrap.css --watch"
   },
   "repository": {

@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
 
-    <link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="main-news-img.css">
     <script src="https://kit.fontawesome.com/a89d6e17c6.js" crossorigin="anonymous"></script>
     <title>Title</title>
@@ -247,7 +247,7 @@
                        <time datetime="2025-05-1 11:45:00">May,2,2025 at 11:45am </time>
                    </article>
                </div>
-                <button class="btn btn-close "></button>
+                <button class="btn btn-close " aria-label="click to close"></button>
             </section>
         <section id="primary" class="row justify-content-center" aria-label="main news section" >
             <div id="news-article-list" class=" row col-12 custom-col-md-9 ">
@@ -526,18 +526,22 @@
                         <div id="photo-wrapper"><h2 id="photo-video-title"><a href="#"> photos and video <i class="bi bi-chevron-right"></i></a> </h2></div>
                         <article id="article" class="col-12 custom-col-lg-8 ">
                         <div class="img-wrapper-photo">
-                            <a href="#">
+                            <a id="icon" href="https://example.com/" aria-label="click to see the collection of images of this news"></a>
+                            <a href="https://example.com/">
                             <img src="https://placehold.co/642x428" class="img-fluid" alt="some img description">
                             </a>
                         </div>
-                        <h3><a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta </a></h3>
+                        <h3><a href="https://example.com/"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta </a></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta. Cras blandit,
                             purus eu egestas mollis, nulla</p>
                     </article>
                         <ul id="article-list" class="list-unstyled col-12 custom-col-lg-4 list-group list-group-flush">
                         <li class="list-group-item">
-                            <article  class="listed-article">
-                                <a href="#"><img src="https://placehold.co/90x70" class="" alt="img descriprion"></a>
+                            <article  class="listed-article ">
+                                <div class="img-wrapper-photo-list">
+                                    <a href="https://example.com/" class="icon-item" aria-label="click to see the collection of images of this news"></a>
+                                    <a href="https://example.com/"><img src="https://placehold.co/90x70" class="" alt="img descriprion"></a>
+                                </div>
                                 <h3 class="listed-article-title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit   </a></h3>
                             </article>
                         </li>
