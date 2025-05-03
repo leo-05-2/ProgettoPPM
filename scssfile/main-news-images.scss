@@ -839,7 +839,7 @@ $custom-breakpoint-main-img:(
 
 }
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -887,6 +887,7 @@ $custom-breakpoint-main-img:(
 #navbar-wrapper{
   max-width: 100%;
   align-items: center;
+
 }
 .navbar{
   max-width: 100vw;
