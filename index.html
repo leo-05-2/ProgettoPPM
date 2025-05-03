@@ -29,7 +29,11 @@
         </button>
             </div>
             <div id="navbar-logo" class="col-4 justify-content-center" aria-label="site logo">
-                <a href="#" class="text-decoration-none text-reset"> Boston Herald</a></div>    <!--todo: valutare l' h1 per il logo e le immagini-->
+                <a href="#" class="text-decoration-none text-reset">
+
+                    <!--aggiunto h1 solo per gli screen reader per migliorare l' accessibilità
+                        reso non visibile altrimenti in quanto non vi è un macro argomento nel sito -->
+                    <h1 class="visually-hidden"> main page</h1> Boston Herald</a></div>    <!--todo: valutare l' h1 per il logo e le immagini-->
             <div id="wrapper" class="d-inline-flex  col-4 justify-content-end ">
                 <button  id="account-section-icon" class="btn d-custom-lg-none " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaRight" aria-controls="offcanvas-user-menu" aria-label="click to open user section off canvas">
                     <i class="fa-solid fa-user"></i>
