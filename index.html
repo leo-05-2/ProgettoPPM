@@ -29,14 +29,14 @@
         </button>
             </div>
             <div id="navbar-logo" class="col-4 justify-content-center" aria-label="site logo">
-                <a href="#" class="text-decoration-none text-reset"> Boston Herald</a></div>
+                <a href="#" class="text-decoration-none text-reset"> Boston Herald</a></div>    <!--todo: valutare l' h1 per il logo e le immagini-->
             <div id="wrapper" class="d-inline-flex  col-4 justify-content-end ">
                 <button  id="account-section-icon" class="btn d-custom-lg-none " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaRight" aria-controls="offcanvas-user-menu" aria-label="click to open user section off canvas">
                     <i class="fa-solid fa-user"></i>
                 </button>
                 <ul class="d-custom-lg-block">
-                    <li><a href="#" class="  d-custom-lg-block  " role="button" aria-label="click to subscribe">sing up</a></li>
-                    <li><a href="#" class="  d-custom-lg-block " role="button" aria-label="click to sing up"> log in</a></li>
+                    <li><a href="#" class="  d-custom-lg-block  "  aria-label="click to subscribe">Subscribe</a></li>
+                    <li><a href="#" class="  d-custom-lg-block "  aria-label="click to log in">Log in</a></li>
                 </ul>
                 <button class=" btn " id="search-bar" aria-label="search bar">
                     <i class="bi bi-search"></i>
@@ -190,43 +190,45 @@
         </div>
         </div>
         <section id="median-bottom-navbar" class=" row ">
-            <section id="median-navbar" class=" col-12 row">
-                <div id="median-navbar-widget" class="col-4 justify-content-center" aria-label="widget whether">
+            <section id="median-navbar" class=" row">
+                <div id="median-navbar-widget" class="median-navbar-element  " aria-label="widget whether">
+                    <div id="div-wrapper">
                     <i class="fa-solid fa-cloud-sun col-6" aria-label="whether icon"></i>
                     <div class="text-widget">
                         Thursday,may,2nd,25
                         <p><a href="#">e-edition</a></p>
 
                     </div>
+                    </div>
 
                 </div>
-                <div id="logo" class="col-4 justify-content-center" aria-label="site title">boston herald</div>
-                <div id="place-holder-median" class="col-4 justify-content-center"> </div>
+                <div id="logo" class=" justify-content-center median-navbar-element " aria-label="site title">boston herald</div>
+                <div id="place-holder-median" class="median-navbar-element "> </div>
             </section>
             <nav id="bottom-navbar" class="col-12 row  " role="navigation" aria-label="main section navigation">
             <ul id="some-section" class="list-group list-group-horizontal
                     list-unstyled align-items-center justify-content-center ">
-                <li class="nav-item"><a  class="" href="#">news</a></li>
-                <li class="nav-item"><a  class="" href="#">opinion</a></li>
-                <li class="nav-item"><a  class="" href="#">sports</a></li>
-                <li class="nav-item"><a  class="" href="#">entertainment</a></li>
-                <li class="nav-item"><a  class="" href="#">lifestyle</a></li>
-                <li class="nav-item"><a  class="" href="#">multimedia/video</a></li>
-                <li class="nav-item"><a  class="" href="#">photo</a></li>
-                <li class="nav-item"><a  class="" href="#">obituaries</a></li>
+                <li class="nav-item"><a  class="" href="#">News</a></li>
+                <li class="nav-item"><a  class="" href="#">Opinion</a></li>
+                <li class="nav-item"><a  class="" href="#">Sports</a></li>
+                <li class="nav-item"><a  class="" href="#">Entertainment</a></li>
+                <li class="nav-item"><a  class="" href="#">Lifestyle</a></li>
+                <li class="nav-item"><a  class="" href="#">Multimedia/video</a></li>
+                <li class="nav-item"><a  class="" href="#">Photo</a></li>
+                <li class="nav-item"><a  class="" href="#">Obituaries</a></li>
             </ul>
         </nav>
         </section>
     </div>
     <section id="trending-news-bar" class="row justify-content-center">
         <div id="trending-news" class=" d-custom-lg-block align-items-center  ">
-            <p id="trending-title" class=" ">trending news:</p>
+            <p id="trending-title" class=" ">trending :</p>
             <nav><ul class=" trending-news-list list-unstyled  ">
-                <li  class="trending-news-item">prova1</li>
-                <li class="trending-news-item">prova2</li>
-                <li class="trending-news-item">prova3</li>
-                <li class="trending-news-item">prova4</li>
-                <li class="trending-news-item">prova5</li>
+                <li  class="trending-news-item"><a href="https://example.com">prova1</a></li>
+                <li class="trending-news-item"><a href="https://example.com">prova2</a></li>
+                <li class="trending-news-item"><a href="https://example.com">prova3</a></li>
+                <li class="trending-news-item"><a href="https://example.com">prova4</a></li>
+                <li class="trending-news-item"><a href="https://example.com">prova5</a></li>
             </ul></nav>
         </div>
     </section>
@@ -255,9 +257,8 @@
                     <article  id="main-news" class="row" aria-label="main news article">
                                 <section id="main-article" class="custom-col ">
                                     <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus</a></h2>
-                                    <a href="#">
-                                    <img id="main-img-complementary" src="https://placehold.co/525x350" class="img-fluid custom-main-image-wrapper"
-                                         alt="some img description"  >
+                                    <a href="https://example.com" id="main-img-complementary">
+                                        <img  alt="some imge description" src="https://placehold.co/525x350" class="img-fluid custom-main-image-wrapper" >
                                     </a>
                                     <div id="news-description" >
                                         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum,
@@ -778,7 +779,7 @@
             </li>
             <li class="main-footer-item footer-item ">
                 <h3 class="footer-item-title d-flex"><a>Contact Us</a><button class="btn " data-bs-toggle="collapse" data-bs-target="#menu-2"
-                                                                               aria-label="click here to expand the menu" aria-expanded="false">
+                                                                               aria-label="click here to expand the menu" aria-expanded="false">  <!-- todo: sostituire questo hr con qualcosa per racchiudere sia lui che button -->
                     <i class="bi bi-chevron-down d-flex align-items-center justify-content-center"></i>
                 </button>
                 </h3>

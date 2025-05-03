@@ -12763,7 +12763,7 @@ body > * {
 @media (min-width: 1040px) {
   #median-bottom-navbar {
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: center;
   }
 }
@@ -12810,6 +12810,9 @@ body > * {
   #median-navbar {
     display: flex;
     height: 80px;
+    padding: 0;
+    max-width: 95%;
+    margin: 0 auto;
   }
   #median-navbar > * {
     display: flex;
@@ -12819,11 +12822,11 @@ body > * {
 
 .trending-news-item {
   padding-right: 25px;
-  font: normal 600 15px "Open Sans";
+  font: normal 400 15px "Noto Serif", Roboto, serif;
   color: #1f1e1e;
 }
 
-#trending-title {
+p#trending-title {
   color: rgb(0, 83, 138);
   font-size: 14px;
   text-transform: uppercase;
@@ -13255,8 +13258,10 @@ body > * {
   font: normal 700 14px "Open Sans", Roboto, sans-serif;
   text-transform: uppercase;
 }
-#footer-button a:hover {
+
+#footer-button:hover {
   text-decoration: underline;
+  color: #ffffff;
 }
 
 h3, .h3 {
@@ -13404,24 +13409,30 @@ footer a {
 }
 #wrapper ul li a {
   width: 120px;
+  height: 44px;
   margin-left: 15px;
   background-color: #00538a;
-  font: normal 600 15px "Noto Sans", Roboto, sans-serif;
+  font: normal 600 15px "Open Sans", Roboto, sans-serif;
   padding: 7% 5%;
   border-radius: 4px;
   color: #ffffff;
   text-decoration: none;
   text-align: center;
 }
+#wrapper ul li a:hover {
+  text-decoration: underline;
+}
 #wrapper #search-bar {
   padding: 15px;
+  height: 64px;
+  width: 54px;
 }
 
-#median-navbar-widget {
+#median-navbar-widget, #div-wrapper {
   display: flex;
   flex-direction: row;
 }
-#median-navbar-widget i {
+#median-navbar-widget i, #div-wrapper i {
   width: 30px;
 }
 
@@ -13445,7 +13456,6 @@ footer a {
 @media (max-width: 1040px) {
   #navbar-logo {
     display: flex;
-    padding: 0 12px;
   }
 }
 
@@ -13535,4 +13545,24 @@ footer a {
   content: url("/icons/icons/image-regular.svg");
   width: 48%;
   height: 48%;
+}
+
+#offcanvasNavbarLabel {
+  font: normal 600 15px "Open Sans", Roboto, serif;
+}
+
+#median-navbar #median-navbar-widget, #median-navbar #logo, #median-navbar #place-holder-median {
+  padding: 0;
+  height: 80px;
+}
+
+#median-navbar-widget {
+  justify-content: start;
+}
+#median-navbar-widget > * {
+  padding: 15px;
+}
+
+.median-navbar-element {
+  width: 33.33333333%;
 }
