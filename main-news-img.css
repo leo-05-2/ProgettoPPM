@@ -13507,7 +13507,7 @@ footer a {
   position: relative;
 }
 .img-wrapper-photo #icon:before {
-  content: url("/icons/icons/image-regular.svg");
+  content: url("./icons/icons/image-regular.svg");
   width: 48%;
   height: 48%;
 }
@@ -13542,7 +13542,7 @@ footer a {
   position: relative;
 }
 .img-wrapper-photo-list .icon-item:before {
-  content: url("/icons/icons/image-regular.svg");
+  content: url("./icons/icons/image-regular.svg");
   width: 48%;
   height: 48%;
 }
