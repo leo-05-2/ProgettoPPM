@@ -983,6 +983,7 @@ $custom-breakpoint-main-img:(
 #navbar-left{
   display: flex;
   flex-direction: row;
+  box-sizing: border-box;
 
   i{
     padding-right: 4px;
