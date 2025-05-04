@@ -12,7 +12,7 @@
 
 
     <link rel="stylesheet" href="icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="main-news-img.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/a89d6e17c6.js" crossorigin="anonymous"></script>
     <title>Title</title>
 </head>
@@ -52,31 +52,30 @@
         </nav>
         <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header row" >
+                <a type="button" class="offcanvas-title button-offcanvas" href="#" aria-label="click to sign in">sing in</a>
                 <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                <button type="button" class="btn-primary offcanvas-title"  aria-label="subscribe"> <span>bottone sing in</span></button>
-                <div href="https://example.com" class="d-lg-none"  aria-label="widget whether">
-                    <div id="div-wrapper-offcanvas" class="d-custom-lg-none">
-                        <a  aria-label="click to go to the whether page"><i class="fa-solid fa-cloud-sun " aria-hidden="true"></i></a>
-                        <div class="text-widget">
+                <div id="div-wrapper-offcanvas" class="d-custom-lg-none" aria-label="widget whether">
+                    <a  aria-label="click to go to the whether page"><i class="fa-solid fa-cloud-sun " aria-hidden="true"></i></a>
+                    <div class="text-widget">
                             Thursday,may,2nd,25
                             <p><a href="#">e-edition</a></p>
 
                         </div>
-                    </div>
-
                 </div>
 
-        </div>
+
+            </div>
             <div class="offcanvas-body " aria-label=" all sections links">
                 <ul class=" navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
+                <li class="nav-item d-inline-flex align-items-center gap-1">
+                    <i class="fa-solid fa-house" aria-hidden="true"></i>
                     <a class="nav-link active" aria-label="home page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link "  id="news-nav-section" role="button" aria-label="news subsection"
+                    <button class="nav-link "  id="news-nav-section"  aria-label="news subsection"
                        data-bs-toggle="collapse" data-bs-target="#news-subsection"  aria-expanded="false">
                         news
-                    </a>
+                    </button>
                     <ul class="collapse list-unstyled " aria-labelledby="news-nav-section" id="news-subsection" >
                         <li><a class="nav-link active" href="#">News</a></li>
                         <li><a class="nav-link active" href="#">Local News</a></li>
@@ -95,9 +94,9 @@
                     </ul>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active" id="opinion" role="button" data-bs-toggle="collapse"
-                       data-bs-target="#opinion-subsection" aria-expanded="false" aria-label="opinion section">Opinion</a>
-                    <ul class="collapselist-unstyled" aria-labelledby="opinion" id="opinion-subsection">
+                    <button class="nav-link " id="opinion"  data-bs-toggle="collapse"
+                       data-bs-target="#opinion-subsection" aria-expanded="false" aria-label="opinion section">Opinion</button>
+                    <ul class="collapse list-unstyled" aria-labelledby="opinion" id="opinion-subsection">
                         <li><a class="dropdown-item" href="#">Opinion</a></li>
                         <li><a class="dropdown-item" href="#">Editorials</a></li>
                         <li><a class="dropdown-item" href="#">Letters to the Editor</a></li>
@@ -105,9 +104,9 @@
                     </ul>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active" id="entertainment" role="button"  data-bs-toggle="collapse"
+                    <button class="nav-link active" id="entertainment"   data-bs-toggle="collapse"
                        data-bs-target="#entertainment-subsection" aria-label=" entertainment" aria-expanded="false">
-                        Entertainment</a>
+                        Entertainment</button>
                     <ul class="collapse list-unstyled" aria-labelledby="entertainment" id="entertainment-subsection">
                         <li><a class="dropdown-item" href="#">Arts</a></li>
                         <li><a class="dropdown-item" href="#">Movies</a></li>
@@ -122,10 +121,10 @@
                     </ul>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active" id="life-style" role="button" data-bs-toggle="collapse"
+                    <button class="nav-link active" id="life-style"  data-bs-toggle="collapse"
                        data-bs-target="#life-style-subsection" aria-expanded="false">
                         Lifestyle
-                    </a>
+                    </button>
 
                     <ul class="collapse list-unstyled" aria-labelledby="life-style" id="life-style-subsection">
                         <li><a class="dropdown-item" href="#">Lifestyles</a></li>
@@ -135,13 +134,13 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" role="button" >
+                    <a class="nav-link active"  href="#">
                         Photo
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active" id="Obituaries" role="button" data-bs-toggle="collapse"
-                       data-bs-target="#obituaries-subsection" aria-expanded="false">Obituaries</a>
+                    <button class="nav-link active" id="Obituaries"  data-bs-toggle="collapse"
+                       data-bs-target="#obituaries-subsection" aria-expanded="false">Obituaries</button>
                     <ul class="collapse list-unstyled" aria-labelledby="Obituaries" id="obituaries-subsection">
                         <li><a class="dropdown-item" href="#">Obituaries</a></li>
                         <li><a class="dropdown-item" href="#">News Obituaries</a></li>
@@ -149,21 +148,18 @@
                     </ul>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active" role="button">
+                    <button class="nav-link active" >
                         Branded Content
-                    </a>
+                    </button>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active" role="button">
+                    <a class="nav-link active" href="https://example.com" >
                         Subscribe
 
                     </a>
                 </li>
-                <li>
-                    void
-                </li>
                 <li class="nav-item ">
-                    <a class="nav-link active" role="button">
+                    <a class=" nav-link active" href="https://example.com">
                         Log in
 
                     </a>
@@ -171,13 +167,11 @@
                 </li>
 
             </ul>
-                <div class="nav-item border-top border-2 border-black row ">
-                <p class="nav-link active justify-content-center d-flex" >sing up for newsletters</p>
-                <a class="nav-link active justify-content-center d-flex" aria-current="page" >
-                    <button class="btn btn-primary" type="button" aria-label="subscribe"> <span>sing up</span></button>
-                </a>
+                <div class="nav-item border-top border-2 border-black row justify-content-center ">
+                    <p class="nav-link active justify-content-center d-flex" >sing up for newsletters</p>
+                    <button id="offcanvaButton" class=" button-offcanvas" href="#" aria-label="subscribe"> <span>sing up</span></button>
+                </div>
             </div>
-        </div>
 
 
     </div>
@@ -185,22 +179,20 @@
             <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 list-unstyled">
                 <li class="nav-item ">
-                    <a class="nav-link active" role="button" aria-label="Subscribe button" >
+                    <a class="nav-link active" href="https://example.com" aria-label="Subscribe " >
                         Subscribe
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a  class="nav-link active" role="button" aria-label="Login" >
+                    <a  class="nav-link active"  href="https://example.com" aria-label="Login" >
                         Login
                     </a>
                 </li>
             </ul>
 
-            <div class="nav-item border-top border-2 border-black row mt-2 ">
+            <div class="nav-item border-top border-2 border-black row mt-2 justify-content-center ">
                 <p class="nav-link active justify-content-center d-flex" >sing up for newsletters</p>
-                <a class="nav-link active justify-content-center d-flex" aria-current="page" >
-                    <button class="btn btn-primary" type="button" aria-label="subscribe"> <span>sing up</span></button>
-                </a>
+                <a id="offcanvaButton2" class="btn  button-offcanvas"  href="https://example.com" aria-label="subscribe"> <span>sing up</span></a>
             </div>
 
 
@@ -230,12 +222,12 @@
             <nav id="bottom-navbar" class="col-12 row  " role="navigation" aria-label="secondary navigation menu">
             <ul id="some-section" class="list-group list-group-horizontal
                     list-unstyled align-items-center justify-content-center ">
-                <li class="nav-item"><a  class="" href="#">News</a></li>
-                <li class="nav-item"><a  class="" href="#">Opinion</a></li>
-                <li class="nav-item"><a  class="" href="#">Sports</a></li>
-                <li class="nav-item"><a  class="" href="#">Entertainment</a></li>
+                <li class="nav-item"><a  class="" href="#primary">News</a></li>
+                <li class="nav-item"><a  class="" href="#opinion-section">Opinion</a></li>
+                <li class="nav-item"><a  class="" href="#sport">Sports</a></li>
+                <li class="nav-item"><a  class="" href="#entertainment-section">Entertainment</a></li>
                 <li class="nav-item"><a  class="" href="#">Lifestyle</a></li>
-                <li class="nav-item"><a  class="" href="#">Multimedia/video</a></li>
+                <li class="nav-item"><a  class="" href="#photo-section">Multimedia/video</a></li>
                 <li class="nav-item"><a  class="" href="#">Photo</a></li>
                 <li class="nav-item"><a  class="" href="#">Obituaries</a></li>
             </ul>
@@ -691,7 +683,7 @@
                                 </ul>
                             </div>
                         </section> </li>
-                        <li><section >
+                        <li><section id="entertainment-section" >
                             <header class="title-wrapper"><h2 class="category-title">
                                 <a href="https://example.com">entertainment<i class="bi bi-chevron-right" aria-hidden="true"></i></a></h2> </header>
                             <div class="row content-obj">
@@ -763,7 +755,7 @@
                                 </ul>
                             </div>
                         </section></li>
-                        <li><section >
+                        <li><section id="opinion-section" >
                             <header class="title-wrapper"><h2 class="category-title">
                                 <a href="https://example.com">opinion<i class="bi bi-chevron-right" aria-hidden="true"></i></a></h2> </header>
                             <div class="row content-obj">
@@ -828,12 +820,12 @@
 </main>
 <footer class="footer-display">
 
-    <div id="footer-main">
+    <section id="footer-main">
         <h2 class="visually-hidden"> footer navigation link section</h2>
         <div id="footer-image" class="row">
             <img  src="https://placehold.co/282x48" alt="footer logo">
         </div>
-        <section id="section-list" class="row" aria-label="footer navigation" >
+        <div id="section-list" class="row" aria-label="footer navigation" >
         <ul class="list-unstyled list-group footer-list ">
             <li class="main-footer-item footer-item ">
                 <section>
@@ -916,10 +908,11 @@
                 Subscribe Now
             </a></li>
         </ul>
-    </section>
     </div>
+    </section>
     <section id="footer-terms-of-use" class="" aria-label="terms of use">
         <h2 class="visually-hidden">terms of use</h2>
+
         <ul class="list-unstyled">
             <li><a href="#">Lorem ipsum</a></li>
             <li><a href="#">dolor sit</a></li>
