@@ -12329,12 +12329,12 @@ body > * {
   width: 100%;
   padding: 10px 10px 0 0;
 }
-.custom-numbered-list li a {
+.custom-numbered-list li h3, .custom-numbered-list li .h3 {
   width: 100%;
   display: flex;
   flex-direction: row;
 }
-.custom-numbered-list li a h3, .custom-numbered-list li a .h3 {
+.custom-numbered-list li h3 a, .custom-numbered-list li .h3 a {
   align-items: center;
   overflow-wrap: break-word;
   margin-bottom: 0;
@@ -12351,7 +12351,7 @@ body > * {
     height: 20%;
     flex-direction: row;
   }
-  .custom-numbered-list li a {
+  .custom-numbered-list li h3, .custom-numbered-list li .h3 {
     display: flex;
     align-items: center;
   }
@@ -12406,7 +12406,7 @@ body > * {
   color: #005d9c;
   text-transform: uppercase;
   padding: 0;
-  margin: 0 16px;
+  margin: 0;
 }
 @media (max-width: 800px) {
   .landing-3-1-left {
@@ -13136,26 +13136,28 @@ p#trending-title {
 .breaking-news-bar-wrapper {
   width: calc(100% - 28px);
   padding: 10px 0;
-  display: flex;
+  overflow: hidden;
 }
 .breaking-news-bar-wrapper #breaking-news-title {
   float: left;
   overflow-wrap: break-word;
   margin: 0;
   align-content: center;
+  height: 21px;
 }
 .breaking-news-bar-wrapper #breaking-news-title h2, .breaking-news-bar-wrapper #breaking-news-title .h2 {
   font: normal 700 18px "Open Sans", Roboto, sans-serif;
   margin-bottom: 0;
 }
 .breaking-news-bar-wrapper article {
-  align-content: center;
+  display: block;
 }
 .breaking-news-bar-wrapper article a {
   margin-left: 8px;
   text-decoration: none;
   color: #000000;
   font: normal 400 16px "Open Sans", Roboto, sans-serif;
+  display: inline;
 }
 .breaking-news-bar-wrapper article a:hover {
   text-decoration: underline;
@@ -13164,6 +13166,7 @@ p#trending-title {
 .breaking-news-bar-wrapper article time {
   font: normal 400 16px "Open Sans", Roboto, sans-serif;
   color: #000000;
+  display: block;
 }
 
 .title-list li {
@@ -13283,7 +13286,7 @@ a:hover {
 }
 
 #title-list {
-  font: normal 400 27px/1.14 "Open Sans", Roboto, serif;
+  font: normal 400 27px/1.14 "Noto Serif", Roboto, serif;
   border-bottom: 2px solid #005d9c;
   color: #5d5b5a;
   margin-bottom: 16px;
@@ -13367,7 +13370,7 @@ footer a {
 }
 #bottom h2, #bottom .h2 {
   padding-bottom: 5.3px;
-  margin: 0 0 3px 0;
+  margin: 0 0 8px 0;
   border-bottom: 2px solid rgb(155, 48, 15);
   color: rgb(155, 48, 15);
 }
@@ -13385,6 +13388,9 @@ footer a {
   display: flex;
   flex-direction: column;
   align-items: start;
+}
+#bottom div img {
+  margin-bottom: 3px;
 }
 #bottom div p {
   font: normal 400 12px "Noto Serif", Roboto, serif;
@@ -13428,12 +13434,24 @@ footer a {
   width: 54px;
 }
 
-#median-navbar-widget, #div-wrapper {
+#median-navbar-widget {
   display: flex;
   flex-direction: row;
 }
-#median-navbar-widget i, #div-wrapper i {
+#median-navbar-widget i {
   width: 30px;
+}
+
+#div-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+#div-wrapper a {
+  width: 30px;
+}
+#div-wrapper a i {
+  width: 100%;
+  height: 100%;
 }
 
 #text-widget {
@@ -13452,6 +13470,17 @@ footer a {
 
 #navbar-logo {
   display: none;
+}
+#navbar-logo a {
+  display: flex;
+}
+#navbar-logo a .img-fluid {
+  width: 100%;
+  height: auto;
+  max-height: 64px;
+  display: flex;
+  padding: 12px 0;
+  flex: 1 1 auto;
 }
 @media (max-width: 1040px) {
   #navbar-logo {
@@ -13500,9 +13529,6 @@ footer a {
   justify-content: center;
   align-items: center;
 }
-.img-wrapper-photo #icon:hover {
-  background-color: #005d9c;
-}
 .img-wrapper-photo a img {
   position: relative;
 }
@@ -13512,6 +13538,10 @@ footer a {
   height: 48%;
 }
 
+.img-wrapper-photo:hover #icon {
+  background-color: #005d9c;
+}
+
 .img-wrapper-photo-list {
   position: relative;
   display: inline-block;
@@ -13519,7 +13549,7 @@ footer a {
 }
 .img-wrapper-photo-list .icon-item {
   left: auto;
-  right: 5px;
+  right: 12px;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
   display: flex;
@@ -13535,9 +13565,6 @@ footer a {
   width: 20px;
   bottom: 5px;
 }
-.img-wrapper-photo-list .icon-item:hover {
-  background-color: #005d9c;
-}
 .img-wrapper-photo-list a img {
   position: relative;
 }
@@ -13545,6 +13572,10 @@ footer a {
   content: url("./icons/icons/image-regular.svg");
   width: 48%;
   height: 48%;
+}
+
+.img-wrapper-photo-list:hover .icon-item {
+  background-color: #005d9c;
 }
 
 #offcanvasNavbarLabel {

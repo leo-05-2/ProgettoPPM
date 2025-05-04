@@ -18,40 +18,52 @@
 </head>
 <body>
 <header class="">
-   <!--  <div id="testo">testo</div> -->
-
-    <div id="navbar-wrapper" class="container border-bottom border-2 border-black">
+    <div id="navbar-wrapper" class="container border-bottom border-1 border-black">
         <div id="placeholder"></div>
 
-        <div class="navbar " id="menu-wrapper" aria-label="fixed top menu">
-            <div id="navbar-left" class="col-4"><button id="offcanvasNavbarLabel" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i><span>All Sections</span>
-        </button>
+        <section class="navbar " id="menu-wrapper" aria-label="fixed top menu">
+            <div id="navbar-left" class="col-4">
+                <button id="offcanvasNavbarLabel" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="click to open section's navigation menù">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                    <span>All Sections</span>
+                </button>
             </div>
             <div id="navbar-logo" class="col-4 justify-content-center" aria-label="site logo">
-                <a href="#" class="text-decoration-none text-reset">
+                <a href="#" class="text-decoration-none text-reset w-100">
+
 
                     <!--aggiunto h1 solo per gli screen reader per migliorare l' accessibilità
                         reso non visibile altrimenti in quanto non vi è un macro argomento nel sito -->
-                    <h1 class="visually-hidden"> main page</h1> Boston Herald</a></div>    <!--todo: valutare l' h1 per il logo e le immagini-->
+                    <h1 class="visually-hidden"> main page</h1>
+                    <img src="https://placehold.co/1588x270png" class="img-fluid" alt="main logo of the site"></a></div>    <!--todo: valutare l' h1 per il logo e le immagini-->
             <div id="wrapper" class="d-inline-flex  col-4 justify-content-end ">
                 <button  id="account-section-icon" class="btn d-custom-lg-none " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaRight" aria-controls="offcanvas-user-menu" aria-label="click to open user section off canvas">
                     <i class="fa-solid fa-user"></i>
                 </button>
                 <ul class="d-custom-lg-block">
-                    <li><a href="#" class="  d-custom-lg-block  "  aria-label="click to subscribe">Subscribe</a></li>
-                    <li><a href="#" class="  d-custom-lg-block "  aria-label="click to log in">Log in</a></li>
+                    <li><a href="https://example.com" class="  d-custom-lg-block  " >Subscribe</a></li>
+                    <li><a href="https://example.com" class="  d-custom-lg-block "  >Log in</a></li>
                 </ul>
-                <button class=" btn " id="search-bar" aria-label="search bar">
-                    <i class="bi bi-search"></i>
+                <button class=" btn " id="search-bar" aria-label="click here to open the search bar">
+                    <i class="bi bi-search" aria-hidden="true"></i>
                 </button>
             </div>
-        </div>
+        </section>
         <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header row" aria-label="all sections list">
+            <div class="offcanvas-header row" >
                 <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 <button type="button" class="btn-primary offcanvas-title"  aria-label="subscribe"> <span>bottone sing in</span></button>
-                <button type="button" class="d-lg-none"  aria-label="widget-wether"> <span>widget</span></button>
+                <div href="https://example.com" class="d-lg-none"  aria-label="widget whether">
+                    <div id="div-wrapper-offcanvas" class="d-custom-lg-none">
+                        <a  aria-label="click to go to the whether page"><i class="fa-solid fa-cloud-sun " aria-hidden="true"></i></a>
+                        <div class="text-widget">
+                            Thursday,may,2nd,25
+                            <p><a href="#">e-edition</a></p>
+
+                        </div>
+                    </div>
+
+                </div>
 
         </div>
             <nav class="offcanvas-body " aria-label=" all sections links">
@@ -177,13 +189,13 @@
                     </a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active" role="button" aria-label="Login" >
+                    <a  class="nav-link active" role="button" aria-label="Login" >
                         Login
                     </a>
                 </li>
             </ul>
-            <div> void</div>
-            <div class="nav-item border-top border-2 border-black row ">
+
+            <div class="nav-item border-top border-2 border-black row mt-2 ">
                 <p class="nav-link active justify-content-center d-flex" >sing up for newsletters</p>
                 <a class="nav-link active justify-content-center d-flex" aria-current="page" >
                     <button class="btn btn-primary" type="button" aria-label="subscribe"> <span>sing up</span></button>
@@ -197,12 +209,13 @@
             <section id="median-navbar" class=" row">
                 <div id="median-navbar-widget" class="median-navbar-element  " aria-label="widget whether">
                     <div id="div-wrapper">
-                    <i class="fa-solid fa-cloud-sun col-6" aria-label="whether icon"></i>
-                    <div class="text-widget">
+                        <a aria-label="click to go to the whether page">
+                            <i class="fa-solid fa-cloud-sun " aria-hidden="true"></i>
+                        </a>
+                        <div class="text-widget">
                         Thursday,may,2nd,25
                         <p><a href="#">e-edition</a></p>
-
-                    </div>
+                        </div>
                     </div>
 
                 </div>
@@ -228,11 +241,11 @@
         <div id="trending-news" class=" d-custom-lg-block align-items-center  ">
             <p id="trending-title" class=" ">trending :</p>
             <nav><ul class=" trending-news-list list-unstyled  ">
-                <li  class="trending-news-item"><a href="https://example.com">prova1</a></li>
-                <li class="trending-news-item"><a href="https://example.com">prova2</a></li>
-                <li class="trending-news-item"><a href="https://example.com">prova3</a></li>
-                <li class="trending-news-item"><a href="https://example.com">prova4</a></li>
-                <li class="trending-news-item"><a href="https://example.com">prova5</a></li>
+                <li  class="trending-news-item"><a href="https://example.com" aria-label="click to see the full news">Lorem ipsum</a></li>
+                <li class="trending-news-item"><a href="https://example.com" aria-label="click to see the full news">dolor sit</a></li>
+                <li class="trending-news-item"><a href="https://example.com" aria-label="click to see the full news">consectetur</a></li>
+                <li class="trending-news-item"><a href="https://example.com" aria-label="click to see the full news">adipiscing</a></li>
+                <li class="trending-news-item"><a href="https://example.com" aria-label="click to see the full news">elit</a></li>
             </ul></nav>
         </div>
     </section>
@@ -243,12 +256,12 @@
 </header>
 <main id="page" class="container-xxl">
     <section id="main content" class=" row justify-content-center">
-            <div class="void-1"> </div>
+        <div class="void-1"> </div>
         <section id="breaking-news-bar" class="row" aria-label="breaking news bar">
-               <div class="breaking-news-bar-wrapper col-12">
+               <div class="breaking-news-bar-wrapper ">
                    <div id="breaking-news-title"><h2>Breaking News</h2></div>
                    <article id="breaking-news-link" class="">
-                       <a class="" href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a>
+                       <a class="" href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </a>
                        <time datetime="2025-05-1 11:45:00">May,2,2025 at 11:45am </time>
                    </article>
                </div>
@@ -270,15 +283,15 @@
                                     <section id="related-articles" aria-label="related articles">
                                         <h3 id="related" >related</h3>
                                         <ul id="related-list">
-                                        <li><article><header><h4 class="d-inline"><a href="#" class="d-inline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a libero diam.
+                                        <li><article><header><h4 class="d-inline"><a href="https://example.com" class="d-inline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a libero diam.
                                         </a></h4><time class="d-inline" datetime="2025-04-20 00:00:00"> 23 hours ago </time></header></article></li>
-                                        <li><article><header><h4 class="d-inline"><a href="#" class="d-inline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a libero diam.
+                                        <li><article><header><h4 class="d-inline"><a href="https://example.com" class="d-inline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a libero diam.
                                         </a></h4><time class="d-inline" datetime="2025-04-20 00:00:00"> 23 hours ago </time></header></article></li>
                                     </ul>
                                     </section>
                                 </section>
                                 <div id="main-img-wrapper" class="custom-col">
-                                    <a href="#">
+                                    <a href="https://example.com">
                                     <img id="main-img" src="https://placehold.co/525x350" class="img-fluid custom-main-image-wrapper"
                                          alt="some img description"  >
                                     </a>
@@ -288,9 +301,9 @@
                                 <ul id="other-news-list" class=" list-unstyled custom-horizontal-list list-group  list-group-flush">
                                     <li class="list-group-item"><article >
                                         <div>
-                                            <a href="#"><img src="https://placehold.co/345x230" class="img-fluid" alt="some img description">
+                                            <a href="https://example.com"><img src="https://placehold.co/345x230" class="img-fluid" alt="some img description">
                                             </a>
-                                    </div>
+                                        </div>
                                          <h2 class="main-list-title"><a href="#" >
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a libero diam.
                                         </a></h2>
@@ -327,7 +340,7 @@
                                     <article>
                                         <header >
                                             <h3 class="d-inline">
-                                                <a href="#">
+                                                <a href="https://example.com">
                                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit condimentum
                                                     massa quis cursus. Nullam pellentesque auctor purus
                                                 </a>
@@ -406,134 +419,145 @@
                                     </article></li>
                                 <li  class="latest-headlines-link">
                                     <div id="news-letter-subscribe">
-                                        <p>sign up for email newsletter</p>
-                                        <a href="#" role="button">test</a>
+                                        <p>Sign up for email newsletter</p>
+                                        <a href="https://example.com" role="button">Sing up</a>
                                     </div>
                                 </li>
 
                             </ul>
                         </section>
                 <div id="bottom"  class="col-12 custom-col-md-8 ">
-                    <h2><a href="#">Promotion & special</a></h2>
+                    <h2><a href="https://example.com">Promotion & special</a></h2>
                     <div>
-                        <a href="#"><img src="https://placehold.co/120x90" alt="Promotion logo">
+                        <a href="https://example.com"><img src="https://placehold.co/120x90" alt="Promotion logo">
                         <p>see all</p>
                         </a>
                     </div>
                 </div>
             </div>
             <aside id="newspaper-img" class="col-12 bg-light custom-col-md-3 " aria-label="newspaper cover image" >
-                        <img src="https://placehold.co/1333x1425" class="img-fluid" alt="aside image description">
+                <a href="https://example.com">
+                    <img src="https://placehold.co/1333x1425" class="img-fluid" alt="aside image description">
+                </a>
                     </aside>
 
             </section>
-            <div id="sponsors-void" class="void-2"></div>
-            <section class="landing-3-1" aria-label="most popular news">
+        <div id="sponsors-void" class="void-2"></div>
+        <section class="landing-3-1" aria-label="most popular news">
                 <div class=" row landing-3-1-left ">
-                    <h2 id="most-popular" class="d-flex">Most popular news</h2>
+                    <header><h2 id="most-popular" class="d-flex">Most popular news</h2></header>
                     <ol class="  list-unstyled custom-numbered-list ">
 
-                        <li class=""><a href="#" class="custom-number"><h3>
+                        <li class=""><h3 class="custom-number"> <a href="https://example.com" >
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                        </h3></a></li>
-                        <li class=""><a href="#" class="custom-number"><h3>
-                            Lorem ipsum dolor sit amet
-                        </h3></a></li>
-                        <li class=""><a href="#" class="custom-number"><h3>
+                        </a>
+                        </h3></li>
+                        <li class=""><h3 class="custom-number"> <a href="https://example.com" >
+                            Lorem ipsum dolor sit amet </a>
+                        </h3></li>
+                        <li class=""><h3 class="custom-number"> <a href="https://example.com" >
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                        </h3></a></li>
-                        <li class=""><a href="#" class="custom-number"><h3>
+                        </a>
+                        </h3></li>
+                        <li class=""><h3 class="custom-number"> <a href="https://example.com" >
                             Lorem ipsum dolor sit amet
-                        </h3></a></li>
-                        <li class=""><a href="#" class="custom-number"><h3>
+                        </a>
+                        </h3></li>
+                        <li class=""><h3 class="custom-number"> <a href="https://example.com" >
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                        </h3></a></li>
-                        <li class=""><a href="#" class="custom-number"><h3>
+                        </a>
+                        </h3></li>
+                        <li class=""><h3 class="custom-number"> <a href="https://example.com" >
                             Lorem ipsum dolor sit amet
-                        </h3></a></li>
-                        <li class=""><a href="#" class="custom-number"><h3>
+                        </a>
+                        </h3></li>
+                        <li class=""><h3 class="custom-number"> <a href="https://example.com" >
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                        </h3></a></li>
-                        <li class=""><a href="#" class="custom-number"><h3>
+                        </a>
+                        </h3></li>
+                        <li class=""><h3 class="custom-number"> <a href="https://example.com" >
                             Lorem ipsum dolor sit amet
-                        </h3></a></li>
-                        <li class=""><a href="#" class="custom-number"><h3>
-                            Lorem ipsum dolor sit amet
-                        </h3></a></li>
-                        <li class=""><a href="#" class="custom-number"><h3>
+                        </a>
+                        </h3></li>
+                        <li class=""><h3 class="custom-number"> <a href="https://example.com" >
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                        </h3></a></li>
+                        </a>
+                        </h3></li>
+                        <li class=""><h3 class="custom-number"> <a href="https://example.com" >
+                            Lorem ipsum dolor sit amet
+                        </a>
+                        </h3></li>
                     </ol>
                 </div>
                 <div class="landing-3-1-right"></div>
             </section>
-            <div class="void-3"></div>
-            <section id="landing-4-3" class="row " aria-label="main thematic section">
+        <div class="void-3"></div>
+        <section id="landing-4-3" class="row " aria-label="main thematic section">
                 <section class="col-12 custom-col-sm-6 custom-col-lg-3" id="sport" >
-                    <h2><a href="#">sport<i class="bi bi-chevron-right"></i></a></h2>
+                    <h2><a href="https://example.com">sport<i class="bi bi-chevron-right" aria-hidden="true"></i></a></h2>
                     <article>
-                        <a href="#" ><div class="img-wrapper">
+                        <a href="https://example.com" class="img-wrapper">
                             <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image description">
-                        </div></a>
-                        <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </a>
+                        <h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Mauris eros. </a></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta. Cras blandit,
                             purus eu egestas mollis, nulla </p>
                     </article>
                     <ul class="list-unstyled list-group list-group-flush ul-4-3">
-                        <li class="list-group-item"><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
-                        <li class="list-group-item"><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
-                        <li class="list-group-item"><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
+                        <li class="list-group-item"><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
+                        <li class="list-group-item"><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
+                        <li class="list-group-item"><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
 
                     </ul></section>
                 <section class="col-12 custom-col-sm-6 custom-col-lg-3" id="opinion-columnist" >
-                    <h2><a href="#">opinion columnist <i class="bi bi-chevron-right"></i></a></h2>
+                    <h2><a href="https://example.com">opinion columnist <i class="bi bi-chevron-right" aria-hidden="true"></i></a></h2>
                     <article>
-                        <a href="#" ><div class="img-wrapper">
+                        <a href="https://example.com" class="img-wrapper">
                             <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image description">
-                        </div></a>
-                        <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </a>
+                        <h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Mauris eros. </a></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta. Cras blandit,
                             purus eu egestas mollis, nulla </p>
                     </article>
-                    <ul class="list-unstyled list-group list-group-flush ul-4-3">
-                        <li class="list-group-item"><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
-                        <li class="list-group-item"><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
-                        <li class="list-group-item"><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
+                    <ul class="list-unstyled list-group list-group-flush ul-4-3" >
+                        <li class="list-group-item"><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
+                        <li class="list-group-item"><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
+                        <li class="list-group-item"><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
 
                     </ul></section>
                 <section class="col-12 custom-col-sm-6 custom-col-lg-3" id="local-news" >
-                    <h2><a href="#">local news <i class="bi bi-chevron-right"></i></a></h2>
+                    <h2><a href="https://example.com">local news <i class="bi bi-chevron-right" aria-hidden="true"></i></a></h2>
                     <article>
-                        <a href="#" ><div class="img-wrapper">
+                        <a href="https://example.com" class="img-wrapper">
                             <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image description">
-                        </div></a>
-                        <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </a>
+                        <h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Mauris eros. </a></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta. Cras blandit,
                             purus eu egestas mollis, nulla </p>
                     </article>
                     <ul class="list-unstyled list-group list-group-flush ul-4-3">
-                        <li class="list-group-item"><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
-                        <li class="list-group-item"><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
-                        <li class="list-group-item"><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
+                        <li class="list-group-item"><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
+                        <li class="list-group-item"><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
+                        <li class="list-group-item"><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3></li>
 
                     </ul></section>
                 <div id="articolo-4" class="custom-col-sm-3 col-12 d-none d-sm-block"></div>
             </section>
-            <div class="void-4"></div>
-            <section id="photo-section" class="row " aria-label="photo & videos">
+        <div class="void-4"></div>
+        <section id="photo-section" class="row " aria-label="photo & videos">
                 <section id="landing-2-3" class="photo-video-container ">
                     <div  class=" row on-the-left article-list-photo">
-                        <div id="photo-wrapper"><h2 id="photo-video-title"><a href="#"> photos and video <i class="bi bi-chevron-right"></i></a> </h2></div>
+                        <div id="photo-wrapper"><h2 id="photo-video-title"><a href="https://example.com"> photos and video <i class="bi bi-chevron-right" aria-hidden="true"></i></a> </h2></div>
                         <article id="article" class="col-12 custom-col-lg-8 ">
-                        <div class="img-wrapper-photo">
-                            <a id="icon" href="https://example.com/" aria-label="click to see the collection of images of this news"></a>
-                            <a href="https://example.com/">
-                            <img src="https://placehold.co/642x428" class="img-fluid" alt="some img description">
-                            </a>
-                        </div>
+                            <div class="img-wrapper-photo">
+                                <a href="https://example.com/">
+                                    <div id="icon" aria-hidden="true"></div>
+                                    <img src="https://placehold.co/642x428" class="img-fluid" alt="some img description">
+                                </a>
+                            </div>
                         <h3><a href="https://example.com/"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta </a></h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta. Cras blandit,
                             purus eu egestas mollis, nulla</p>
@@ -542,10 +566,12 @@
                         <li class="list-group-item">
                             <article  class="listed-article ">
                                 <div class="img-wrapper-photo-list">
-                                    <a href="https://example.com/" class="icon-item" aria-label="click to see the collection of images of this news"></a>
-                                    <a href="https://example.com/"><img src="https://placehold.co/90x70" class="" alt="img descriprion"></a>
+                                    <a href="https://example.com/"  aria-label="click to see the collection of images of this news">
+                                        <div class="icon-item" aria-hidden="true"></div>
+                                        <img src="https://placehold.co/90x70" class="" alt="img descriprion">
+                                    </a>
                                 </div>
-                                <h3 class="listed-article-title"><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit   </a></h3>
+                                <h3 class="listed-article-title"><a href="https://example.com/">Lorem ipsum dolor sit amet, consectetur adipiscing elit   </a></h3>
                             </article>
                         </li>
                         <li class="list-group-item">
@@ -587,156 +613,156 @@
 
                     <div id="void-img" class="on-the-right">
                     <div id="void" class=""></div>
-                        <a href="#">
+                        <a href="https://example.com/">
                             <img id="img-aside" src="https://placehold.co/552x287" class="img-fluid" alt="img publicity description">
                         </a>
 
                 </div>
                 </section>
             </section>
-            <section id="list-news-void" class="list-news-void" aria-label="thematic section">
+        <section id="list-news-void" class="list-news-void" aria-label="thematic section">
                 <div id="list-news2" class=" col-12 custom-col-md-8 ">
                     <ul class="list-unstyled list-list">
                         <li><section >
-                            <div class="title-wrapper"><h2 class="category-title">
-                                <a href="#">business<i class="bi bi-chevron-right"></i></a></h2> </div>
-                            <section id="news1" class="row">
+                            <header class="title-wrapper"><h2 class="category-title">
+                                <a href="https://example.com">business<i class="bi bi-chevron-right" aria-hidden="true"></i></a></h2> </header>
+                            <section class="row">
                                 <article  class=" col-12  custom-col-lg-7 custom-article">
                                     <div class="col-12 custom-col-md-6">
-                                        <div class="img-wrapper-2">
+                                        <figure class="img-wrapper-2">
                                             <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image">
-                                        </div>
+                                        </figure>
                                     </div>
                                     <div class="col-12 custom-col-md-6">
-                                        <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3>
+                                        <h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta. Cras blandit,
                                             purus eu egestas mollis, nulla</p>
                                     </div>
                                 </article>
                                 <ul class="col-12   custom-col-md-6 custom-col-lg-5 list-unstyled related-article-list">
-                                    <li class=""><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
-                                    <li class=""><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
-                                    <li class=""><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
+                                    <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
+                                    <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
+                                    <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
 
                                 </ul>
                             </section>
                         </section> </li>
                         <li><section >
-                            <div class="title-wrapper"><h2 class="category-title">
-                                <a href="#">entertainment<i class="bi bi-chevron-right"></i></a></h2> </div>
-                            <section  class="row">
+                            <header class="title-wrapper"><h2 class="category-title">
+                                <a href="https://example.com">entertainment<i class="bi bi-chevron-right" aria-hidden="true"></i></a></h2> </header>
+                            <section class="row">
                                 <article  class=" col-12  custom-col-lg-7 custom-article">
                                     <div class="col-12 custom-col-md-6">
-                                        <div class="img-wrapper-2">
+                                        <figure class="img-wrapper-2">
                                             <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image">
-                                        </div>
+                                        </figure>
                                     </div>
                                     <div class="col-12 custom-col-md-6">
-                                        <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3>
+                                        <h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta. Cras blandit,
                                             purus eu egestas mollis, nulla</p>
                                     </div>
                                 </article>
                                 <ul class="col-12   custom-col-md-6 custom-col-lg-5 list-unstyled related-article-list">
-                                    <li class=""><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
-                                    <li class=""><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
-                                    <li class=""><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
+                                    <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
+                                    <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
+                                    <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
 
                                 </ul>
                             </section>
                         </section> </li>
                         <li><section >
-                            <div class="title-wrapper"><h2 class="category-title">
-                                <a href="#">network<i class="bi bi-chevron-right"></i></a></h2> </div>
-                            <section  class="row">
+                            <header class="title-wrapper"><h2 class="category-title">
+                                <a href="https://example.com">network<i class="bi bi-chevron-right" aria-hidden="true"></i></a></h2> </header>
+                            <section class="row">
                                 <article  class=" col-12  custom-col-lg-7 custom-article">
                                     <div class="col-12 custom-col-md-6">
-                                        <div class="img-wrapper-2">
+                                        <figure class="img-wrapper-2">
                                             <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image">
-                                        </div>
+                                        </figure>
                                     </div>
                                     <div class="col-12 custom-col-md-6">
-                                        <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3>
+                                        <h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta. Cras blandit,
                                             purus eu egestas mollis, nulla</p>
                                     </div>
                                 </article>
                                 <ul class="col-12   custom-col-md-6 custom-col-lg-5 list-unstyled related-article-list">
-                                    <li class=""><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
-                                    <li class=""><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
-                                    <li class=""><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
+                                    <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
+                                    <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
+                                    <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
 
                                 </ul>
                             </section>
                         </section> </li>
                         <li><section >
-                            <div class="title-wrapper"><h2 class="category-title">
-                                <a href="#">best review<i class="bi bi-chevron-right"></i> </a></h2> </div>
-                            <section  class="row">
+                            <header class="title-wrapper"><h2 class="category-title">
+                                <a href="https://example.com">best review<i class="bi bi-chevron-right" aria-hidden="true"></i> </a></h2> </header>
+                            <section class="row">
                                 <article  class=" col-12  custom-col-lg-7 custom-article">
                                     <div class="col-12 custom-col-md-6">
-                                        <div class="img-wrapper-2">
+                                        <figure class="img-wrapper-2">
                                             <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image">
-                                        </div>
+                                        </figure>
                                     </div>
                                     <div class="col-12 custom-col-md-6">
-                                        <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3>
+                                        <h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta. Cras blandit,
                                             purus eu egestas mollis, nulla</p>
                                     </div>
                                 </article>
                                 <ul class="col-12   custom-col-md-6 custom-col-lg-5 list-unstyled related-article-list">
-                                    <li class=""><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
-                                    <li class=""><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
-                                    <li class=""><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
+                                    <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
+                                    <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
+                                    <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
+
+                                </ul>
+                            </section>
+                        </section></li>
+                        <li><section >
+                            <header class="title-wrapper"><h2 class="category-title">
+                                <a href="https://example.com">opinion<i class="bi bi-chevron-right" aria-hidden="true"></i></a></h2> </header>
+                            <section class="row">
+                                <article  class=" col-12  custom-col-lg-7 custom-article">
+                                    <div class="col-12 custom-col-md-6">
+                                        <figure class="img-wrapper-2">
+                                            <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image">
+                                        </figure>
+                                    </div>
+                                    <div class="col-12 custom-col-md-6">
+                                        <h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta. Cras blandit,
+                                            purus eu egestas mollis, nulla</p>
+                                    </div>
+                                </article>
+                                <ul class="col-12   custom-col-md-6 custom-col-lg-5 list-unstyled related-article-list">
+                                    <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
+                                    <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
+                                    <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
 
                                 </ul>
                             </section>
                         </section> </li>
                         <li><section >
-                            <div class="title-wrapper"><h2 class="category-title">
-                                <a href="#">opinion<i class="bi bi-chevron-right"></i></a></h2> </div>
-                            <section  class="row">
+                            <header class="title-wrapper"><h2 class="category-title">
+                                <a href="https://example.com">national politic<i class="bi bi-chevron-right" aria-hidden="true"></i></a></h2> </header>
+                            <section class="row">
                                 <article  class=" col-12  custom-col-lg-7 custom-article">
                                     <div class="col-12 custom-col-md-6">
-                                        <div class="img-wrapper-2">
+                                        <figure class="img-wrapper-2">
                                             <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image">
-                                        </div>
+                                        </figure>
                                     </div>
                                     <div class="col-12 custom-col-md-6">
-                                        <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3>
+                                        <h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta. Cras blandit,
                                             purus eu egestas mollis, nulla</p>
                                     </div>
                                 </article>
                                 <ul class="col-12   custom-col-md-6 custom-col-lg-5 list-unstyled related-article-list">
-                                    <li class=""><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
-                                    <li class=""><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
-                                    <li class=""><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
-
-                                </ul>
-                            </section>
-                        </section> </li>
-                        <li><section >
-                            <div class="title-wrapper"><h2 class="category-title">
-                                <a href="#">national politic<i class="bi bi-chevron-right"></i></a></h2> </div>
-                            <section  class="row">
-                                <article  class=" col-12  custom-col-lg-7 custom-article">
-                                    <div class="col-12 custom-col-md-6">
-                                        <div class="img-wrapper-2">
-                                            <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image">
-                                        </div>
-                                    </div>
-                                    <div class="col-12 custom-col-md-6">
-                                        <h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet lectus faucibus porta. Cras blandit,
-                                            purus eu egestas mollis, nulla</p>
-                                    </div>
-                                </article>
-                                <ul class="col-12   custom-col-md-6 custom-col-lg-5 list-unstyled related-article-list">
-                                    <li class=""><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
-                                    <li class=""><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
-                                    <li class=""><h3><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
+                                    <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
+                                    <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
+                                    <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
 
                                 </ul>
                             </section>
@@ -747,13 +773,13 @@
                 </div>
                 <div id="void2" class="on-the-right "></div>
             </section>
-            <section id="widget-void" class="row" aria-label="upcoming event news">
-                <div id="widget" class="col" >
-                    <img src="https://placehold.co/500x250/png" class="img-fluid" alt="widget">
-                </div>
+        <section id="widget-void" class="row" aria-label="upcoming event news">
+                <figure id="widget" class="col" >
+                    <img src="https://placehold.co/500x250/png" class="img-fluid" alt="upcoming event calendar">
+                </figure>
                 <div id="void-ads" class="col-auto" ></div>
             </section>
-            <div class="void-footer"></div>
+        <div class="void-footer"></div>
     </section>
 </main>
 <footer class="footer-display">
@@ -861,3 +887,5 @@ a maximus mi sodales. In posuere aliquam libero a tristique. Donec facilisis est
 <script src="nav-bar-script.js"></script>
 </body>
 </html>
+
+<!--todo: ricontrollare differenza tra img e figure in thematic section-->
