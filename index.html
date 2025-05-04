@@ -18,10 +18,10 @@
 </head>
 <body>
 <header class="">
-    <div id="navbar-wrapper" class="container border-bottom border-1 border-black">
+    <div id="navbar-wrapper" class="container ">
         <div id="placeholder"></div>
 
-        <section class="navbar " id="menu-wrapper" aria-label="fixed top menu">
+        <nav class="navbar " id="menu-wrapper" aria-label="fixed top main navigation menu">
             <div id="navbar-left" class="col-4">
                 <button id="offcanvasNavbarLabel" class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="click to open section's navigation menù">
                     <i class="fa-solid fa-bars" aria-hidden="true"></i>
@@ -29,14 +29,14 @@
                 </button>
             </div>
             <div id="navbar-logo" class="col-4 justify-content-center" aria-label="site logo">
-                <a href="#" class="text-decoration-none text-reset w-100">
+                <a href="#" class="text-decoration-none text-reset w-100" aria-label="home page link">
 
 
                     <!--aggiunto h1 solo per gli screen reader per migliorare l' accessibilità
                         reso non visibile altrimenti in quanto non vi è un macro argomento nel sito -->
                     <h1 class="visually-hidden"> main page</h1>
-                    <img src="https://placehold.co/1588x270png" class="img-fluid" alt="main logo of the site"></a></div>    <!--todo: valutare l' h1 per il logo e le immagini-->
-            <div id="wrapper" class="d-inline-flex  col-4 justify-content-end ">
+                    <img src="https://placehold.co/1588x270png" class="img-fluid" alt="main logo of the site"></a></div>
+            <div id="wrapper" class="  col-4 justify-content-end ">
                 <button  id="account-section-icon" class="btn d-custom-lg-none " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaRight" aria-controls="offcanvas-user-menu" aria-label="click to open user section off canvas">
                     <i class="fa-solid fa-user"></i>
                 </button>
@@ -48,7 +48,7 @@
                     <i class="bi bi-search" aria-hidden="true"></i>
                 </button>
             </div>
-        </section>
+        </nav>
         <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header row" >
                 <button type="button" class="btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -66,7 +66,7 @@
                 </div>
 
         </div>
-            <nav class="offcanvas-body " aria-label=" all sections links">
+            <div class="offcanvas-body " aria-label=" all sections links">
                 <ul class=" navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
                     <a class="nav-link active" aria-label="home page" href="#">Home</a>
@@ -176,7 +176,7 @@
                     <button class="btn btn-primary" type="button" aria-label="subscribe"> <span>sing up</span></button>
                 </a>
             </div>
-        </nav>
+        </div>
 
 
     </div>
@@ -219,10 +219,14 @@
                     </div>
 
                 </div>
-                <div id="logo" class=" justify-content-center median-navbar-element " aria-label="site title">boston herald</div>
+                <div id="logo" class=" justify-content-center median-navbar-element " aria-label="site title">
+                    <a href="https://example.com" aria-label="home page link">
+                        <img src="https://placehold.co/1588x270png" class="img-fluid" alt="logo image">
+                    </a>
+                </div>
                 <div id="place-holder-median" class="median-navbar-element "> </div>
             </section>
-            <nav id="bottom-navbar" class="col-12 row  " role="navigation" aria-label="main section navigation">
+            <nav id="bottom-navbar" class="col-12 row  " role="navigation" aria-label="secondary navigation menu">
             <ul id="some-section" class="list-group list-group-horizontal
                     list-unstyled align-items-center justify-content-center ">
                 <li class="nav-item"><a  class="" href="#">News</a></li>
@@ -240,13 +244,13 @@
     <section id="trending-news-bar" class="row justify-content-center">
         <div id="trending-news" class=" d-custom-lg-block align-items-center  ">
             <p id="trending-title" class=" ">trending :</p>
-            <nav><ul class=" trending-news-list list-unstyled  ">
+            <div><ul class=" trending-news-list list-unstyled  ">
                 <li  class="trending-news-item"><a href="https://example.com" aria-label="click to see the full news">Lorem ipsum</a></li>
                 <li class="trending-news-item"><a href="https://example.com" aria-label="click to see the full news">dolor sit</a></li>
                 <li class="trending-news-item"><a href="https://example.com" aria-label="click to see the full news">consectetur</a></li>
                 <li class="trending-news-item"><a href="https://example.com" aria-label="click to see the full news">adipiscing</a></li>
                 <li class="trending-news-item"><a href="https://example.com" aria-label="click to see the full news">elit</a></li>
-            </ul></nav>
+            </ul></div>
         </div>
     </section>
     <!-- todo: controllare semantica navbar e all sections link-->
@@ -308,26 +312,32 @@
                                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a libero diam.
                                         </a></h2>
                                     </article></li>
-                                    <li class="list-group-item"><article>
-                                        <div class="main-list-images-wrapper">
-                                        <a href="#"><img src="https://placehold.co/345x230/png" class="img-fluid" alt="some img description">
-                                        </a>
-                                        </div>
-                                        <header><h2><a href="#" class="text-decoration-none text-reset">Article 2</a></h2></header>
-
-                                    </article></li>
-                                    <li class="list-group-item"><article>
-                                        <div class="main-list-images-wrapper">
-                                            <a href="#"><img src="https://placehold.co/345x230/png" class="img-fluid" alt="some img description">
+                                    <li class="list-group-item"><article >
+                                        <div>
+                                            <a href="https://example.com"><img src="https://placehold.co/345x230" class="img-fluid" alt="some img description">
                                             </a>
                                         </div>
-                                        <header> <h2><a href="#" class="text-decoration-none text-reset">Article 3</a></h2></header>
+                                        <h2 class="main-list-title"><a href="#" >
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a libero diam.
+                                        </a></h2>
                                     </article></li>
-                                    <li class="list-group-item"><article>
-                                        <div class="main-list-images-wrapper ">
-                                        <img src="https://placehold.co/345x230/png" class="img-fluid" alt="some img description">
-                                    </div>
-                                        <header><h2><a href="#" class="text-decoration-none text-reset">Article 4 </a></h2></header>
+                                    <li class="list-group-item"><article >
+                                        <div>
+                                            <a href="https://example.com"><img src="https://placehold.co/345x230" class="img-fluid" alt="some img description">
+                                            </a>
+                                        </div>
+                                        <h2 class="main-list-title"><a href="#" >
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a libero diam.
+                                        </a></h2>
+                                    </article></li>
+                                    <li class="list-group-item"><article >
+                                        <div>
+                                            <a href="https://example.com"><img src="https://placehold.co/345x230" class="img-fluid" alt="some img description">
+                                            </a>
+                                        </div>
+                                        <h2 class="main-list-title"><a href="#" >
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a libero diam.
+                                        </a></h2>
                                     </article></li>
 
                                 </ul>
@@ -353,11 +363,12 @@
                                     <article>
                                         <header >
                                             <h3 class="d-inline">
-                                                <a href="#" class="text-decoration-none text-reset article-list-link d-inline">
-                                                    test notizia 1
+                                                <a href="https://example.com">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit condimentum
+                                                    massa quis cursus. Nullam pellentesque auctor purus
                                                 </a>
                                             </h3>
-                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 ore fa</time>
+                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 hours ago</time>
                                         </header>
                                     </article>
                                 </li>
@@ -365,11 +376,12 @@
                                     <article>
                                         <header >
                                             <h3 class="d-inline">
-                                                <a href="#" class="text-decoration-none  text-reset article-list-link d-inline">
-                                                    test notizia 1
+                                                <a href="https://example.com">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit condimentum
+                                                    massa quis cursus. Nullam pellentesque auctor purus
                                                 </a>
                                             </h3>
-                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 ore fa</time>
+                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 hours ago</time>
                                         </header>
                                     </article>
                                 </li>
@@ -377,54 +389,62 @@
                                     <article>
                                         <header >
                                             <h3 class="d-inline">
-                                                <a href="#" class="text-decoration-none  text-reset article-list-link d-inline">
-                                                    test notizia 1
+                                                <a href="https://example.com">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit condimentum
+                                                    massa quis cursus. Nullam pellentesque auctor purus
                                                 </a>
                                             </h3>
-                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 ore fa</time>
+                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 hours ago</time>
                                         </header>
-                                    </article></li>
+                                    </article>
+                                </li>
                                 <li  class="">
                                     <article>
                                         <header >
                                             <h3 class="d-inline">
-                                                <a href="#" class="text-decoration-none  text-reset article-list-link d-inline">
-                                                    test notizia 1
+                                                <a href="https://example.com">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit condimentum
+                                                    massa quis cursus. Nullam pellentesque auctor purus
                                                 </a>
                                             </h3>
-                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 ore fa</time>
+                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 hours ago</time>
                                         </header>
-                                    </article></li>
+                                    </article>
+                                </li>
                                 <li  class="">
                                     <article>
                                         <header >
                                             <h3 class="d-inline">
-                                                <a href="#" class="text-decoration-none  text-reset article-list-link d-inline">
-                                                    test notizia 1
+                                                <a href="https://example.com">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit condimentum
+                                                    massa quis cursus. Nullam pellentesque auctor purus
                                                 </a>
                                             </h3>
-                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 ore fa</time>
+                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 hours ago</time>
                                         </header>
-                                    </article></li>
+                                    </article>
+                                </li>
                                 <li  class="">
                                     <article>
                                         <header >
                                             <h3 class="d-inline">
-                                                <a href="#" class="text-decoration-none  text-reset article-list-link d-inline">
-                                                    test notizia 1
+                                                <a href="https://example.com">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In suscipit condimentum
+                                                    massa quis cursus. Nullam pellentesque auctor purus
                                                 </a>
                                             </h3>
-                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 ore fa</time>
+                                            <time datetime="2025-04-20 00:00:00" class=" d-inline ">23 hours ago</time>
                                         </header>
-                                    </article></li>
-                                <li  class="latest-headlines-link">
-                                    <div id="news-letter-subscribe">
-                                        <p>Sign up for email newsletter</p>
-                                        <a href="https://example.com" role="button">Sing up</a>
-                                    </div>
+                                    </article>
                                 </li>
 
                             </ul>
+                    <div  class="latest-headlines-link" aria-label="sign up for newsletter">
+                        <div id="news-letter-subscribe">
+                            <p>Sign up for email newsletter</p>
+                            <a href="https://example.com" role="button">Sing up</a>
+                        </div>
+                    </div>
                         </section>
                 <div id="bottom"  class="col-12 custom-col-md-8 ">
                     <h2><a href="https://example.com">Promotion & special</a></h2>
@@ -435,7 +455,7 @@
                     </div>
                 </div>
             </div>
-            <aside id="newspaper-img" class="col-12 bg-light custom-col-md-3 " aria-label="newspaper cover image" >
+            <aside id="newspaper-img" class="col-12 custom-col-md-3 " aria-label="newspaper cover image" >
                 <a href="https://example.com">
                     <img src="https://placehold.co/1333x1425" class="img-fluid" alt="aside image description">
                 </a>
@@ -548,7 +568,7 @@
             </section>
         <div class="void-4"></div>
         <section id="photo-section" class="row " aria-label="photo & videos">
-                <section id="landing-2-3" class="photo-video-container ">
+                <div id="landing-2-3" class="photo-video-container ">
                     <div  class=" row on-the-left article-list-photo">
                         <div id="photo-wrapper"><h2 id="photo-video-title"><a href="https://example.com"> photos and video <i class="bi bi-chevron-right" aria-hidden="true"></i></a> </h2></div>
                         <article id="article" class="col-12 custom-col-lg-8 ">
@@ -574,37 +594,62 @@
                                 <h3 class="listed-article-title"><a href="https://example.com/">Lorem ipsum dolor sit amet, consectetur adipiscing elit   </a></h3>
                             </article>
                         </li>
-                        <li class="list-group-item">
-                            <article  class="listed-article">
-                                <img src="https://placehold.co/90x70" class="" alt="Article Image">
-                                <p>testo articolo</p>
-                            </article>
-                        </li>
-                        <li class="list-group-item">
-                            <article  class="listed-article">
-                                <img src="https://placehold.co/90x70" class="" alt="Article Image">
-                                <p>testo articolo</p>
-                            </article>
-                        </li>
-                        <li class="list-group-item">
-                            <article  class="listed-article">
-                                <img src="https://placehold.co/90x70" class="" alt="Article Image">
-                                <p>testo articolo</p>
-                            </article>
-                        </li>
-                        <li class="list-group-item">
-                            <article  class="listed-article">
-                                <img src="https://placehold.co/90x70" class="" alt="Article Image">
-                                <p>testo articolo</p>
-                            </article>
-                        </li>
-                        <li class="list-group-item">
-                            <article  class="listed-article">
-                                <img src="https://placehold.co/90x70" class="" alt="Article Image">
-                                <p>testo articolo</p>
-                            </article>
-                        </li>
-                    </ul>
+                            <li class="list-group-item">
+                                <article  class="listed-article ">
+                                    <div class="img-wrapper-photo-list">
+                                        <a href="https://example.com/"  aria-label="click to see the collection of images of this news">
+                                            <div class="icon-item" aria-hidden="true"></div>
+                                            <img src="https://placehold.co/90x70" class="" alt="img descriprion">
+                                        </a>
+                                    </div>
+                                    <h3 class="listed-article-title"><a href="https://example.com/">Lorem ipsum dolor sit amet, consectetur adipiscing elit   </a></h3>
+                                </article>
+                            </li>
+                            <li class="list-group-item">
+                                <article  class="listed-article ">
+                                    <div class="img-wrapper-photo-list">
+                                        <a href="https://example.com/"  aria-label="click to see the collection of images of this news">
+                                            <div class="icon-item" aria-hidden="true"></div>
+                                            <img src="https://placehold.co/90x70" class="" alt="img descriprion">
+                                        </a>
+                                    </div>
+                                    <h3 class="listed-article-title"><a href="https://example.com/">Lorem ipsum dolor sit amet, consectetur adipiscing elit   </a></h3>
+                                </article>
+                            </li>
+                            <li class="list-group-item">
+                                <article  class="listed-article ">
+                                    <div class="img-wrapper-photo-list">
+                                        <a href="https://example.com/"  aria-label="click to see the collection of images of this news">
+                                            <div class="icon-item" aria-hidden="true"></div>
+                                            <img src="https://placehold.co/90x70" class="" alt="img descriprion">
+                                        </a>
+                                    </div>
+                                    <h3 class="listed-article-title"><a href="https://example.com/">Lorem ipsum dolor sit amet, consectetur adipiscing elit   </a></h3>
+                                </article>
+                            </li>
+                            <li class="list-group-item">
+                                <article  class="listed-article ">
+                                    <div class="img-wrapper-photo-list">
+                                        <a href="https://example.com/"  aria-label="click to see the collection of images of this news">
+                                            <div class="icon-item" aria-hidden="true"></div>
+                                            <img src="https://placehold.co/90x70" class="" alt="img descriprion">
+                                        </a>
+                                    </div>
+                                    <h3 class="listed-article-title"><a href="https://example.com/">Lorem ipsum dolor sit amet, consectetur adipiscing elit   </a></h3>
+                                </article>
+                            </li>
+                            <li class="list-group-item">
+                                <article  class="listed-article ">
+                                    <div class="img-wrapper-photo-list">
+                                        <a href="https://example.com/"  aria-label="click to see the collection of images of this news">
+                                            <div class="icon-item" aria-hidden="true"></div>
+                                            <img src="https://placehold.co/90x70" class="" alt="img descriprion">
+                                        </a>
+                                    </div>
+                                    <h3 class="listed-article-title"><a href="https://example.com/">Lorem ipsum dolor sit amet, consectetur adipiscing elit   </a></h3>
+                                </article>
+                            </li>
+                        </ul>
                         <button id="show-more-photo" class="btn rounded-0">
                         show more photos
                     </button>
@@ -618,7 +663,7 @@
                         </a>
 
                 </div>
-                </section>
+                </div>
             </section>
         <section id="list-news-void" class="list-news-void" aria-label="thematic section">
                 <div id="list-news2" class=" col-12 custom-col-md-8 ">
@@ -626,12 +671,12 @@
                         <li><section >
                             <header class="title-wrapper"><h2 class="category-title">
                                 <a href="https://example.com">business<i class="bi bi-chevron-right" aria-hidden="true"></i></a></h2> </header>
-                            <section class="row">
+                            <div class="row content-obj">
                                 <article  class=" col-12  custom-col-lg-7 custom-article">
                                     <div class="col-12 custom-col-md-6">
-                                        <figure class="img-wrapper-2">
+                                        <div class="img-wrapper-2">
                                             <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image">
-                                        </figure>
+                                        </div>
                                     </div>
                                     <div class="col-12 custom-col-md-6">
                                         <h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3>
@@ -645,17 +690,17 @@
                                     <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
 
                                 </ul>
-                            </section>
+                            </div>
                         </section> </li>
                         <li><section >
                             <header class="title-wrapper"><h2 class="category-title">
                                 <a href="https://example.com">entertainment<i class="bi bi-chevron-right" aria-hidden="true"></i></a></h2> </header>
-                            <section class="row">
+                            <div class="row content-obj">
                                 <article  class=" col-12  custom-col-lg-7 custom-article">
                                     <div class="col-12 custom-col-md-6">
-                                        <figure class="img-wrapper-2">
+                                        <div class="img-wrapper-2">
                                             <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image">
-                                        </figure>
+                                        </div>
                                     </div>
                                     <div class="col-12 custom-col-md-6">
                                         <h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3>
@@ -669,17 +714,17 @@
                                     <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
 
                                 </ul>
-                            </section>
+                            </div>
                         </section> </li>
                         <li><section >
                             <header class="title-wrapper"><h2 class="category-title">
                                 <a href="https://example.com">network<i class="bi bi-chevron-right" aria-hidden="true"></i></a></h2> </header>
-                            <section class="row">
+                            <div class="row content-obj">
                                 <article  class=" col-12  custom-col-lg-7 custom-article">
                                     <div class="col-12 custom-col-md-6">
-                                        <figure class="img-wrapper-2">
+                                        <div class="img-wrapper-2">
                                             <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image">
-                                        </figure>
+                                        </div>
                                     </div>
                                     <div class="col-12 custom-col-md-6">
                                         <h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3>
@@ -693,17 +738,17 @@
                                     <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
 
                                 </ul>
-                            </section>
+                            </div>
                         </section> </li>
                         <li><section >
                             <header class="title-wrapper"><h2 class="category-title">
                                 <a href="https://example.com">best review<i class="bi bi-chevron-right" aria-hidden="true"></i> </a></h2> </header>
-                            <section class="row">
+                            <div class="row content-obj">
                                 <article  class=" col-12  custom-col-lg-7 custom-article">
                                     <div class="col-12 custom-col-md-6">
-                                        <figure class="img-wrapper-2">
+                                        <div class="img-wrapper-2">
                                             <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image">
-                                        </figure>
+                                        </div>
                                     </div>
                                     <div class="col-12 custom-col-md-6">
                                         <h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3>
@@ -717,17 +762,17 @@
                                     <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
 
                                 </ul>
-                            </section>
+                            </div>
                         </section></li>
                         <li><section >
                             <header class="title-wrapper"><h2 class="category-title">
                                 <a href="https://example.com">opinion<i class="bi bi-chevron-right" aria-hidden="true"></i></a></h2> </header>
-                            <section class="row">
+                            <div class="row content-obj">
                                 <article  class=" col-12  custom-col-lg-7 custom-article">
                                     <div class="col-12 custom-col-md-6">
-                                        <figure class="img-wrapper-2">
+                                        <div class="img-wrapper-2">
                                             <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image">
-                                        </figure>
+                                        </div>
                                     </div>
                                     <div class="col-12 custom-col-md-6">
                                         <h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3>
@@ -741,17 +786,17 @@
                                     <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
 
                                 </ul>
-                            </section>
+                            </div>
                         </section> </li>
                         <li><section >
                             <header class="title-wrapper"><h2 class="category-title">
                                 <a href="https://example.com">national politic<i class="bi bi-chevron-right" aria-hidden="true"></i></a></h2> </header>
-                            <section class="row">
+                            <div class="row content-obj">
                                 <article  class=" col-12  custom-col-lg-7 custom-article">
                                     <div class="col-12 custom-col-md-6">
-                                        <figure class="img-wrapper-2">
+                                        <div class="img-wrapper-2">
                                             <img src="https://placehold.co/642x428" class="img-fluid" alt="Article Image">
-                                        </figure>
+                                        </div>
                                     </div>
                                     <div class="col-12 custom-col-md-6">
                                         <h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce</a></h3>
@@ -765,7 +810,7 @@
                                     <li class=""><h3><a href="https://example.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique metus sit amet </a></h3></li>
 
                                 </ul>
-                            </section>
+                            </div>
                         </section> </li>
 
 
@@ -774,9 +819,9 @@
                 <div id="void2" class="on-the-right "></div>
             </section>
         <section id="widget-void" class="row" aria-label="upcoming event news">
-                <figure id="widget" class="col" >
+                <div id="widget" class="col" >
                     <img src="https://placehold.co/500x250/png" class="img-fluid" alt="upcoming event calendar">
-                </figure>
+                </div>
                 <div id="void-ads" class="col-auto" ></div>
             </section>
         <div class="void-footer"></div>
@@ -789,28 +834,36 @@
         <div id="footer-image" class="row">
             <img  src="https://placehold.co/282x48" alt="footer logo">
         </div>
-        <nav id="section-list" class="row" aria-label="footer navigation">
+        <section id="section-list" class="row" aria-label="footer navigation" >
         <ul class="list-unstyled list-group footer-list ">
             <li class="main-footer-item footer-item ">
-               <h3 class="footer-item-title d-flex"><a href="#">sing up for newsletter</a>
-                    <button class="btn " data-bs-toggle="collapse" data-bs-target="#menu-1" aria-label="click here to expand the menu" aria-expanded="false">
+                <section>
+                    <header class="footer-item-title d-flex ">
+                        <h3 ><a href="#">sing up for newsletter</a></h3>
+                        <button class="btn " data-bs-toggle="collapse" data-bs-target="#menu-1" aria-label="click here to expand the menu" aria-expanded="false">
                     <i class="bi bi-chevron-down d-flex align-items-center justify-content-center"></i>
                 </button>
-                </h3>
+                    </header>
 
-                <ul class="collapse list-unstyled footer-item-body" id="menu-1" >
-                    <li><a href="#">e-Edition</a> </li>
-                    <li><a class="" href="#">Send a News Tip</a></li>
+                    <ul class="collapse list-unstyled footer-item-body" id="menu-1" >
+                        <li><a href="#">e-Edition</a> </li>
+                        <li><a class="" href="#">Send a News Tip</a></li>
 
-                </ul>
+                    </ul>
+                </section>
 
             </li>
             <li class="main-footer-item footer-item ">
-                <h3 class="footer-item-title d-flex"><a>Contact Us</a><button class="btn " data-bs-toggle="collapse" data-bs-target="#menu-2"
+                <section>
+                    <header class="footer-item-title d-flex">
+                <h3 ><a>Contact Us</a></h3>
+                    <button class="btn " data-bs-toggle="collapse" data-bs-target="#menu-2"
                                                                                aria-label="click here to expand the menu" aria-expanded="false">  <!-- todo: sostituire questo hr con qualcosa per racchiudere sia lui che button -->
                     <i class="bi bi-chevron-down d-flex align-items-center justify-content-center"></i>
                 </button>
-                </h3>
+                    </header>
+                </section>
+
                 <ul class="collapse list-unstyled footer-item-body" id="menu-2"  >
                     <li><a href="#">Boston Herald Store/Back Copies</a></li>
                     <li><a href="#">Work WIth Us</a></li>
@@ -822,11 +875,16 @@
 
             </li>
             <li class="main-footer-item footer-item ">
-                <h3 class="footer-item-title d-flex"><a>classifieds</a><button class="btn " data-bs-toggle="collapse" data-bs-target="#menu-3"
+                <section>
+                    <header class="footer-item-title d-flex">
+                        <h3 ><a>classifieds</a> </h3>
+                        <button class="btn " data-bs-toggle="collapse" data-bs-target="#menu-3"
                                                                                 aria-label="click here to expand the menu" aria-expanded="false">
                     <i class="bi bi-chevron-down d-flex align-items-center justify-content-center"></i>
                 </button>
-                </h3>
+
+                    </header>
+                </section>
                 <ul class="collapse list-unstyled footer-item-body" id="menu-3"  >
                     <li><a href="#">Contest</a> </li>
                     <li><a href="#">Special Section</a></li>
@@ -837,11 +895,16 @@
 
             </li>
             <li class="main-footer-item footer-item ">
-                <h3 class="footer-item-title d-flex"><a>business directory</a><button class="btn" data-bs-toggle="collapse" data-bs-target="#menu-4"
+                <section>
+                    <header class="footer-item-title d-flex">
+                        <h3 ><a>business directory</a></h3>
+                        <button class="btn" data-bs-toggle="collapse" data-bs-target="#menu-4"
                                                                                        aria-label="click here to expand the menu" aria-expanded="false">
                     <i class="bi bi-chevron-down d-flex align-items-center justify-content-center"></i>
                 </button>
-                </h3>
+                    </header>
+                </section>
+
                 <ul class="collapse list-unstyled footer-item-body" id="menu-4"  >
                     <li><a href="#">Network Advertising</a></li>
                     <li><a href="#">Ad solution</a></li>
@@ -854,7 +917,7 @@
                 Subscribe Now
             </a></li>
         </ul>
-    </nav>
+    </section>
     </div>
     <section id="footer-terms-of-use" class="" aria-label="terms of use">
         <h2 class="visually-hidden">terms of use</h2>

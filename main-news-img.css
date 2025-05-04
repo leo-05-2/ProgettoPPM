@@ -12551,7 +12551,7 @@ body > * {
 .list-list {
   padding: 0;
 }
-.list-list li section {
+.list-list li div.content-obj {
   margin: 0 0 32px 0;
   padding: 0 0 32px 0;
   justify-content: end;
@@ -12700,6 +12700,7 @@ body > * {
   align-items: center;
   overflow-y: hidden;
   overflow-x: hidden;
+  border-bottom: 1px solid #9d9a98;
 }
 
 @media (min-width: 1040px) {
@@ -12865,7 +12866,6 @@ p#trending-title {
   margin: 16px 2.5% 0 2.5%;
   border-top: 2px solid #000;
 }
-
 .footer-item-title {
   margin: 16px 15px 0 0;
   font-family: "Open Sans", Roboto, sans-serif;
@@ -13148,6 +13148,7 @@ p#trending-title {
 .breaking-news-bar-wrapper #breaking-news-title h2, .breaking-news-bar-wrapper #breaking-news-title .h2 {
   font: normal 700 18px "Open Sans", Roboto, sans-serif;
   margin-bottom: 0;
+  flex-wrap: nowrap;
 }
 .breaking-news-bar-wrapper article {
   display: block;
@@ -13166,20 +13167,13 @@ p#trending-title {
 .breaking-news-bar-wrapper article time {
   font: normal 400 16px "Open Sans", Roboto, sans-serif;
   color: #000000;
-  display: block;
+  display: inline;
 }
 
 .title-list li {
   border-top: 1px solid rgb(221, 216, 213);
   margin: 12px 0 0 0;
   padding-top: 16px;
-}
-.title-list li:last-child {
-  border-top: none;
-  background-color: #ecede7;
-}
-.title-list li:last-child {
-  border-top: none;
 }
 
 #news-letter-subscribe {
@@ -13398,6 +13392,10 @@ footer a {
   text-transform: uppercase;
 }
 
+#wrapper {
+  display: flex;
+  flex-direction: row;
+}
 #wrapper ul {
   list-style: none;
   display: flex;
@@ -13424,6 +13422,7 @@ footer a {
   color: #ffffff;
   text-decoration: none;
   text-align: center;
+  align-content: center;
 }
 #wrapper ul li a:hover {
   text-decoration: underline;
@@ -13477,7 +13476,7 @@ footer a {
 #navbar-logo a .img-fluid {
   width: 100%;
   height: auto;
-  max-height: 64px;
+  max-height: 80px;
   display: flex;
   padding: 12px 0;
   flex: 1 1 auto;
@@ -13486,6 +13485,22 @@ footer a {
   #navbar-logo {
     display: flex;
   }
+}
+
+#logo {
+  display: flex;
+}
+#logo a {
+  display: flex;
+  width: 100%;
+}
+#logo a .img-fluid {
+  width: 100%;
+  height: auto;
+  max-height: 64px;
+  display: flex;
+  padding: 12px 0;
+  flex: 1 1 auto;
 }
 
 #navbar-logo.navbar-logo-scroll {
@@ -13596,4 +13611,9 @@ footer a {
 
 .median-navbar-element {
   width: 33.33333333%;
+}
+
+.navbar.scrolled {
+  border-bottom: 1px solid #9d9a98;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
 }

@@ -736,7 +736,7 @@ $custom-breakpoint-main-img:(
 .list-list{
   padding: 0;
   li{
-    section{
+    div.content-obj{
       margin: 0 0 32px 0;
       padding: 0 0 32px 0;
       justify-content: end;
@@ -897,6 +897,7 @@ $custom-breakpoint-main-img:(
   align-items: center;
   overflow-y: hidden;
   overflow-x: hidden;
+  border-bottom: 1px solid #9d9a98;
 
 }
 
@@ -1070,6 +1071,10 @@ p#trending-title{
 
   margin: 16px 2.5% 0 2.5%;
   border-top: 2px solid #000;
+
+  section{
+
+  }
 }
 .footer-item-title{
   margin: 16px 15px 0 0;
@@ -1379,6 +1384,7 @@ p#trending-title{
     h2{
       font: normal 700 18px "Open Sans", Roboto, sans-serif;
       margin-bottom: 0;
+      flex-wrap: nowrap;
 
     }
 
@@ -1399,7 +1405,7 @@ p#trending-title{
     time{
       font: normal 400 16px "Open Sans", Roboto, sans-serif;
         color: #000000;
-      display: block;
+      display: inline;
 
     }
 
@@ -1416,14 +1422,7 @@ p#trending-title{
       padding-top: 16px;
 
     }
-    li:last-child{
-      border-top: none;
-      background-color: #ecede7;
-    }
-    li:last-child{
-      border-top: none;
 
-    }
   }
   #news-letter-subscribe{
     text-align: center;
@@ -1674,6 +1673,8 @@ footer{
 
 }
 #wrapper{
+  display: flex;
+  flex-direction: row;
   ul{
     list-style: none;
     display: flex;
@@ -1698,6 +1699,7 @@ footer{
         color: #ffffff;
         text-decoration: none;
         text-align: center;
+        align-content: center;
       }
       a:hover{
         text-decoration: underline;
@@ -1765,7 +1767,7 @@ footer{
     .img-fluid{
       width: 100%;
       height: auto;
-      max-height: 64px;
+      max-height: 80px;
       display: flex;
       padding: 12px 0;
       flex: 1 1 auto;
@@ -1777,6 +1779,25 @@ footer{
     display: flex;
 
 
+  }
+}
+
+#logo{
+
+  display: flex;
+  a{
+    display: flex;
+    width: 100%;
+    .img-fluid{
+      width: 100%;
+      height: auto;
+      max-height: 64px;
+      display: flex;
+      padding: 12px 0;
+      flex: 1 1 auto;
+
+
+    }
   }
 }
 #navbar-logo.navbar-logo-scroll{
@@ -1926,6 +1947,11 @@ footer{
 
 .median-navbar-element{
   width: 33.33333333%;
+}
+
+.navbar.scrolled {
+  border-bottom: 1px solid #9d9a98;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, .25);
 }
 
 
