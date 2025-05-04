@@ -12578,9 +12578,6 @@ body > * {
   margin-bottom: 8px;
 }
 
-/* todo:impostare larghezza massima per la section ne mobile per far in modo che le la fine del bordo sia allineata con il bordo delle trending news
-   o valutare uno pseudo elemento
- */
 .category-title {
   margin-bottom: 20px;
   padding-bottom: 6.5px;
@@ -12897,7 +12894,7 @@ p#trending-title {
 @media (min-width: 800px) and (max-width: 1039px) {
   .footer-list {
     display: flex;
-    height: 514px;
+    height: 525px;
     width: 100%;
     flex-wrap: wrap;
   }
@@ -12920,7 +12917,7 @@ p#trending-title {
 @media (min-width: 1332px) {
   .footer-list {
     display: flex;
-    height: 490px;
+    height: 500px;
     width: 100%;
     flex-wrap: wrap;
   }
@@ -12931,7 +12928,7 @@ p#trending-title {
     width: 20%;
   }
 }
-@media (min-width: 1340px) {
+@media (min-width: 1320px) {
   #footer-button-container {
     margin-bottom: 30px;
   }
@@ -13396,6 +13393,11 @@ footer a {
   display: flex;
   flex-direction: row;
 }
+@media (max-width: 1040px) {
+  #wrapper > * {
+    flex-shrink: 1;
+  }
+}
 #wrapper ul {
   list-style: none;
   display: flex;
@@ -13403,7 +13405,7 @@ footer a {
   padding: 0;
   margin: 0;
 }
-@media (max-width: 1040px) {
+@media (max-width: 1041px) {
   #wrapper ul {
     display: none;
   }
@@ -13428,9 +13430,8 @@ footer a {
   text-decoration: underline;
 }
 #wrapper #search-bar {
-  padding: 15px;
   height: 64px;
-  width: 54px;
+  max-width: 54px;
 }
 
 #median-navbar-widget {
@@ -13481,7 +13482,7 @@ footer a {
   padding: 12px 0;
   flex: 1 1 auto;
 }
-@media (max-width: 1040px) {
+@media (max-width: 1039px) {
   #navbar-logo {
     display: flex;
   }
@@ -13616,4 +13617,28 @@ footer a {
 .navbar.scrolled {
   border-bottom: 1px solid #9d9a98;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+.account-section-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@media (min-width: 1040px) {
+  .account-section-icon {
+    display: none;
+  }
+}
+.account-section-icon i {
+  padding: 0;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex: 1 1 auto;
+}
+
+@media (max-width: 320px) {
+  #search-bar, #account-section-icon {
+    padding: 0;
+  }
 }

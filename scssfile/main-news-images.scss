@@ -1,4 +1,4 @@
-@import "custom-bootstrap";
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
@@ -1111,7 +1111,7 @@ p#trending-title{
 @media (min-width: 800px) and (max-width: (1039px)) {
   .footer-list {
     display: flex;
-    height: 514px;
+    height: 525px;
     width: 100%;
     flex-wrap: wrap;
     li{
@@ -1147,7 +1147,7 @@ p#trending-title{
   @media (min-width: 1332px) {
     .footer-list {
       display: flex;
-      height: 490px;
+      height: 500px;
       width: 100%;
       flex-wrap: wrap;
       li{
@@ -1162,7 +1162,7 @@ p#trending-title{
     }
   }
 #footer-button-container{
-  @media (min-width: 1340px) {
+  @media (min-width: 1320px) {
     margin-bottom: 30px;
 
   }
@@ -1673,13 +1673,22 @@ footer{
 #wrapper{
   display: flex;
   flex-direction: row;
+
+
+  @media (max-width: 1040px) {
+    >*{
+      flex-shrink: 1;
+
+    }
+
+  }
   ul{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
-    @media (max-width: 1040px) {
+    @media (max-width: 1041px) {
       display: none;
 
     }
@@ -1707,9 +1716,8 @@ footer{
   }
   #search-bar{
 
-    padding: 15px;
     height: 64px;
-    width: 54px;
+    max-width: 54px;
   }
 }
 
@@ -1773,7 +1781,7 @@ footer{
 
     }
   }
-  @media (max-width: 1040px) {
+  @media (max-width: 1039px) {
     display: flex;
 
 
@@ -1950,6 +1958,34 @@ footer{
 .navbar.scrolled {
   border-bottom: 1px solid #9d9a98;
   box-shadow: 0 3px 3px rgba(0, 0, 0, .25);
+}
+
+.account-section-icon{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @media (min-width: 1040px) {
+    display: none;
+  }
+
+  i{
+    padding: 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex: 1 1 auto;
+
+
+  }
+}
+
+
+@media (max-width: 320px) {
+  #search-bar,#account-section-icon{
+    padding: 0;
+  }
+
 }
 
 
