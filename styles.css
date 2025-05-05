@@ -13312,6 +13312,21 @@ a:hover {
 
 #newspaper-img {
   padding: 0 24px;
+  margin: 32px 0 0 0;
+}
+@media (max-width: 800px) {
+  #newspaper-img {
+    padding: 0 0;
+    width: 100%;
+  }
+  #newspaper-img a {
+    display: flex;
+    justify-content: center;
+  }
+  #newspaper-img a img {
+    width: 50vw;
+    margin: 0 auto;
+  }
 }
 
 #landing-4-3 h2, #landing-4-3 .h2 {

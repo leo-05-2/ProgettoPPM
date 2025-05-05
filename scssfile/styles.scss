@@ -1582,6 +1582,20 @@ a:hover{
 }
 #newspaper-img{
   padding: 0 24px;
+  margin: 32px 0 0 0;
+  @media (max-width: 800px) {
+    padding: 0 0;
+    width: 100%;
+    a{
+      display: flex;
+      justify-content: center;
+      img{
+        width: 50vw;
+        margin: 0 auto;
+
+      }
+    }
+  }
 }
 
 #landing-4-3{
@@ -2055,6 +2069,7 @@ a.button-offcanvas:hover,#offcanvaButton{
 .offcanvas-header{
   font: normal 600 15px "Open Sans", Roboto, sans-serif;
 }
+
 
 
 
