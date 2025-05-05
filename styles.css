@@ -13689,3 +13689,15 @@ a.button-offcanvas:hover, #offcanvaButton {
   margin-bottom: 20px;
   align-items: center;
 }
+
+.offcanvas-body ul li {
+  color: rgb(26, 26, 26);
+  font: normal 600 14px "Open Sans", Roboto, sans-serif;
+}
+.offcanvas-body ul li ul li {
+  padding-left: 12px;
+}
+
+.offcanvas-header {
+  font: normal 600 15px "Open Sans", Roboto, sans-serif;
+}
