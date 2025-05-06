@@ -1093,7 +1093,7 @@ p#trending-title{
 }
 .footer-item-body{
   li{
-    margin: 15px 15px 19px 0;
+    margin: 0;
     a{
       text-decoration: none;
       color: inherit;
@@ -1108,7 +1108,7 @@ p#trending-title{
 @media (min-width: 640px) and (max-width: 800px) {
   .footer-list {
     display: flex;
-    height: 525px;
+    height: 800px;
     width: 100%;
     flex-wrap: wrap;
     li{
@@ -1131,6 +1131,7 @@ p#trending-title{
     flex-wrap: wrap;
     li{
       break-inside: avoid;
+      width: 40%;
     }
     .main-footer-item {
       width: 28%;
@@ -1146,7 +1147,7 @@ p#trending-title{
 @media (min-width: 1040px) and (max-width: 1331px) {
   .footer-list {
 
-    height: 410px;
+    height: 300px;
     display: flex;
 
 
@@ -1154,7 +1155,9 @@ p#trending-title{
   .main-footer-item {
 
     width: 20%;
+
   }
+
 
 
 }
@@ -1162,7 +1165,7 @@ p#trending-title{
   @media (min-width: 1332px) {
     .footer-list {
       display: flex;
-      height: 500px;
+      height: 350px;
       width: 100%;
       flex-wrap: wrap;
       li{
@@ -1172,6 +1175,7 @@ p#trending-title{
         width: 20%;
 
       }
+
 
 
     }
@@ -1284,7 +1288,8 @@ p#trending-title{
       flex-wrap: wrap;
       padding: 17px 8px;
       width: 100%;
-      margin: 0;
+      max-width: 1344px;
+      margin: 0 auto ;
       li{
         margin-right: 16px;
         @media (max-width: 800px) {
