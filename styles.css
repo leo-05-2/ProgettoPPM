@@ -13049,6 +13049,7 @@ p#trending-title {
 #widget-void #void-ads {
   display: flex;
   width: 100%;
+  margin-top: 15px;
 }
 #widget-void #void-ads img {
   margin: auto;
@@ -13068,6 +13069,7 @@ p#trending-title {
     display: flex;
     width: auto;
     max-width: 300px;
+    margin-top: 0;
   }
   #widget-void #void-ads img {
     margin: auto;
