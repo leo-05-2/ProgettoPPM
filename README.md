@@ -8,3 +8,5 @@ In altre parti del sito ho notato cambiamenti e aggiunte sporadiche di elementi,
 
 Quelli che sono stati visti durante lo sviluppo sono stati implementati, ma potrebbero esserci aggiunte o modifiche degli oggetti da parte del sito che non sono state 
 riportate pechè non presenti al momento
+
+si è comunque implementato oggetti che potrebbero cambiare come ad esempio a volte immagi che diventano caroselli sporadicamente come delle immagini
